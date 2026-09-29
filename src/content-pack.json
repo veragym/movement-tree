@@ -1,11 +1,12 @@
 {
-  "id": "conversation-2026-09",
+  "id": "conversation-structure-v2-images-reset",
   "nodes": [
     {
       "id": "upper",
       "label": "상체",
       "parent": null,
       "kind": "branch",
+      "level": "region",
       "images": [],
       "meanings": [],
       "fields": [],
@@ -20,6 +21,7 @@
       "label": "하체",
       "parent": null,
       "kind": "branch",
+      "level": "region",
       "images": [],
       "meanings": [],
       "fields": [],
@@ -34,6 +36,7 @@
       "label": "밀기",
       "parent": "upper",
       "kind": "branch",
+      "level": "pattern",
       "images": [],
       "meanings": [],
       "fields": [],
@@ -48,6 +51,7 @@
       "label": "당기기",
       "parent": "upper",
       "kind": "branch",
+      "level": "pattern",
       "images": [],
       "meanings": [],
       "fields": [],
@@ -62,16 +66,10 @@
       "label": "스쿼트",
       "parent": "lower",
       "kind": "branch",
+      "level": "pattern",
       "images": [],
       "meanings": [],
-      "fields": [
-        {
-          "id": "squat-concept",
-          "title": "먼저 배우는 공통점",
-          "body": "무릎과 고관절을 함께 굽혔다 펴는 움직임을 익힙니다.",
-          "visible": true
-        }
-      ],
+      "fields": [],
       "show": {
         "image": true,
         "path": true,
@@ -83,16 +81,10 @@
       "label": "힌지",
       "parent": "lower",
       "kind": "branch",
+      "level": "pattern",
       "images": [],
       "meanings": [],
-      "fields": [
-        {
-          "id": "hinge-concept",
-          "title": "먼저 배우는 공통점",
-          "body": "고관절을 중심으로 몸통과 골반의 움직임을 익힙니다.",
-          "visible": true
-        }
-      ],
+      "fields": [],
       "show": {
         "image": true,
         "path": true,
@@ -104,16 +96,10 @@
       "label": "런지",
       "parent": "lower",
       "kind": "branch",
+      "level": "pattern",
       "images": [],
       "meanings": [],
-      "fields": [
-        {
-          "id": "lunge-concept",
-          "title": "먼저 배우는 공통점",
-          "body": "발의 앞뒤·좌우 배치와 이동 방식에 따라 확장합니다.",
-          "visible": true
-        }
-      ],
+      "fields": [],
       "show": {
         "image": true,
         "path": true,
@@ -121,20 +107,29 @@
       }
     },
     {
-      "id": "press",
+      "id": "push::복합관절",
+      "label": "복합관절",
+      "parent": "push",
+      "kind": "branch",
+      "level": "joint",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::복합관절::프레스",
       "label": "프레스",
-      "parent": "push",
+      "parent": "push::복합관절",
       "kind": "branch",
+      "level": "movement",
       "images": [],
       "meanings": [],
-      "fields": [
-        {
-          "id": "press-concept",
-          "title": "먼저 배우는 공통점",
-          "body": "팔을 뻗어 미는 움직임을 익힌 뒤, 도구와 몸의 각도를 바꿉니다.",
-          "visible": true
-        }
-      ],
+      "fields": [],
       "show": {
         "image": true,
         "path": true,
@@ -142,10 +137,257 @@
       }
     },
     {
-      "id": "fly",
+      "id": "push::복합관절::프레스::수평",
+      "label": "수평",
+      "parent": "push::복합관절::프레스",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::체스트 프레스",
+      "label": "체스트 프레스",
+      "parent": "push::복합관절::프레스::수평",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-chest_press-m0",
+          "word": "체스트",
+          "meaning": "가슴"
+        },
+        {
+          "id": "pack-ex-chest_press-m1",
+          "word": "프레스",
+          "meaning": "저항을 밀어 내는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::푸시업",
+      "label": "푸시업",
+      "parent": "push::복합관절::프레스::수평",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-push_up-m0",
+          "word": "푸시업",
+          "meaning": "손으로 바닥을 밀어 몸을 올리는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::복합관절::프레스::상향 사선",
+      "label": "상향 사선",
+      "parent": "push::복합관절::프레스",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::인클라인 체스트 프레스",
+      "label": "인클라인 체스트 프레스",
+      "parent": "push::복합관절::프레스::상향 사선",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-incline_chest_press-m0",
+          "word": "인클라인",
+          "meaning": "등받이·벤치를 위쪽으로 기울인 각도"
+        },
+        {
+          "id": "pack-ex-incline_chest_press-m1",
+          "word": "체스트",
+          "meaning": "가슴"
+        },
+        {
+          "id": "pack-ex-incline_chest_press-m2",
+          "word": "프레스",
+          "meaning": "저항을 밀어 내는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::복합관절::프레스::하향 사선",
+      "label": "하향 사선",
+      "parent": "push::복합관절::프레스",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::디클라인 체스트 프레스",
+      "label": "디클라인 체스트 프레스",
+      "parent": "push::복합관절::프레스::하향 사선",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-decline_chest_press-m0",
+          "word": "디클라인",
+          "meaning": "등받이·벤치를 아래쪽으로 기울인 각도"
+        },
+        {
+          "id": "pack-ex-decline_chest_press-m1",
+          "word": "체스트",
+          "meaning": "가슴"
+        },
+        {
+          "id": "pack-ex-decline_chest_press-m2",
+          "word": "프레스",
+          "meaning": "저항을 밀어 내는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::복합관절::프레스::수직",
+      "label": "수직",
+      "parent": "push::복합관절::프레스",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::숄더 프레스",
+      "label": "숄더 프레스",
+      "parent": "push::복합관절::프레스::수직",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-shoulder_press-m0",
+          "word": "숄더",
+          "meaning": "어깨"
+        },
+        {
+          "id": "pack-ex-shoulder_press-m1",
+          "word": "프레스",
+          "meaning": "저항을 밀어 내는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::복합관절::프레스::하향",
+      "label": "하향",
+      "parent": "push::복합관절::프레스",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::딥스",
+      "label": "딥스",
+      "parent": "push::복합관절::프레스::하향",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-dip-m0",
+          "word": "딥스",
+          "meaning": "팔로 몸을 지지하며 몸을 내렸다 미는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::단일관절",
+      "label": "단일관절",
+      "parent": "push",
+      "kind": "branch",
+      "level": "joint",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::단일관절::플라이",
       "label": "플라이",
-      "parent": "push",
+      "parent": "push::단일관절",
       "kind": "branch",
+      "level": "movement",
       "images": [],
       "meanings": [],
       "fields": [],
@@ -156,32 +398,160 @@
       }
     },
     {
-      "id": "raise",
+      "id": "push::단일관절::플라이::수평",
+      "label": "수평",
+      "parent": "push::단일관절::플라이",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::체스트 플라이",
+      "label": "체스트 플라이",
+      "parent": "push::단일관절::플라이::수평",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-chest_fly-m0",
+          "word": "체스트",
+          "meaning": "가슴"
+        },
+        {
+          "id": "pack-ex-chest_fly-m1",
+          "word": "플라이",
+          "meaning": "팔을 벌리거나 모으는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::단일관절::플라이::상향 사선",
+      "label": "상향 사선",
+      "parent": "push::단일관절::플라이",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::인클라인 플라이",
+      "label": "인클라인 플라이",
+      "parent": "push::단일관절::플라이::상향 사선",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-incline_fly-m0",
+          "word": "인클라인",
+          "meaning": "등받이·벤치를 위쪽으로 기울인 각도"
+        },
+        {
+          "id": "pack-ex-incline_fly-m1",
+          "word": "플라이",
+          "meaning": "팔을 벌리거나 모으는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::로우 투 하이 플라이",
+      "label": "로우 투 하이 플라이",
+      "parent": "push::단일관절::플라이::상향 사선",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-low_to_high_fly-m0",
+          "word": "로우 투 하이",
+          "meaning": "아래에서 위로 향하는 경로"
+        },
+        {
+          "id": "pack-ex-low_to_high_fly-m1",
+          "word": "플라이",
+          "meaning": "팔을 벌리거나 모으는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::단일관절::플라이::하향 사선",
+      "label": "하향 사선",
+      "parent": "push::단일관절::플라이",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::하이 투 로우 플라이",
+      "label": "하이 투 로우 플라이",
+      "parent": "push::단일관절::플라이::하향 사선",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-high_to_low_fly-m0",
+          "word": "하이 투 로우",
+          "meaning": "위에서 아래로 향하는 경로"
+        },
+        {
+          "id": "pack-ex-high_to_low_fly-m1",
+          "word": "플라이",
+          "meaning": "팔을 벌리거나 모으는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::단일관절::레이즈",
       "label": "레이즈",
-      "parent": "push",
+      "parent": "push::단일관절",
       "kind": "branch",
-      "images": [],
-      "meanings": [],
-      "fields": [
-        {
-          "id": "raise-concept",
-          "title": "먼저 배우는 공통점",
-          "body": "레이즈는 프레스와 다른 어깨 보조 움직임입니다. 옆으로 들기는 별도의 움직임으로 배웁니다.",
-          "visible": true
-        }
-      ],
-      "show": {
-        "image": true,
-        "path": true,
-        "meanings": true
-      },
-      "relation": "related"
-    },
-    {
-      "id": "extension",
-      "label": "팔꿈치 펴기",
-      "parent": "push",
-      "kind": "branch",
+      "level": "movement",
       "images": [],
       "meanings": [],
       "fields": [],
@@ -189,56 +559,254 @@
         "image": true,
         "path": true,
         "meanings": true
-      },
-      "relation": "related"
+      }
     },
     {
-      "id": "row",
+      "id": "push::단일관절::레이즈::전방",
+      "label": "전방",
+      "parent": "push::단일관절::레이즈",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::프론트 레이즈",
+      "label": "프론트 레이즈",
+      "parent": "push::단일관절::레이즈::전방",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-front_raise-m0",
+          "word": "프론트",
+          "meaning": "앞쪽 / 스쿼트에서는 중량의 앞쪽 위치"
+        },
+        {
+          "id": "pack-ex-front_raise-m1",
+          "word": "레이즈",
+          "meaning": "들어 올리는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::단일관절::레이즈::측방",
+      "label": "측방",
+      "parent": "push::단일관절::레이즈",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::래터럴 레이즈",
+      "label": "래터럴 레이즈",
+      "parent": "push::단일관절::레이즈::측방",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-lateral_raise-m0",
+          "word": "래터럴",
+          "meaning": "옆쪽"
+        },
+        {
+          "id": "pack-ex-lateral_raise-m1",
+          "word": "레이즈",
+          "meaning": "들어 올리는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::단일관절::팔꿈치 신전",
+      "label": "팔꿈치 신전",
+      "parent": "push::단일관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::단일관절::팔꿈치 신전::하향",
+      "label": "하향",
+      "parent": "push::단일관절::팔꿈치 신전",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::트라이셉스 푸시다운",
+      "label": "트라이셉스 푸시다운",
+      "parent": "push::단일관절::팔꿈치 신전::하향",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-triceps_pushdown-m0",
+          "word": "트라이셉스",
+          "meaning": "상완삼두근"
+        },
+        {
+          "id": "pack-ex-triceps_pushdown-m1",
+          "word": "푸시다운",
+          "meaning": "아래쪽으로 밀어 내리는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::단일관절::팔꿈치 신전::상향",
+      "label": "상향",
+      "parent": "push::단일관절::팔꿈치 신전",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::오버헤드 트라이셉스 익스텐션",
+      "label": "오버헤드 트라이셉스 익스텐션",
+      "parent": "push::단일관절::팔꿈치 신전::상향",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-overhead_triceps_extension-m0",
+          "word": "오버헤드",
+          "meaning": "머리 위에 팔을 둔 위치"
+        },
+        {
+          "id": "pack-ex-overhead_triceps_extension-m1",
+          "word": "트라이셉스",
+          "meaning": "상완삼두근"
+        },
+        {
+          "id": "pack-ex-overhead_triceps_extension-m2",
+          "word": "익스텐션",
+          "meaning": "관절을 펴는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "push::단일관절::팔꿈치 신전::후방",
+      "label": "후방",
+      "parent": "push::단일관절::팔꿈치 신전",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::트라이셉스 킥백",
+      "label": "트라이셉스 킥백",
+      "parent": "push::단일관절::팔꿈치 신전::후방",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-triceps_kickback-m0",
+          "word": "트라이셉스",
+          "meaning": "상완삼두근"
+        },
+        {
+          "id": "pack-ex-triceps_kickback-m1",
+          "word": "킥백",
+          "meaning": "팔이나 다리를 뒤로 보내는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::복합관절",
+      "label": "복합관절",
+      "parent": "pull",
+      "kind": "branch",
+      "level": "joint",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::복합관절::로우",
       "label": "로우",
-      "parent": "pull",
+      "parent": "pull::복합관절",
       "kind": "branch",
-      "images": [],
-      "meanings": [],
-      "fields": [
-        {
-          "id": "row-concept",
-          "title": "먼저 배우는 공통점",
-          "body": "팔꿈치가 몸통 뒤쪽으로 이동하는 당기기 계열입니다. 도구마다 몸통 지지와 저항 방향을 따로 확인합니다.",
-          "visible": true
-        }
-      ],
-      "show": {
-        "image": true,
-        "path": true,
-        "meanings": true
-      }
-    },
-    {
-      "id": "pulldown",
-      "label": "풀다운",
-      "parent": "pull",
-      "kind": "branch",
-      "images": [],
-      "meanings": [],
-      "fields": [
-        {
-          "id": "pulldown-concept",
-          "title": "먼저 배우는 공통점",
-          "body": "위쪽에서 오는 저항을 아래로 당기는 움직임입니다.",
-          "visible": true
-        }
-      ],
-      "show": {
-        "image": true,
-        "path": true,
-        "meanings": true
-      }
-    },
-    {
-      "id": "pullup",
-      "label": "풀업·친업",
-      "parent": "pull",
-      "kind": "branch",
+      "level": "movement",
       "images": [],
       "meanings": [],
       "fields": [],
@@ -249,10 +817,11 @@
       }
     },
     {
-      "id": "straight",
-      "label": "스트레이트 암 풀",
-      "parent": "pull",
+      "id": "pull::복합관절::로우::수평",
+      "label": "수평",
+      "parent": "pull::복합관절::로우",
       "kind": "branch",
+      "level": "form",
       "images": [],
       "meanings": [],
       "fields": [],
@@ -263,47 +832,411 @@
       }
     },
     {
-      "id": "rear",
+      "id": "basic::시티드 로우",
+      "label": "시티드 로우",
+      "parent": "pull::복합관절::로우::수평",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-seated_row-m0",
+          "word": "시티드",
+          "meaning": "앉은 자세"
+        },
+        {
+          "id": "pack-ex-seated_row-m1",
+          "word": "로우",
+          "meaning": "당겨 모으는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::벤트오버 로우",
+      "label": "벤트오버 로우",
+      "parent": "pull::복합관절::로우::수평",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-bent_over_row-m0",
+          "word": "벤트오버",
+          "meaning": "몸통을 앞으로 기울인 자세"
+        },
+        {
+          "id": "pack-ex-bent_over_row-m1",
+          "word": "로우",
+          "meaning": "당겨 모으는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::복합관절::로우::상향 사선",
+      "label": "상향 사선",
+      "parent": "pull::복합관절::로우",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::하이 로우",
+      "label": "하이 로우",
+      "parent": "pull::복합관절::로우::상향 사선",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-high_row-m0",
+          "word": "원 암",
+          "meaning": "한 팔"
+        },
+        {
+          "id": "pack-ex-high_row-m1",
+          "word": "하이",
+          "meaning": "높은 위치"
+        },
+        {
+          "id": "pack-ex-high_row-m2",
+          "word": "로우",
+          "meaning": "당겨 모으는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::복합관절::로우::하향 사선",
+      "label": "하향 사선",
+      "parent": "pull::복합관절::로우",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::로우 로우",
+      "label": "로우 로우",
+      "parent": "pull::복합관절::로우::하향 사선",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-low_row-a",
+          "word": "머신",
+          "meaning": "도구"
+        },
+        {
+          "id": "pack-ex-low_row-b",
+          "word": "로우 (low)",
+          "meaning": "낮은 위치"
+        },
+        {
+          "id": "pack-ex-low_row-c",
+          "word": "로우 (row)",
+          "meaning": "당겨 모으는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::복합관절::풀",
+      "label": "풀",
+      "parent": "pull::복합관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::복합관절::풀::수직 하향",
+      "label": "수직 하향",
+      "parent": "pull::복합관절::풀",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::랫 풀다운",
+      "label": "랫 풀다운",
+      "parent": "pull::복합관절::풀::수직 하향",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-lat_pulldown-m0",
+          "word": "풀다운",
+          "meaning": "아래쪽으로 당기는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::복합관절::풀::수직 상향",
+      "label": "수직 상향",
+      "parent": "pull::복합관절::풀",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::풀업",
+      "label": "풀업",
+      "parent": "pull::복합관절::풀::수직 상향",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-pull_up-m0",
+          "word": "풀업",
+          "meaning": "매달린 몸을 끌어올리는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::친업",
+      "label": "친업",
+      "parent": "pull::복합관절::풀::수직 상향",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-chin_up-m0",
+          "word": "친업",
+          "meaning": "보통 손바닥을 몸쪽으로 둔 풀업"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::단일관절",
+      "label": "단일관절",
+      "parent": "pull",
+      "kind": "branch",
+      "level": "joint",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::단일관절::어깨 신전",
+      "label": "어깨 신전",
+      "parent": "pull::단일관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::단일관절::어깨 신전::상향 → 하향",
+      "label": "상향 → 하향",
+      "parent": "pull::단일관절::어깨 신전",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::스트레이트 암 풀다운",
+      "label": "스트레이트 암 풀다운",
+      "parent": "pull::단일관절::어깨 신전::상향 → 하향",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-straight_arm_pulldown-m0",
+          "word": "스트레이트 암",
+          "meaning": "팔꿈치 각도를 비교적 일정하게 유지하는 방식"
+        },
+        {
+          "id": "pack-ex-straight_arm_pulldown-m1",
+          "word": "풀다운",
+          "meaning": "아래쪽으로 당기는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::풀오버",
+      "label": "풀오버",
+      "parent": "pull::단일관절::어깨 신전::상향 → 하향",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-pullover-m0",
+          "word": "풀오버",
+          "meaning": "팔을 머리 위쪽에서 몸통 쪽으로 가져오는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::단일관절::후면 어깨 벌림",
+      "label": "후면 어깨 벌림",
+      "parent": "pull::단일관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::단일관절::후면 어깨 벌림::수평",
+      "label": "수평",
+      "parent": "pull::단일관절::후면 어깨 벌림",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::리어 델트 플라이",
       "label": "리어 델트 플라이",
-      "parent": "pull",
+      "parent": "pull::단일관절::후면 어깨 벌림::수평",
       "kind": "branch",
+      "level": "basic",
       "images": [],
-      "meanings": [],
-      "fields": [
+      "meanings": [
         {
-          "id": "rear-concept",
-          "title": "먼저 배우는 공통점",
-          "body": "등 운동과 함께 설명하는 어깨 보조 움직임입니다.",
-          "visible": true
+          "id": "pack-ex-rear_delt_fly-m0",
+          "word": "리어 델트",
+          "meaning": "어깨 뒤쪽"
+        },
+        {
+          "id": "pack-ex-rear_delt_fly-m1",
+          "word": "플라이",
+          "meaning": "팔을 벌리거나 모으는 움직임"
         }
       ],
-      "show": {
-        "image": true,
-        "path": true,
-        "meanings": true
-      },
-      "relation": "related"
-    },
-    {
-      "id": "curl",
-      "label": "컬",
-      "parent": "pull",
-      "kind": "branch",
-      "images": [],
-      "meanings": [],
       "fields": [],
       "show": {
         "image": true,
         "path": true,
         "meanings": true
-      },
-      "relation": "related"
+      }
     },
     {
-      "id": "deadlift",
-      "label": "데드리프트",
-      "parent": "hinge",
+      "id": "basic::리버스 플라이",
+      "label": "리버스 플라이",
+      "parent": "pull::단일관절::후면 어깨 벌림::수평",
       "kind": "branch",
+      "level": "basic",
       "images": [],
       "meanings": [],
       "fields": [],
@@ -314,10 +1247,11 @@
       }
     },
     {
-      "id": "bridge",
-      "label": "브리지·힙 쓰러스트",
-      "parent": "hinge",
+      "id": "pull::단일관절::팔꿈치 굴곡",
+      "label": "팔꿈치 굴곡",
+      "parent": "pull::단일관절",
       "kind": "branch",
+      "level": "movement",
       "images": [],
       "meanings": [],
       "fields": [],
@@ -328,10 +1262,11 @@
       }
     },
     {
-      "id": "hipExtension",
-      "label": "고관절 펴기",
-      "parent": "hinge",
+      "id": "pull::단일관절::팔꿈치 굴곡::일반",
+      "label": "일반",
+      "parent": "pull::단일관절::팔꿈치 굴곡",
       "kind": "branch",
+      "level": "form",
       "images": [],
       "meanings": [],
       "fields": [],
@@ -342,17 +1277,442 @@
       }
     },
     {
-      "id": "squatSupport",
-      "label": "관련 보조운동",
+      "id": "basic::바이셉스 컬",
+      "label": "바이셉스 컬",
+      "parent": "pull::단일관절::팔꿈치 굴곡::일반",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-biceps_curl-m0",
+          "word": "바이셉스",
+          "meaning": "상완이두근"
+        },
+        {
+          "id": "pack-ex-biceps_curl-m1",
+          "word": "컬",
+          "meaning": "관절을 굽히는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::단일관절::팔꿈치 굴곡::중립 그립",
+      "label": "중립 그립",
+      "parent": "pull::단일관절::팔꿈치 굴곡",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::해머 컬",
+      "label": "해머 컬",
+      "parent": "pull::단일관절::팔꿈치 굴곡::중립 그립",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-hammer_curl-m0",
+          "word": "해머",
+          "meaning": "손바닥이 서로 마주보는 그립"
+        },
+        {
+          "id": "pack-ex-hammer_curl-m1",
+          "word": "컬",
+          "meaning": "관절을 굽히는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "pull::단일관절::팔꿈치 굴곡::회내 그립",
+      "label": "회내 그립",
+      "parent": "pull::단일관절::팔꿈치 굴곡",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::리버스 컬",
+      "label": "리버스 컬",
+      "parent": "pull::단일관절::팔꿈치 굴곡::회내 그립",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-reverse_curl-m0",
+          "word": "리버스",
+          "meaning": "반대 방향 / 런지에서는 뒤로 이동"
+        },
+        {
+          "id": "pack-ex-reverse_curl-m1",
+          "word": "컬",
+          "meaning": "관절을 굽히는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::복합관절",
+      "label": "복합관절",
       "parent": "squat",
       "kind": "branch",
+      "level": "joint",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::복합관절::스쿼트",
+      "label": "스쿼트",
+      "parent": "squat::복합관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::복합관절::스쿼트::양측",
+      "label": "양측",
+      "parent": "squat::복합관절::스쿼트",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::스쿼트",
+      "label": "스쿼트",
+      "parent": "squat::복합관절::스쿼트::양측",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-squat_basic-m0",
+          "word": "스쿼트",
+          "meaning": "앉았다 일어서는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::복합관절::스쿼트::전방 부하",
+      "label": "전방 부하",
+      "parent": "squat::복합관절::스쿼트",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::프론트 스쿼트",
+      "label": "프론트 스쿼트",
+      "parent": "squat::복합관절::스쿼트::전방 부하",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-front_squat-m0",
+          "word": "프론트",
+          "meaning": "앞쪽 / 스쿼트에서는 중량의 앞쪽 위치"
+        },
+        {
+          "id": "pack-ex-front_squat-m1",
+          "word": "스쿼트",
+          "meaning": "앉았다 일어서는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::복합관절::스쿼트::후방 부하",
+      "label": "후방 부하",
+      "parent": "squat::복합관절::스쿼트",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::백 스쿼트",
+      "label": "백 스쿼트",
+      "parent": "squat::복합관절::스쿼트::후방 부하",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-back_squat-m0",
+          "word": "백",
+          "meaning": "뒤쪽 / 스쿼트에서는 중량의 뒤쪽 위치"
+        },
+        {
+          "id": "pack-ex-back_squat-m1",
+          "word": "스쿼트",
+          "meaning": "앉았다 일어서는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::복합관절::스쿼트::넓은 스탠스",
+      "label": "넓은 스탠스",
+      "parent": "squat::복합관절::스쿼트",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::스모 스쿼트",
+      "label": "스모 스쿼트",
+      "parent": "squat::복합관절::스쿼트::넓은 스탠스",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-sumo_squat-m0",
+          "word": "스모",
+          "meaning": "발을 넓게 벌린 자세"
+        },
+        {
+          "id": "pack-ex-sumo_squat-m1",
+          "word": "스쿼트",
+          "meaning": "앉았다 일어서는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::복합관절::프레스",
+      "label": "프레스",
+      "parent": "squat::복합관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::복합관절::프레스::양측",
+      "label": "양측",
+      "parent": "squat::복합관절::프레스",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::레그 프레스",
+      "label": "레그 프레스",
+      "parent": "squat::복합관절::프레스::양측",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-leg_press-m0",
+          "word": "레그",
+          "meaning": "다리"
+        },
+        {
+          "id": "pack-ex-leg_press-m1",
+          "word": "프레스",
+          "meaning": "저항을 밀어 내는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::복합관절::스쿼트 머신 패턴",
+      "label": "스쿼트 머신 패턴",
+      "parent": "squat::복합관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::복합관절::스쿼트 머신 패턴::수직",
+      "label": "수직",
+      "parent": "squat::복합관절::스쿼트 머신 패턴",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::핵 스쿼트",
+      "label": "핵 스쿼트",
+      "parent": "squat::복합관절::스쿼트 머신 패턴::수직",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-hack_squat-m0",
+          "word": "핵",
+          "meaning": "등받이·레일을 사용하는 스쿼트 변형"
+        },
+        {
+          "id": "pack-ex-hack_squat-m1",
+          "word": "스쿼트",
+          "meaning": "앉았다 일어서는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::V 스쿼트",
+      "label": "V 스쿼트",
+      "parent": "squat::복합관절::스쿼트 머신 패턴::수직",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::단일관절",
+      "label": "단일관절",
+      "parent": "squat",
+      "kind": "branch",
+      "level": "joint",
       "images": [],
       "meanings": [],
       "fields": [
         {
-          "id": "squatSupport-concept",
-          "title": "먼저 배우는 공통점",
-          "body": "스쿼트의 종류가 아니라 관련 부위의 보조운동입니다.",
+          "id": "squat::단일관절-note",
+          "title": "관련 보조운동",
+          "body": "이 패턴 자체의 변형이 아니라 관련 부위의 보조운동을 함께 찾아보기 위한 분류입니다.",
           "visible": true
         }
       ],
@@ -364,17 +1724,483 @@
       "relation": "related"
     },
     {
-      "id": "hingeSupport",
-      "label": "관련 보조운동",
+      "id": "squat::단일관절::무릎 신전",
+      "label": "무릎 신전",
+      "parent": "squat::단일관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::단일관절::무릎 신전::전방",
+      "label": "전방",
+      "parent": "squat::단일관절::무릎 신전",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::레그 익스텐션",
+      "label": "레그 익스텐션",
+      "parent": "squat::단일관절::무릎 신전::전방",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-leg_extension-m0",
+          "word": "레그",
+          "meaning": "다리"
+        },
+        {
+          "id": "pack-ex-leg_extension-m1",
+          "word": "익스텐션",
+          "meaning": "관절을 펴는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::단일관절::고관절 내전",
+      "label": "고관절 내전",
+      "parent": "squat::단일관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "squat::단일관절::고관절 내전::내측",
+      "label": "내측",
+      "parent": "squat::단일관절::고관절 내전",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::힙 어덕션",
+      "label": "힙 어덕션",
+      "parent": "squat::단일관절::고관절 내전::내측",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-hip_adduction-m0",
+          "word": "힙",
+          "meaning": "엉덩이·고관절"
+        },
+        {
+          "id": "pack-ex-hip_adduction-m1",
+          "word": "어덕션",
+          "meaning": "몸의 중심 쪽으로 모으기"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::복합관절",
+      "label": "복합관절",
       "parent": "hinge",
       "kind": "branch",
+      "level": "joint",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::복합관절::데드리프트",
+      "label": "데드리프트",
+      "parent": "hinge::복합관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::복합관절::데드리프트::일반",
+      "label": "일반",
+      "parent": "hinge::복합관절::데드리프트",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::데드리프트",
+      "label": "데드리프트",
+      "parent": "hinge::복합관절::데드리프트::일반",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-deadlift-m0",
+          "word": "컨벤셔널",
+          "meaning": "일반적인 데드리프트 방식"
+        },
+        {
+          "id": "pack-ex-deadlift-m1",
+          "word": "데드리프트",
+          "meaning": "고관절·무릎을 펴며 중량을 드는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::복합관절::데드리프트::무릎 굴곡 적음",
+      "label": "무릎 굴곡 적음",
+      "parent": "hinge::복합관절::데드리프트",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::루마니안 데드리프트",
+      "label": "루마니안 데드리프트",
+      "parent": "hinge::복합관절::데드리프트::무릎 굴곡 적음",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-romanian_deadlift-m0",
+          "word": "루마니안",
+          "meaning": "고관절을 뒤로 보내는 데드리프트 변형"
+        },
+        {
+          "id": "pack-ex-romanian_deadlift-m1",
+          "word": "데드리프트",
+          "meaning": "고관절·무릎을 펴며 중량을 드는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::스티프 레그 데드리프트",
+      "label": "스티프 레그 데드리프트",
+      "parent": "hinge::복합관절::데드리프트::무릎 굴곡 적음",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-stiff_leg_deadlift-m0",
+          "word": "스티프 레그",
+          "meaning": "무릎 굽힘을 작게 유지하는 자세"
+        },
+        {
+          "id": "pack-ex-stiff_leg_deadlift-m1",
+          "word": "데드리프트",
+          "meaning": "고관절·무릎을 펴며 중량을 드는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::복합관절::데드리프트::넓은 스탠스",
+      "label": "넓은 스탠스",
+      "parent": "hinge::복합관절::데드리프트",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::스모 데드리프트",
+      "label": "스모 데드리프트",
+      "parent": "hinge::복합관절::데드리프트::넓은 스탠스",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-sumo_deadlift-m0",
+          "word": "스모",
+          "meaning": "발을 넓게 벌린 자세"
+        },
+        {
+          "id": "pack-ex-sumo_deadlift-m1",
+          "word": "데드리프트",
+          "meaning": "고관절·무릎을 펴며 중량을 드는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::복합관절::힙 익스텐션",
+      "label": "힙 익스텐션",
+      "parent": "hinge::복합관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::복합관절::힙 익스텐션::수평",
+      "label": "수평",
+      "parent": "hinge::복합관절::힙 익스텐션",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::힙 쓰러스트",
+      "label": "힙 쓰러스트",
+      "parent": "hinge::복합관절::힙 익스텐션::수평",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-hip_thrust-m0",
+          "word": "힙",
+          "meaning": "엉덩이·고관절"
+        },
+        {
+          "id": "pack-ex-hip_thrust-m1",
+          "word": "쓰러스트",
+          "meaning": "골반을 들어 올리는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::글루트 브리지",
+      "label": "글루트 브리지",
+      "parent": "hinge::복합관절::힙 익스텐션::수평",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-glute_bridge-m0",
+          "word": "글루트",
+          "meaning": "둔근"
+        },
+        {
+          "id": "pack-ex-glute_bridge-m1",
+          "word": "브리지",
+          "meaning": "몸을 지지하고 골반을 들어 올리는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::복합관절::힙 익스텐션::몸통 고정 / 고관절 신전",
+      "label": "몸통 고정 / 고관절 신전",
+      "parent": "hinge::복합관절::힙 익스텐션",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::백 익스텐션",
+      "label": "백 익스텐션",
+      "parent": "hinge::복합관절::힙 익스텐션::몸통 고정 / 고관절 신전",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-back_extension-m0",
+          "word": "백",
+          "meaning": "뒤쪽 / 스쿼트에서는 중량의 뒤쪽 위치"
+        },
+        {
+          "id": "pack-ex-back_extension-m1",
+          "word": "익스텐션",
+          "meaning": "관절을 펴는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::복합관절::굿모닝 패턴",
+      "label": "굿모닝 패턴",
+      "parent": "hinge::복합관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::복합관절::굿모닝 패턴::전후",
+      "label": "전후",
+      "parent": "hinge::복합관절::굿모닝 패턴",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::굿모닝",
+      "label": "굿모닝",
+      "parent": "hinge::복합관절::굿모닝 패턴::전후",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-good_morning-m0",
+          "word": "굿모닝",
+          "meaning": "상체를 숙였다 세우는 고관절 중심 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::단일관절",
+      "label": "단일관절",
+      "parent": "hinge",
+      "kind": "branch",
+      "level": "joint",
       "images": [],
       "meanings": [],
       "fields": [
         {
-          "id": "hingeSupport-concept",
-          "title": "먼저 배우는 공통점",
-          "body": "힌지의 종류가 아니라 관련 부위의 보조운동입니다.",
+          "id": "hinge::단일관절-note",
+          "title": "관련 보조운동",
+          "body": "이 패턴 자체의 변형이 아니라 관련 부위의 보조운동을 함께 찾아보기 위한 분류입니다.",
           "visible": true
         }
       ],
@@ -386,10 +2212,791 @@
       "relation": "related"
     },
     {
-      "id": "pack-tool-press-머신",
-      "label": "머신",
-      "parent": "press",
+      "id": "hinge::단일관절::무릎 굴곡",
+      "label": "무릎 굴곡",
+      "parent": "hinge::단일관절",
       "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::단일관절::무릎 굴곡::앉은 자세",
+      "label": "앉은 자세",
+      "parent": "hinge::단일관절::무릎 굴곡",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::시티드 레그 컬",
+      "label": "시티드 레그 컬",
+      "parent": "hinge::단일관절::무릎 굴곡::앉은 자세",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-leg_curl-m0",
+          "word": "레그",
+          "meaning": "다리"
+        },
+        {
+          "id": "pack-ex-leg_curl-m1",
+          "word": "컬",
+          "meaning": "관절을 굽히는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::단일관절::무릎 굴곡::누운 자세",
+      "label": "누운 자세",
+      "parent": "hinge::단일관절::무릎 굴곡",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::라잉 레그 컬",
+      "label": "라잉 레그 컬",
+      "parent": "hinge::단일관절::무릎 굴곡::누운 자세",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::단일관절::무릎 굴곡::선 자세",
+      "label": "선 자세",
+      "parent": "hinge::단일관절::무릎 굴곡",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::스탠딩 레그 컬",
+      "label": "스탠딩 레그 컬",
+      "parent": "hinge::단일관절::무릎 굴곡::선 자세",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::단일관절::고관절 신전",
+      "label": "고관절 신전",
+      "parent": "hinge::단일관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::단일관절::고관절 신전::후방",
+      "label": "후방",
+      "parent": "hinge::단일관절::고관절 신전",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::힙 익스텐션",
+      "label": "힙 익스텐션",
+      "parent": "hinge::단일관절::고관절 신전::후방",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-hip_extension-m0",
+          "word": "스탠딩",
+          "meaning": "선 자세"
+        },
+        {
+          "id": "pack-ex-hip_extension-m1",
+          "word": "힙",
+          "meaning": "엉덩이·고관절"
+        },
+        {
+          "id": "pack-ex-hip_extension-m2",
+          "word": "익스텐션",
+          "meaning": "관절을 펴는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::글루트 킥백",
+      "label": "글루트 킥백",
+      "parent": "hinge::단일관절::고관절 신전::후방",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-glute_kickback-m0",
+          "word": "글루트",
+          "meaning": "둔근"
+        },
+        {
+          "id": "pack-ex-glute_kickback-m1",
+          "word": "킥백",
+          "meaning": "팔이나 다리를 뒤로 보내는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::단일관절::고관절 외전",
+      "label": "고관절 외전",
+      "parent": "hinge::단일관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "hinge::단일관절::고관절 외전::측방",
+      "label": "측방",
+      "parent": "hinge::단일관절::고관절 외전",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::힙 어브덕션",
+      "label": "힙 어브덕션",
+      "parent": "hinge::단일관절::고관절 외전::측방",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-hip_abduction-m0",
+          "word": "힙",
+          "meaning": "엉덩이·고관절"
+        },
+        {
+          "id": "pack-ex-hip_abduction-m1",
+          "word": "어브덕션",
+          "meaning": "몸의 중심에서 멀어지게 벌리기"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::아웃 타이",
+      "label": "아웃 타이",
+      "parent": "hinge::단일관절::고관절 외전::측방",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절",
+      "label": "복합관절",
+      "parent": "lunge",
+      "kind": "branch",
+      "level": "joint",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::런지",
+      "label": "런지",
+      "parent": "lunge::복합관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::런지::전방",
+      "label": "전방",
+      "parent": "lunge::복합관절::런지",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::포워드 런지",
+      "label": "포워드 런지",
+      "parent": "lunge::복합관절::런지::전방",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-forward_lunge-m0",
+          "word": "포워드",
+          "meaning": "앞쪽으로 이동"
+        },
+        {
+          "id": "pack-ex-forward_lunge-m1",
+          "word": "런지",
+          "meaning": "두 다리의 위치를 나누어 몸을 낮추고 올리기"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::런지::후방",
+      "label": "후방",
+      "parent": "lunge::복합관절::런지",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::리버스 런지",
+      "label": "리버스 런지",
+      "parent": "lunge::복합관절::런지::후방",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-reverse_lunge-m0",
+          "word": "리버스",
+          "meaning": "반대 방향 / 런지에서는 뒤로 이동"
+        },
+        {
+          "id": "pack-ex-reverse_lunge-m1",
+          "word": "런지",
+          "meaning": "두 다리의 위치를 나누어 몸을 낮추고 올리기"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::런지::연속 전방",
+      "label": "연속 전방",
+      "parent": "lunge::복합관절::런지",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::워킹 런지",
+      "label": "워킹 런지",
+      "parent": "lunge::복합관절::런지::연속 전방",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-walking_lunge-m0",
+          "word": "워킹",
+          "meaning": "걸으며 이동"
+        },
+        {
+          "id": "pack-ex-walking_lunge-m1",
+          "word": "런지",
+          "meaning": "두 다리의 위치를 나누어 몸을 낮추고 올리기"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::런지::측방",
+      "label": "측방",
+      "parent": "lunge::복합관절::런지",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::사이드 런지",
+      "label": "사이드 런지",
+      "parent": "lunge::복합관절::런지::측방",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-side_lunge-m0",
+          "word": "사이드",
+          "meaning": "옆쪽"
+        },
+        {
+          "id": "pack-ex-side_lunge-m1",
+          "word": "런지",
+          "meaning": "두 다리의 위치를 나누어 몸을 낮추고 올리기"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::런지::대각선",
+      "label": "대각선",
+      "parent": "lunge::복합관절::런지",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::커시 런지",
+      "label": "커시 런지",
+      "parent": "lunge::복합관절::런지::대각선",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-curtsy_lunge-m0",
+          "word": "커트시",
+          "meaning": "뒤쪽으로 교차하는 발 배치"
+        },
+        {
+          "id": "pack-ex-curtsy_lunge-m1",
+          "word": "런지",
+          "meaning": "두 다리의 위치를 나누어 몸을 낮추고 올리기"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::스플릿 스쿼트",
+      "label": "스플릿 스쿼트",
+      "parent": "lunge::복합관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::스플릿 스쿼트::고정 자세",
+      "label": "고정 자세",
+      "parent": "lunge::복합관절::스플릿 스쿼트",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::스플릿 스쿼트",
+      "label": "스플릿 스쿼트",
+      "parent": "lunge::복합관절::스플릿 스쿼트::고정 자세",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-split_squat-m0",
+          "word": "스플릿",
+          "meaning": "두 발을 앞뒤로 나눈 자세"
+        },
+        {
+          "id": "pack-ex-split_squat-m1",
+          "word": "스쿼트",
+          "meaning": "앉았다 일어서는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::스플릿 스쿼트::후방 다리 거상",
+      "label": "후방 다리 거상",
+      "parent": "lunge::복합관절::스플릿 스쿼트",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::불가리안 스플릿 스쿼트",
+      "label": "불가리안 스플릿 스쿼트",
+      "parent": "lunge::복합관절::스플릿 스쿼트::후방 다리 거상",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-bulgarian_split_squat-m0",
+          "word": "불가리안",
+          "meaning": "뒷발을 높은 지지대에 둔 스플릿 자세"
+        },
+        {
+          "id": "pack-ex-bulgarian_split_squat-m1",
+          "word": "스플릿",
+          "meaning": "두 발을 앞뒤로 나눈 자세"
+        },
+        {
+          "id": "pack-ex-bulgarian_split_squat-m2",
+          "word": "스쿼트",
+          "meaning": "앉았다 일어서는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::스텝",
+      "label": "스텝",
+      "parent": "lunge::복합관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::스텝::상향",
+      "label": "상향",
+      "parent": "lunge::복합관절::스텝",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::스텝업",
+      "label": "스텝업",
+      "parent": "lunge::복합관절::스텝::상향",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-step_up-m0",
+          "word": "스텝업",
+          "meaning": "높은 지지대로 올라가기"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::스텝::하향",
+      "label": "하향",
+      "parent": "lunge::복합관절::스텝",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::스텝다운",
+      "label": "스텝다운",
+      "parent": "lunge::복합관절::스텝::하향",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-step_down-m0",
+          "word": "스텝다운",
+          "meaning": "높은 지지대에서 내려가기"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::싱글 레그 Squat",
+      "label": "싱글 레그 Squat",
+      "parent": "lunge::복합관절",
+      "kind": "branch",
+      "level": "movement",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "lunge::복합관절::싱글 레그 Squat::한쪽 지지",
+      "label": "한쪽 지지",
+      "parent": "lunge::복합관절::싱글 레그 Squat",
+      "kind": "branch",
+      "level": "form",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::싱글 레그 스쿼트",
+      "label": "싱글 레그 스쿼트",
+      "parent": "lunge::복합관절::싱글 레그 Squat::한쪽 지지",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-single_leg_squat-m0",
+          "word": "싱글 레그",
+          "meaning": "한 다리를 중심으로 수행"
+        },
+        {
+          "id": "pack-ex-single_leg_squat-m1",
+          "word": "스쿼트",
+          "meaning": "앉았다 일어서는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::피스톨 스쿼트",
+      "label": "피스톨 스쿼트",
+      "parent": "lunge::복합관절::싱글 레그 Squat::한쪽 지지",
+      "kind": "branch",
+      "level": "basic",
+      "images": [],
+      "meanings": [
+        {
+          "id": "pack-ex-pistol_squat-m0",
+          "word": "피스톨",
+          "meaning": "한쪽 다리를 앞으로 뻗는 한 발 스쿼트"
+        },
+        {
+          "id": "pack-ex-pistol_squat-m1",
+          "word": "스쿼트",
+          "meaning": "앉았다 일어서는 움직임"
+        }
+      ],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::체스트 프레스::tool::머신",
+      "label": "머신",
+      "parent": "basic::체스트 프레스",
+      "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -409,15 +3016,9 @@
     {
       "id": "pack-ex-chest_press",
       "label": "머신 체스트 프레스",
-      "parent": "pack-tool-press-머신",
+      "parent": "basic::체스트 프레스::tool::머신",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-chest_press-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/chest/Chest%20Press.png",
-          "alt": "체스트 프레스 (핀)"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-chest_press-tool",
@@ -442,16 +3043,14 @@
         "meanings": true
       },
       "sourceExerciseId": "chest_press",
-      "aliases": [
-        "체스트 프레스",
-        "체스트 프레스"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-press-맨몸",
+      "id": "basic::푸시업::tool::맨몸",
       "label": "맨몸",
-      "parent": "press",
+      "parent": "basic::푸시업",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -471,15 +3070,9 @@
     {
       "id": "pack-ex-push_up",
       "label": "맨몸 푸시업",
-      "parent": "pack-tool-press-맨몸",
+      "parent": "basic::푸시업::tool::맨몸",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-push_up-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/chest/Push%20Ups.png",
-          "alt": "푸시업스"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-push_up-tool",
@@ -499,16 +3092,14 @@
         "meanings": true
       },
       "sourceExerciseId": "push_up",
-      "aliases": [
-        "푸시업",
-        "푸시업"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-press-바벨",
+      "id": "basic::인클라인 체스트 프레스::tool::바벨",
       "label": "바벨",
-      "parent": "press",
+      "parent": "basic::인클라인 체스트 프레스",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -528,15 +3119,9 @@
     {
       "id": "pack-ex-incline_chest_press",
       "label": "바벨 인클라인 체스트 프레스",
-      "parent": "pack-tool-press-바벨",
+      "parent": "basic::인클라인 체스트 프레스::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-incline_chest_press-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/chest/Barbell%20Incline%20Bench%20Press.png",
-          "alt": "바벨 인클라인 벤치 프레스"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-incline_chest_press-tool",
@@ -566,23 +3151,36 @@
         "meanings": true
       },
       "sourceExerciseId": "incline_chest_press",
-      "aliases": [
-        "인클라인 체스트 프레스",
-        "인클라인 체스트 프레스"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::디클라인 체스트 프레스::tool::바벨",
+      "label": "바벨",
+      "parent": "basic::디클라인 체스트 프레스",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-press-바벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "두 손이 하나의 바를 공유합니다. 그립과 바의 이동 경로를 확인합니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-decline_chest_press",
       "label": "바벨 디클라인 체스트 프레스",
-      "parent": "pack-tool-press-바벨",
+      "parent": "basic::디클라인 체스트 프레스::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-decline_chest_press-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/chest/Barbell%20Decline%20Bench%20Press.png",
-          "alt": "바벨 디클라인 벤치 프레스"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-decline_chest_press-tool",
@@ -612,16 +3210,14 @@
         "meanings": true
       },
       "sourceExerciseId": "decline_chest_press",
-      "aliases": [
-        "디클라인 체스트 프레스",
-        "디클라인 체스트 프레스"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-press-덤벨",
+      "id": "basic::숄더 프레스::tool::덤벨",
       "label": "덤벨",
-      "parent": "press",
+      "parent": "basic::숄더 프레스",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -641,15 +3237,9 @@
     {
       "id": "pack-ex-shoulder_press",
       "label": "덤벨 숄더 프레스",
-      "parent": "pack-tool-press-덤벨",
+      "parent": "basic::숄더 프레스::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-shoulder_press-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/shoulder/Dumbbell%20Seated%20Shoulder%20Press.png",
-          "alt": "덤벨 시티드 숄더 프레스"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-shoulder_press-tool",
@@ -674,15 +3264,34 @@
         "meanings": true
       },
       "sourceExerciseId": "shoulder_press",
-      "aliases": [
-        "숄더 프레스",
-        "숄더 프레스"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::딥스::tool::맨몸",
+      "label": "맨몸",
+      "parent": "basic::딥스",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-press-맨몸-difference",
+          "title": "이번에 달라지는 점",
+          "body": "손과 발의 지지 위치, 몸의 각도에 따라 부담이 달라집니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-dip",
       "label": "맨몸 딥스",
-      "parent": "pack-tool-press-맨몸",
+      "parent": "basic::딥스::tool::맨몸",
       "kind": "exercise",
       "images": [],
       "meanings": [
@@ -704,16 +3313,14 @@
         "meanings": true
       },
       "sourceExerciseId": "dip",
-      "aliases": [
-        "딥스",
-        "딥스"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-fly-덤벨",
+      "id": "basic::체스트 플라이::tool::덤벨",
       "label": "덤벨",
-      "parent": "fly",
+      "parent": "basic::체스트 플라이",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -733,15 +3340,9 @@
     {
       "id": "pack-ex-chest_fly",
       "label": "덤벨 체스트 플라이",
-      "parent": "pack-tool-fly-덤벨",
+      "parent": "basic::체스트 플라이::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-chest_fly-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/chest/Dumbbell%20Fly.png",
-          "alt": "덤벨 플라이"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-chest_fly-tool",
@@ -766,23 +3367,36 @@
         "meanings": true
       },
       "sourceExerciseId": "chest_fly",
-      "aliases": [
-        "체스트 플라이",
-        "체스트 플라이"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::인클라인 플라이::tool::덤벨",
+      "label": "덤벨",
+      "parent": "basic::인클라인 플라이",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-fly-덤벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "양손을 각각 움직이며 도구와 몸통을 스스로 안정시킵니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-incline_fly",
       "label": "덤벨 인클라인 플라이",
-      "parent": "pack-tool-fly-덤벨",
+      "parent": "basic::인클라인 플라이::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-incline_fly-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/chest/Dumbbell%20Incline%20Fly.png",
-          "alt": "덤벨 인클라인 플라이"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-incline_fly-tool",
@@ -807,16 +3421,14 @@
         "meanings": true
       },
       "sourceExerciseId": "incline_fly",
-      "aliases": [
-        "인클라인 플라이",
-        "인클라인 플라이"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-fly-케이블",
+      "id": "basic::로우 투 하이 플라이::tool::케이블",
       "label": "케이블",
-      "parent": "fly",
+      "parent": "basic::로우 투 하이 플라이",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -836,7 +3448,7 @@
     {
       "id": "pack-ex-low_to_high_fly",
       "label": "케이블 로우 투 하이 플라이",
-      "parent": "pack-tool-fly-케이블",
+      "parent": "basic::로우 투 하이 플라이::tool::케이블",
       "kind": "exercise",
       "images": [],
       "meanings": [
@@ -863,15 +3475,34 @@
         "meanings": true
       },
       "sourceExerciseId": "low_to_high_fly",
-      "aliases": [
-        "로우 투 하이 플라이",
-        "로우 투 하이 플라이"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::하이 투 로우 플라이::tool::케이블",
+      "label": "케이블",
+      "parent": "basic::하이 투 로우 플라이",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-fly-케이블-difference",
+          "title": "이번에 달라지는 점",
+          "body": "도르래 높이와 손잡이에 따라 저항이 오는 방향이 달라집니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-high_to_low_fly",
       "label": "케이블 하이 투 로우 플라이",
-      "parent": "pack-tool-fly-케이블",
+      "parent": "basic::하이 투 로우 플라이::tool::케이블",
       "kind": "exercise",
       "images": [],
       "meanings": [
@@ -898,16 +3529,14 @@
         "meanings": true
       },
       "sourceExerciseId": "high_to_low_fly",
-      "aliases": [
-        "하이 투 로우 플라이",
-        "하이 투 로우 플라이"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-raise-덤벨",
+      "id": "basic::프론트 레이즈::tool::덤벨",
       "label": "덤벨",
-      "parent": "raise",
+      "parent": "basic::프론트 레이즈",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -927,15 +3556,9 @@
     {
       "id": "pack-ex-front_raise",
       "label": "덤벨 프론트 레이즈",
-      "parent": "pack-tool-raise-덤벨",
+      "parent": "basic::프론트 레이즈::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-front_raise-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/shoulder/Dumbbell%20Front%20Raise.png",
-          "alt": "덤벨 프론트 레이즈"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-front_raise-tool",
@@ -960,23 +3583,36 @@
         "meanings": true
       },
       "sourceExerciseId": "front_raise",
-      "aliases": [
-        "프론트 레이즈",
-        "프론트 레이즈"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::래터럴 레이즈::tool::덤벨",
+      "label": "덤벨",
+      "parent": "basic::래터럴 레이즈",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-raise-덤벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "양손을 각각 움직이며 도구와 몸통을 스스로 안정시킵니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-lateral_raise",
       "label": "덤벨 래터럴 레이즈",
-      "parent": "pack-tool-raise-덤벨",
+      "parent": "basic::래터럴 레이즈::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-lateral_raise-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/shoulder/Dumbbell%20Standing%20Lateral%20Raise.png",
-          "alt": "덤벨 스탠딩 래터럴 레이즈"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-lateral_raise-tool",
@@ -1001,16 +3637,14 @@
         "meanings": true
       },
       "sourceExerciseId": "lateral_raise",
-      "aliases": [
-        "래터럴 레이즈",
-        "래터럴 레이즈"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-extension-케이블",
+      "id": "basic::트라이셉스 푸시다운::tool::케이블",
       "label": "케이블",
-      "parent": "extension",
+      "parent": "basic::트라이셉스 푸시다운",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1030,15 +3664,9 @@
     {
       "id": "pack-ex-triceps_pushdown",
       "label": "케이블 트라이셉스 푸시다운",
-      "parent": "pack-tool-extension-케이블",
+      "parent": "basic::트라이셉스 푸시다운::tool::케이블",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-triceps_pushdown-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/arm/Cable%20Pushdown.png",
-          "alt": "케이블 푸시다운"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-triceps_pushdown-tool",
@@ -1063,16 +3691,14 @@
         "meanings": true
       },
       "sourceExerciseId": "triceps_pushdown",
-      "aliases": [
-        "트라이셉스 푸시다운",
-        "트라이셉스 푸시다운"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-extension-덤벨",
+      "id": "basic::오버헤드 트라이셉스 익스텐션::tool::덤벨",
       "label": "덤벨",
-      "parent": "extension",
+      "parent": "basic::오버헤드 트라이셉스 익스텐션",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1092,15 +3718,9 @@
     {
       "id": "pack-ex-overhead_triceps_extension",
       "label": "덤벨 오버헤드 트라이셉스 익스텐션",
-      "parent": "pack-tool-extension-덤벨",
+      "parent": "basic::오버헤드 트라이셉스 익스텐션::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-overhead_triceps_extension-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/arm/Dumbbell%20Standing%20Triceps%20Extension.png",
-          "alt": "덤벨 스탠딩 트라이셉스 익스텐션"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-overhead_triceps_extension-tool",
@@ -1130,23 +3750,36 @@
         "meanings": true
       },
       "sourceExerciseId": "overhead_triceps_extension",
-      "aliases": [
-        "오버헤드 트라이셉스 익스텐션",
-        "오버헤드 트라이셉스 익스텐션"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::트라이셉스 킥백::tool::덤벨",
+      "label": "덤벨",
+      "parent": "basic::트라이셉스 킥백",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-extension-덤벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "양손을 각각 움직이며 도구와 몸통을 스스로 안정시킵니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-triceps_kickback",
       "label": "덤벨 트라이셉스 킥백",
-      "parent": "pack-tool-extension-덤벨",
+      "parent": "basic::트라이셉스 킥백::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-triceps_kickback-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/arm/Dumbbell%20Kickback.png",
-          "alt": "덤벨 킥백"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-triceps_kickback-tool",
@@ -1171,16 +3804,14 @@
         "meanings": true
       },
       "sourceExerciseId": "triceps_kickback",
-      "aliases": [
-        "트라이셉스 킥백",
-        "트라이셉스 킥백"
-      ]
+      "level": "variant"
     },
     {
-      "id": "machine",
+      "id": "basic::시티드 로우::tool::머신",
       "label": "머신",
-      "parent": "row",
+      "parent": "basic::시티드 로우",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1200,15 +3831,9 @@
     {
       "id": "pack-ex-seated_row",
       "label": "머신 시티드 로우",
-      "parent": "machine",
+      "parent": "basic::시티드 로우::tool::머신",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-seated_row-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/back/Seated%20Row%20%28Pin%29.png",
-          "alt": "시티드 로우 (핀)"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-seated_row-tool",
@@ -1233,16 +3858,14 @@
         "meanings": true
       },
       "sourceExerciseId": "seated_row",
-      "aliases": [
-        "시티드 로우",
-        "시티드 로우"
-      ]
+      "level": "variant"
     },
     {
-      "id": "barbell",
+      "id": "basic::벤트오버 로우::tool::바벨",
       "label": "바벨",
-      "parent": "row",
+      "parent": "basic::벤트오버 로우",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1262,15 +3885,9 @@
     {
       "id": "pack-ex-bent_over_row",
       "label": "바벨 벤트오버 로우",
-      "parent": "barbell",
+      "parent": "basic::벤트오버 로우::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-bent_over_row-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/back/Barbell%20Bent%20Over%20Row.png",
-          "alt": "바벨 벤트 오버 로우"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-bent_over_row-tool",
@@ -1295,16 +3912,14 @@
         "meanings": true
       },
       "sourceExerciseId": "bent_over_row",
-      "aliases": [
-        "벤트오버 로우",
-        "벤트오버 로우"
-      ]
+      "level": "variant"
     },
     {
-      "id": "cable",
+      "id": "basic::하이 로우::tool::케이블",
       "label": "케이블",
-      "parent": "row",
+      "parent": "basic::하이 로우",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1324,15 +3939,9 @@
     {
       "id": "pack-ex-high_row",
       "label": "케이블 원 암 하이 로우",
-      "parent": "cable",
+      "parent": "basic::하이 로우::tool::케이블",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-high_row-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/back/Cable%20Single%20Arm%20High%20Row.png",
-          "alt": "케이블 싱글 암 하이 로우"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-high_row-tool",
@@ -1362,15 +3971,34 @@
         "meanings": true
       },
       "sourceExerciseId": "high_row",
-      "aliases": [
-        "하이 로우",
-        "원 암 하이 로우"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::로우 로우::tool::머신",
+      "label": "머신",
+      "parent": "basic::로우 로우",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "machine-difference",
+          "title": "이번에 달라지는 점",
+          "body": "좌석·패드·손잡이 위치와 기구의 이동 경로를 확인합니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-low_row",
       "label": "머신 로우 로우",
-      "parent": "machine",
+      "parent": "basic::로우 로우::tool::머신",
       "kind": "exercise",
       "images": [],
       "meanings": [
@@ -1397,16 +4025,14 @@
         "meanings": true
       },
       "sourceExerciseId": "low_row",
-      "aliases": [
-        "로우 로우",
-        "로우 로우"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-pulldown-케이블",
+      "id": "basic::랫 풀다운::tool::케이블",
       "label": "케이블",
-      "parent": "pulldown",
+      "parent": "basic::랫 풀다운",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1426,15 +4052,9 @@
     {
       "id": "pack-ex-lat_pulldown",
       "label": "케이블 랫 풀다운",
-      "parent": "pack-tool-pulldown-케이블",
+      "parent": "basic::랫 풀다운::tool::케이블",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-lat_pulldown-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/back/Cable%20Wide%20Grip%20Lat%20Pulldown.png",
-          "alt": "케이블 와이드 그립 랫 풀다운"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-lat_pulldown-tool",
@@ -1454,16 +4074,14 @@
         "meanings": true
       },
       "sourceExerciseId": "lat_pulldown",
-      "aliases": [
-        "랫 풀다운",
-        "랫 풀다운"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-pullup-맨몸",
+      "id": "basic::풀업::tool::맨몸",
       "label": "맨몸",
-      "parent": "pullup",
+      "parent": "basic::풀업",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1483,15 +4101,9 @@
     {
       "id": "pack-ex-pull_up",
       "label": "맨몸 풀업",
-      "parent": "pack-tool-pullup-맨몸",
+      "parent": "basic::풀업::tool::맨몸",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-pull_up-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/back/Pull%20Up.png",
-          "alt": "풀 업"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-pull_up-tool",
@@ -1511,23 +4123,36 @@
         "meanings": true
       },
       "sourceExerciseId": "pull_up",
-      "aliases": [
-        "풀업",
-        "풀업"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::친업::tool::맨몸",
+      "label": "맨몸",
+      "parent": "basic::친업",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-pullup-맨몸-difference",
+          "title": "이번에 달라지는 점",
+          "body": "손과 발의 지지 위치, 몸의 각도에 따라 부담이 달라집니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-chin_up",
       "label": "맨몸 친업",
-      "parent": "pack-tool-pullup-맨몸",
+      "parent": "basic::친업::tool::맨몸",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-chin_up-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/back/Chin%20Up.png",
-          "alt": "친 업"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-chin_up-tool",
@@ -1547,16 +4172,14 @@
         "meanings": true
       },
       "sourceExerciseId": "chin_up",
-      "aliases": [
-        "친업",
-        "친업"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-straight-케이블",
+      "id": "basic::스트레이트 암 풀다운::tool::케이블",
       "label": "케이블",
-      "parent": "straight",
+      "parent": "basic::스트레이트 암 풀다운",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1576,15 +4199,9 @@
     {
       "id": "pack-ex-straight_arm_pulldown",
       "label": "케이블 스트레이트 암 풀다운",
-      "parent": "pack-tool-straight-케이블",
+      "parent": "basic::스트레이트 암 풀다운::tool::케이블",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-straight_arm_pulldown-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/back/Cable%20Straight%20Arm%20Pulldown.png",
-          "alt": "케이블 스트레이트 암 풀다운"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-straight_arm_pulldown-tool",
@@ -1609,16 +4226,14 @@
         "meanings": true
       },
       "sourceExerciseId": "straight_arm_pulldown",
-      "aliases": [
-        "스트레이트 암 풀다운",
-        "스트레이트 암 풀다운"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-straight-덤벨",
+      "id": "basic::풀오버::tool::덤벨",
       "label": "덤벨",
-      "parent": "straight",
+      "parent": "basic::풀오버",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1638,15 +4253,9 @@
     {
       "id": "pack-ex-pullover",
       "label": "덤벨 풀오버",
-      "parent": "pack-tool-straight-덤벨",
+      "parent": "basic::풀오버::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-pullover-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/back/Dumbbell%20Pullover.png",
-          "alt": "덤벨 풀오버"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-pullover-tool",
@@ -1666,16 +4275,14 @@
         "meanings": true
       },
       "sourceExerciseId": "pullover",
-      "aliases": [
-        "풀오버",
-        "풀오버"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-rear-덤벨",
+      "id": "basic::리어 델트 플라이::tool::덤벨",
       "label": "덤벨",
-      "parent": "rear",
+      "parent": "basic::리어 델트 플라이",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1695,15 +4302,9 @@
     {
       "id": "pack-ex-rear_delt_fly",
       "label": "덤벨 리어 델트 플라이",
-      "parent": "pack-tool-rear-덤벨",
+      "parent": "basic::리어 델트 플라이::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-rear_delt_fly-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/shoulder/Dumbbell%20Rear%20Delt%20Fly.png",
-          "alt": "덤벨 리어 델트 플라이"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-rear_delt_fly-tool",
@@ -1728,16 +4329,14 @@
         "meanings": true
       },
       "sourceExerciseId": "rear_delt_fly",
-      "aliases": [
-        "리어 델트 플라이",
-        "리어 델트 플라이"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-curl-덤벨",
+      "id": "basic::바이셉스 컬::tool::덤벨",
       "label": "덤벨",
-      "parent": "curl",
+      "parent": "basic::바이셉스 컬",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1757,15 +4356,9 @@
     {
       "id": "pack-ex-biceps_curl",
       "label": "덤벨 바이셉스 컬",
-      "parent": "pack-tool-curl-덤벨",
+      "parent": "basic::바이셉스 컬::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-biceps_curl-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/arm/Dumbbell%20Biceps%20Curl.png",
-          "alt": "덤벨 바이셉스 컬"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-biceps_curl-tool",
@@ -1790,23 +4383,36 @@
         "meanings": true
       },
       "sourceExerciseId": "biceps_curl",
-      "aliases": [
-        "바이셉스 컬",
-        "바이셉스 컬"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::해머 컬::tool::덤벨",
+      "label": "덤벨",
+      "parent": "basic::해머 컬",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-curl-덤벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "양손을 각각 움직이며 도구와 몸통을 스스로 안정시킵니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-hammer_curl",
       "label": "덤벨 해머 컬",
-      "parent": "pack-tool-curl-덤벨",
+      "parent": "basic::해머 컬::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-hammer_curl-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/arm/Dumbbell%20Hammer%20Curl.png",
-          "alt": "덤벨 해머 컬"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-hammer_curl-tool",
@@ -1831,16 +4437,14 @@
         "meanings": true
       },
       "sourceExerciseId": "hammer_curl",
-      "aliases": [
-        "해머 컬",
-        "해머 컬"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-curl-바벨",
+      "id": "basic::리버스 컬::tool::바벨",
       "label": "바벨",
-      "parent": "curl",
+      "parent": "basic::리버스 컬",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1860,15 +4464,9 @@
     {
       "id": "pack-ex-reverse_curl",
       "label": "바벨 리버스 컬",
-      "parent": "pack-tool-curl-바벨",
+      "parent": "basic::리버스 컬::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-reverse_curl-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/arm/Barbell%20Reverse%20Curl.png",
-          "alt": "바벨 리버스 컬"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-reverse_curl-tool",
@@ -1893,16 +4491,14 @@
         "meanings": true
       },
       "sourceExerciseId": "reverse_curl",
-      "aliases": [
-        "리버스 컬",
-        "리버스 컬"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-squat-맨몸",
+      "id": "basic::스쿼트::tool::맨몸",
       "label": "맨몸",
-      "parent": "squat",
+      "parent": "basic::스쿼트",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1922,15 +4518,9 @@
     {
       "id": "pack-ex-squat_basic",
       "label": "맨몸 스쿼트",
-      "parent": "pack-tool-squat-맨몸",
+      "parent": "basic::스쿼트::tool::맨몸",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-squat_basic-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Squat.png",
-          "alt": "스쿼트"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-squat_basic-tool",
@@ -1950,16 +4540,14 @@
         "meanings": true
       },
       "sourceExerciseId": "squat_basic",
-      "aliases": [
-        "스쿼트",
-        "스쿼트"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-squat-바벨",
+      "id": "basic::프론트 스쿼트::tool::바벨",
       "label": "바벨",
-      "parent": "squat",
+      "parent": "basic::프론트 스쿼트",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -1979,15 +4567,9 @@
     {
       "id": "pack-ex-front_squat",
       "label": "바벨 프론트 스쿼트",
-      "parent": "pack-tool-squat-바벨",
+      "parent": "basic::프론트 스쿼트::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-front_squat-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Barbell%20Front%20Squat.png",
-          "alt": "바벨 프런트 스쿼트"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-front_squat-tool",
@@ -2012,23 +4594,36 @@
         "meanings": true
       },
       "sourceExerciseId": "front_squat",
-      "aliases": [
-        "프론트 스쿼트",
-        "프론트 스쿼트"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::백 스쿼트::tool::바벨",
+      "label": "바벨",
+      "parent": "basic::백 스쿼트",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-squat-바벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "두 손이 하나의 바를 공유합니다. 그립과 바의 이동 경로를 확인합니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-back_squat",
       "label": "바벨 백 스쿼트",
-      "parent": "pack-tool-squat-바벨",
+      "parent": "basic::백 스쿼트::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-back_squat-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Barbell%20High%20Bar%20Squat.png",
-          "alt": "바벨 하이 바 스쿼트"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-back_squat-tool",
@@ -2053,16 +4648,14 @@
         "meanings": true
       },
       "sourceExerciseId": "back_squat",
-      "aliases": [
-        "백 스쿼트",
-        "백 스쿼트"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-squat-덤벨",
+      "id": "basic::스모 스쿼트::tool::덤벨",
       "label": "덤벨",
-      "parent": "squat",
+      "parent": "basic::스모 스쿼트",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2082,15 +4675,9 @@
     {
       "id": "pack-ex-sumo_squat",
       "label": "덤벨 스모 스쿼트",
-      "parent": "pack-tool-squat-덤벨",
+      "parent": "basic::스모 스쿼트::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-sumo_squat-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Dumbbell%20Sumo%20Squat.png",
-          "alt": "덤벨 스모 스쿼트"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-sumo_squat-tool",
@@ -2115,16 +4702,14 @@
         "meanings": true
       },
       "sourceExerciseId": "sumo_squat",
-      "aliases": [
-        "스모 스쿼트",
-        "스모 스쿼트"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-squat-머신",
+      "id": "basic::레그 프레스::tool::머신",
       "label": "머신",
-      "parent": "squat",
+      "parent": "basic::레그 프레스",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2144,15 +4729,9 @@
     {
       "id": "pack-ex-leg_press",
       "label": "머신 레그 프레스",
-      "parent": "pack-tool-squat-머신",
+      "parent": "basic::레그 프레스::tool::머신",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-leg_press-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Seated%20Leg%20Press.png",
-          "alt": "시티드 레그 프레스 (핀)"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-leg_press-tool",
@@ -2177,16 +4756,14 @@
         "meanings": true
       },
       "sourceExerciseId": "leg_press",
-      "aliases": [
-        "레그 프레스",
-        "레그 프레스"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-squatSupport-머신",
+      "id": "basic::레그 익스텐션::tool::머신",
       "label": "머신",
-      "parent": "squatSupport",
+      "parent": "basic::레그 익스텐션",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2206,15 +4783,9 @@
     {
       "id": "pack-ex-leg_extension",
       "label": "머신 레그 익스텐션",
-      "parent": "pack-tool-squatSupport-머신",
+      "parent": "basic::레그 익스텐션::tool::머신",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-leg_extension-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Leg%20Extension.png",
-          "alt": "레그 익스텐션 (핀)"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-leg_extension-tool",
@@ -2239,16 +4810,14 @@
         "meanings": true
       },
       "sourceExerciseId": "leg_extension",
-      "aliases": [
-        "레그 익스텐션",
-        "레그 익스텐션"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-hingeSupport-케이블",
+      "id": "basic::힙 어덕션::tool::케이블",
       "label": "케이블",
-      "parent": "hingeSupport",
+      "parent": "basic::힙 어덕션",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2268,15 +4837,9 @@
     {
       "id": "pack-ex-hip_adduction",
       "label": "케이블 힙 어덕션",
-      "parent": "pack-tool-hingeSupport-케이블",
+      "parent": "basic::힙 어덕션::tool::케이블",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-hip_adduction-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Cable%20Hip%20Adduction.png",
-          "alt": "케이블 힙 어덕션"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-hip_adduction-tool",
@@ -2301,16 +4864,14 @@
         "meanings": true
       },
       "sourceExerciseId": "hip_adduction",
-      "aliases": [
-        "힙 어덕션",
-        "힙 어덕션"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-deadlift-바벨",
+      "id": "basic::데드리프트::tool::바벨",
       "label": "바벨",
-      "parent": "deadlift",
+      "parent": "basic::데드리프트",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2330,15 +4891,9 @@
     {
       "id": "pack-ex-deadlift",
       "label": "바벨 컨벤셔널 데드리프트",
-      "parent": "pack-tool-deadlift-바벨",
+      "parent": "basic::데드리프트::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-deadlift-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Barbell%20Deadlift.png",
-          "alt": "바벨 데드리프트"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-deadlift-tool",
@@ -2370,23 +4925,36 @@
         "meanings": true
       },
       "sourceExerciseId": "deadlift",
-      "aliases": [
-        "데드리프트",
-        "컨벤셔널 데드리프트"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::루마니안 데드리프트::tool::바벨",
+      "label": "바벨",
+      "parent": "basic::루마니안 데드리프트",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-deadlift-바벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "두 손이 하나의 바를 공유합니다. 그립과 바의 이동 경로를 확인합니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-romanian_deadlift",
       "label": "바벨 루마니안 데드리프트",
-      "parent": "pack-tool-deadlift-바벨",
+      "parent": "basic::루마니안 데드리프트::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-romanian_deadlift-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Barbell%20Romanian%20Deadlift.png",
-          "alt": "바벨 루마니안 데드리프트"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-romanian_deadlift-tool",
@@ -2411,23 +4979,36 @@
         "meanings": true
       },
       "sourceExerciseId": "romanian_deadlift",
-      "aliases": [
-        "루마니안 데드리프트",
-        "루마니안 데드리프트"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::스티프 레그 데드리프트::tool::바벨",
+      "label": "바벨",
+      "parent": "basic::스티프 레그 데드리프트",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-deadlift-바벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "두 손이 하나의 바를 공유합니다. 그립과 바의 이동 경로를 확인합니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-stiff_leg_deadlift",
       "label": "바벨 스티프 레그 데드리프트",
-      "parent": "pack-tool-deadlift-바벨",
+      "parent": "basic::스티프 레그 데드리프트::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-stiff_leg_deadlift-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Barbell%20Stiff%20Legged%20Deadlift.png",
-          "alt": "바벨 스티프 레그 데드리프트"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-stiff_leg_deadlift-tool",
@@ -2452,23 +5033,36 @@
         "meanings": true
       },
       "sourceExerciseId": "stiff_leg_deadlift",
-      "aliases": [
-        "스티프 레그 데드리프트",
-        "스티프 레그 데드리프트"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::스모 데드리프트::tool::바벨",
+      "label": "바벨",
+      "parent": "basic::스모 데드리프트",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-deadlift-바벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "두 손이 하나의 바를 공유합니다. 그립과 바의 이동 경로를 확인합니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-sumo_deadlift",
       "label": "바벨 스모 데드리프트",
-      "parent": "pack-tool-deadlift-바벨",
+      "parent": "basic::스모 데드리프트::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-sumo_deadlift-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Barbell%20Sumo%20Deadlift.png",
-          "alt": "바벨 스모 데드리프트"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-sumo_deadlift-tool",
@@ -2493,16 +5087,14 @@
         "meanings": true
       },
       "sourceExerciseId": "sumo_deadlift",
-      "aliases": [
-        "스모 데드리프트",
-        "스모 데드리프트"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-bridge-바벨",
+      "id": "basic::힙 쓰러스트::tool::바벨",
       "label": "바벨",
-      "parent": "bridge",
+      "parent": "basic::힙 쓰러스트",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2522,15 +5114,9 @@
     {
       "id": "pack-ex-hip_thrust",
       "label": "바벨 힙 쓰러스트",
-      "parent": "pack-tool-bridge-바벨",
+      "parent": "basic::힙 쓰러스트::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-hip_thrust-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Barbell%20Hip%20Thrust.png",
-          "alt": "바벨 힙 쓰러스트"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-hip_thrust-tool",
@@ -2555,23 +5141,36 @@
         "meanings": true
       },
       "sourceExerciseId": "hip_thrust",
-      "aliases": [
-        "힙 쓰러스트",
-        "힙 쓰러스트"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::글루트 브리지::tool::바벨",
+      "label": "바벨",
+      "parent": "basic::글루트 브리지",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-bridge-바벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "두 손이 하나의 바를 공유합니다. 그립과 바의 이동 경로를 확인합니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-glute_bridge",
       "label": "바벨 글루트 브리지",
-      "parent": "pack-tool-bridge-바벨",
+      "parent": "basic::글루트 브리지::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-glute_bridge-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Barbell%20Glute%20Bridge.png",
-          "alt": "바벨 글루트 브릿지"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-glute_bridge-tool",
@@ -2596,16 +5195,14 @@
         "meanings": true
       },
       "sourceExerciseId": "glute_bridge",
-      "aliases": [
-        "글루트 브리지",
-        "글루트 브리지"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-hipExtension-로만 체어",
+      "id": "basic::백 익스텐션::tool::로만 체어",
       "label": "로만 체어",
-      "parent": "hipExtension",
+      "parent": "basic::백 익스텐션",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2625,15 +5222,9 @@
     {
       "id": "pack-ex-back_extension",
       "label": "로만 체어 백 익스텐션",
-      "parent": "pack-tool-hipExtension-로만 체어",
+      "parent": "basic::백 익스텐션::tool::로만 체어",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-back_extension-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/45%20Degrees%20Back%20Extension.png",
-          "alt": "45 디그리 백 익스텐션"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-back_extension-tool",
@@ -2658,16 +5249,14 @@
         "meanings": true
       },
       "sourceExerciseId": "back_extension",
-      "aliases": [
-        "백 익스텐션",
-        "백 익스텐션"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-hipExtension-바벨",
+      "id": "basic::굿모닝::tool::바벨",
       "label": "바벨",
-      "parent": "hipExtension",
+      "parent": "basic::굿모닝",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2687,15 +5276,9 @@
     {
       "id": "pack-ex-good_morning",
       "label": "바벨 굿모닝",
-      "parent": "pack-tool-hipExtension-바벨",
+      "parent": "basic::굿모닝::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-good_morning-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Barbell%20Good%20Morning.png",
-          "alt": "바벨 굿 모닝"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-good_morning-tool",
@@ -2715,16 +5298,14 @@
         "meanings": true
       },
       "sourceExerciseId": "good_morning",
-      "aliases": [
-        "굿모닝",
-        "굿모닝"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-hingeSupport-머신",
+      "id": "basic::시티드 레그 컬::tool::머신",
       "label": "머신",
-      "parent": "hingeSupport",
+      "parent": "basic::시티드 레그 컬",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2744,15 +5325,9 @@
     {
       "id": "pack-ex-leg_curl",
       "label": "머신 레그 컬",
-      "parent": "pack-tool-hingeSupport-머신",
+      "parent": "basic::시티드 레그 컬::tool::머신",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-leg_curl-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Seated%20Leg%20Curl.png",
-          "alt": "시티드 레그 컬 (핀)"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-leg_curl-tool",
@@ -2777,16 +5352,14 @@
         "meanings": true
       },
       "sourceExerciseId": "leg_curl",
-      "aliases": [
-        "레그 컬",
-        "레그 컬"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-hipExtension-케이블",
+      "id": "basic::글루트 킥백::tool::케이블",
       "label": "케이블",
-      "parent": "hipExtension",
+      "parent": "basic::글루트 킥백",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2806,15 +5379,9 @@
     {
       "id": "pack-ex-glute_kickback",
       "label": "케이블 글루트 킥백",
-      "parent": "pack-tool-hipExtension-케이블",
+      "parent": "basic::글루트 킥백::tool::케이블",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-glute_kickback-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Cable%20Donkey%20Kickback.png",
-          "alt": "케이블 동키 킥백"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-glute_kickback-tool",
@@ -2839,16 +5406,14 @@
         "meanings": true
       },
       "sourceExerciseId": "glute_kickback",
-      "aliases": [
-        "글루트 킥백",
-        "글루트 킥백"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-hingeSupport-밴드",
+      "id": "basic::힙 어브덕션::tool::밴드",
       "label": "밴드",
-      "parent": "hingeSupport",
+      "parent": "basic::힙 어브덕션",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2868,15 +5433,9 @@
     {
       "id": "pack-ex-hip_abduction",
       "label": "밴드 힙 어브덕션",
-      "parent": "pack-tool-hingeSupport-밴드",
+      "parent": "basic::힙 어브덕션::tool::밴드",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-hip_abduction-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Band%20Hip%20Abduction.png",
-          "alt": "밴드 힙 어브덕션"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-hip_abduction-tool",
@@ -2901,16 +5460,14 @@
         "meanings": true
       },
       "sourceExerciseId": "hip_abduction",
-      "aliases": [
-        "힙 어브덕션",
-        "힙 어브덕션"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-lunge-맨몸",
+      "id": "basic::포워드 런지::tool::맨몸",
       "label": "맨몸",
-      "parent": "lunge",
+      "parent": "basic::포워드 런지",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2930,15 +5487,9 @@
     {
       "id": "pack-ex-forward_lunge",
       "label": "맨몸 포워드 런지",
-      "parent": "pack-tool-lunge-맨몸",
+      "parent": "basic::포워드 런지::tool::맨몸",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-forward_lunge-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Forward%20Lunge.png",
-          "alt": "포워드 런지"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-forward_lunge-tool",
@@ -2963,16 +5514,14 @@
         "meanings": true
       },
       "sourceExerciseId": "forward_lunge",
-      "aliases": [
-        "포워드 런지",
-        "포워드 런지"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-lunge-덤벨",
+      "id": "basic::리버스 런지::tool::덤벨",
       "label": "덤벨",
-      "parent": "lunge",
+      "parent": "basic::리버스 런지",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -2992,15 +5541,9 @@
     {
       "id": "pack-ex-reverse_lunge",
       "label": "덤벨 리버스 런지",
-      "parent": "pack-tool-lunge-덤벨",
+      "parent": "basic::리버스 런지::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-reverse_lunge-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Dumbbell%20Rear%20Lunge.png",
-          "alt": "덤벨 리어 런지"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-reverse_lunge-tool",
@@ -3025,23 +5568,36 @@
         "meanings": true
       },
       "sourceExerciseId": "reverse_lunge",
-      "aliases": [
-        "리버스 런지",
-        "리버스 런지"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::워킹 런지::tool::덤벨",
+      "label": "덤벨",
+      "parent": "basic::워킹 런지",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-lunge-덤벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "양손을 각각 움직이며 도구와 몸통을 스스로 안정시킵니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-walking_lunge",
       "label": "덤벨 워킹 런지",
-      "parent": "pack-tool-lunge-덤벨",
+      "parent": "basic::워킹 런지::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-walking_lunge-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Dumbbell%20Walking%20Lunge.png",
-          "alt": "덤벨 워킹 런지"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-walking_lunge-tool",
@@ -3066,23 +5622,36 @@
         "meanings": true
       },
       "sourceExerciseId": "walking_lunge",
-      "aliases": [
-        "워킹 런지",
-        "워킹 런지"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::사이드 런지::tool::덤벨",
+      "label": "덤벨",
+      "parent": "basic::사이드 런지",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-lunge-덤벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "양손을 각각 움직이며 도구와 몸통을 스스로 안정시킵니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-side_lunge",
       "label": "덤벨 사이드 런지",
-      "parent": "pack-tool-lunge-덤벨",
+      "parent": "basic::사이드 런지::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-side_lunge-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Dumbbell%20Side%20Lunge.png",
-          "alt": "덤벨 사이드 런지"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-side_lunge-tool",
@@ -3107,16 +5676,14 @@
         "meanings": true
       },
       "sourceExerciseId": "side_lunge",
-      "aliases": [
-        "사이드 런지",
-        "사이드 런지"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-lunge-바벨",
+      "id": "basic::커시 런지::tool::바벨",
       "label": "바벨",
-      "parent": "lunge",
+      "parent": "basic::커시 런지",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -3136,15 +5703,9 @@
     {
       "id": "pack-ex-curtsy_lunge",
       "label": "바벨 커트시 런지",
-      "parent": "pack-tool-lunge-바벨",
+      "parent": "basic::커시 런지::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-curtsy_lunge-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Barbell%20Curtsey%20Lunge.png",
-          "alt": "바벨 커트시 런지"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-curtsy_lunge-tool",
@@ -3169,23 +5730,36 @@
         "meanings": true
       },
       "sourceExerciseId": "curtsy_lunge",
-      "aliases": [
-        "커시 런지",
-        "커트시 런지"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::스플릿 스쿼트::tool::맨몸",
+      "label": "맨몸",
+      "parent": "basic::스플릿 스쿼트",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-lunge-맨몸-difference",
+          "title": "이번에 달라지는 점",
+          "body": "손과 발의 지지 위치, 몸의 각도에 따라 부담이 달라집니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-split_squat",
       "label": "맨몸 스플릿 스쿼트",
-      "parent": "pack-tool-lunge-맨몸",
+      "parent": "basic::스플릿 스쿼트::tool::맨몸",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-split_squat-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Split%20Squat.png",
-          "alt": "스플릿 스쿼트"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-split_squat-tool",
@@ -3210,23 +5784,36 @@
         "meanings": true
       },
       "sourceExerciseId": "split_squat",
-      "aliases": [
-        "스플릿 스쿼트",
-        "스플릿 스쿼트"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::불가리안 스플릿 스쿼트::tool::맨몸",
+      "label": "맨몸",
+      "parent": "basic::불가리안 스플릿 스쿼트",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-lunge-맨몸-difference",
+          "title": "이번에 달라지는 점",
+          "body": "손과 발의 지지 위치, 몸의 각도에 따라 부담이 달라집니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-bulgarian_split_squat",
       "label": "맨몸 불가리안 스플릿 스쿼트",
-      "parent": "pack-tool-lunge-맨몸",
+      "parent": "basic::불가리안 스플릿 스쿼트::tool::맨몸",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-bulgarian_split_squat-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Bulgarian%20Split%20Squat.png",
-          "alt": "불가리안 스플릿 스쿼트"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-bulgarian_split_squat-tool",
@@ -3256,23 +5843,36 @@
         "meanings": true
       },
       "sourceExerciseId": "bulgarian_split_squat",
-      "aliases": [
-        "불가리안 스플릿 스쿼트",
-        "불가리안 스플릿 스쿼트"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::스텝업::tool::맨몸",
+      "label": "맨몸",
+      "parent": "basic::스텝업",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-lunge-맨몸-difference",
+          "title": "이번에 달라지는 점",
+          "body": "손과 발의 지지 위치, 몸의 각도에 따라 부담이 달라집니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-step_up",
       "label": "맨몸 스텝업",
-      "parent": "pack-tool-lunge-맨몸",
+      "parent": "basic::스텝업::tool::맨몸",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-step_up-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Step%20Up.png",
-          "alt": "스텝 업"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-step_up-tool",
@@ -3292,15 +5892,34 @@
         "meanings": true
       },
       "sourceExerciseId": "step_up",
-      "aliases": [
-        "스텝업",
-        "스텝업"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::스텝다운::tool::맨몸",
+      "label": "맨몸",
+      "parent": "basic::스텝다운",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-lunge-맨몸-difference",
+          "title": "이번에 달라지는 점",
+          "body": "손과 발의 지지 위치, 몸의 각도에 따라 부담이 달라집니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-step_down",
       "label": "맨몸 스텝다운",
-      "parent": "pack-tool-lunge-맨몸",
+      "parent": "basic::스텝다운::tool::맨몸",
       "kind": "exercise",
       "images": [],
       "meanings": [
@@ -3322,15 +5941,34 @@
         "meanings": true
       },
       "sourceExerciseId": "step_down",
-      "aliases": [
-        "스텝다운",
-        "스텝다운"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::싱글 레그 스쿼트::tool::맨몸",
+      "label": "맨몸",
+      "parent": "basic::싱글 레그 스쿼트",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-squat-맨몸-difference",
+          "title": "이번에 달라지는 점",
+          "body": "손과 발의 지지 위치, 몸의 각도에 따라 부담이 달라집니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-single_leg_squat",
       "label": "맨몸 싱글 레그 스쿼트",
-      "parent": "pack-tool-squat-맨몸",
+      "parent": "basic::싱글 레그 스쿼트::tool::맨몸",
       "kind": "exercise",
       "images": [],
       "meanings": [
@@ -3357,15 +5995,34 @@
         "meanings": true
       },
       "sourceExerciseId": "single_leg_squat",
-      "aliases": [
-        "싱글 레그 스쿼트",
-        "싱글 레그 스쿼트"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::피스톨 스쿼트::tool::맨몸",
+      "label": "맨몸",
+      "parent": "basic::피스톨 스쿼트",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-squat-맨몸-difference",
+          "title": "이번에 달라지는 점",
+          "body": "손과 발의 지지 위치, 몸의 각도에 따라 부담이 달라집니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-pistol_squat",
       "label": "맨몸 피스톨 스쿼트",
-      "parent": "pack-tool-squat-맨몸",
+      "parent": "basic::피스톨 스쿼트::tool::맨몸",
       "kind": "exercise",
       "images": [],
       "meanings": [
@@ -3392,23 +6049,36 @@
         "meanings": true
       },
       "sourceExerciseId": "pistol_squat",
-      "aliases": [
-        "피스톨 스쿼트",
-        "피스톨 스쿼트"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::스쿼트::tool::덤벨",
+      "label": "덤벨",
+      "parent": "basic::스쿼트",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-squat-덤벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "양손을 각각 움직이며 도구와 몸통을 스스로 안정시킵니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-goblet_squat",
       "label": "덤벨 고블릿 스쿼트",
-      "parent": "pack-tool-squat-덤벨",
+      "parent": "basic::스쿼트::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-goblet_squat-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Dumbbell%20Goblet%20Squat.png",
-          "alt": "덤벨 고블렛 스쿼트"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-goblet_squat-tool",
@@ -3433,22 +6103,36 @@
         "meanings": true
       },
       "sourceExerciseId": "goblet_squat",
-      "aliases": [
-        "고블릿 스쿼트"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::핵 스쿼트::tool::머신",
+      "label": "머신",
+      "parent": "basic::핵 스쿼트",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-squat-머신-difference",
+          "title": "이번에 달라지는 점",
+          "body": "좌석·패드·손잡이 위치와 기구의 이동 경로를 확인합니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-hack_squat",
       "label": "머신 핵 스쿼트",
-      "parent": "pack-tool-squat-머신",
+      "parent": "basic::핵 스쿼트::tool::머신",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-hack_squat-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Sled%20Hack%20Squat.png",
-          "alt": "핵 스쿼트 (플레이트)"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-hack_squat-tool",
@@ -3473,22 +6157,21 @@
         "meanings": true
       },
       "sourceExerciseId": "hack_squat",
-      "aliases": [
-        "핵 스쿼트"
-      ]
+      "level": "variant"
     },
     {
-      "id": "pack-tool-squatSupport-덤벨",
-      "label": "덤벨",
-      "parent": "squatSupport",
+      "id": "basic::힙 익스텐션::tool::케이블",
+      "label": "케이블",
+      "parent": "basic::힙 익스텐션",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
         {
-          "id": "pack-tool-squatSupport-덤벨-difference",
+          "id": "pack-tool-hipExtension-케이블-difference",
           "title": "이번에 달라지는 점",
-          "body": "양손을 각각 움직이며 도구와 몸통을 스스로 안정시킵니다.",
+          "body": "도르래 높이와 손잡이에 따라 저항이 오는 방향이 달라집니다.",
           "visible": true
         }
       ],
@@ -3499,107 +6182,11 @@
       }
     },
     {
-      "id": "pack-ex-calf_raise",
-      "label": "덤벨 스탠딩 카프 레이즈",
-      "parent": "pack-tool-squatSupport-덤벨",
-      "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-calf_raise-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Dumbbell%20Standing%20Calf%20Raise.png",
-          "alt": "덤벨 스탠딩 카프 레이즈"
-        }
-      ],
-      "meanings": [
-        {
-          "id": "pack-ex-calf_raise-tool",
-          "word": "덤벨",
-          "meaning": "이 예시에서 사용하는 도구·지지 방식"
-        },
-        {
-          "id": "pack-ex-calf_raise-m0",
-          "word": "스탠딩",
-          "meaning": "선 자세"
-        },
-        {
-          "id": "pack-ex-calf_raise-m1",
-          "word": "카프",
-          "meaning": "종아리"
-        },
-        {
-          "id": "pack-ex-calf_raise-m2",
-          "word": "레이즈",
-          "meaning": "들어 올리는 움직임"
-        }
-      ],
-      "fields": [],
-      "show": {
-        "image": true,
-        "path": true,
-        "meanings": true
-      },
-      "sourceExerciseId": "calf_raise",
-      "aliases": [
-        "스탠딩 카프 레이즈"
-      ]
-    },
-    {
-      "id": "pack-ex-lying_triceps_extension",
-      "label": "덤벨 라잉 트라이셉스 익스텐션",
-      "parent": "pack-tool-extension-덤벨",
-      "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-lying_triceps_extension-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/arm/Dumbbell%20Lying%20Triceps%20Extension.png",
-          "alt": "덤벨 라잉 트라이셉스 익스텐션"
-        }
-      ],
-      "meanings": [
-        {
-          "id": "pack-ex-lying_triceps_extension-tool",
-          "word": "덤벨",
-          "meaning": "이 예시에서 사용하는 도구·지지 방식"
-        },
-        {
-          "id": "pack-ex-lying_triceps_extension-m0",
-          "word": "라잉",
-          "meaning": "누운 자세"
-        },
-        {
-          "id": "pack-ex-lying_triceps_extension-m1",
-          "word": "트라이셉스",
-          "meaning": "상완삼두근"
-        },
-        {
-          "id": "pack-ex-lying_triceps_extension-m2",
-          "word": "익스텐션",
-          "meaning": "관절을 펴는 움직임"
-        }
-      ],
-      "fields": [],
-      "show": {
-        "image": true,
-        "path": true,
-        "meanings": true
-      },
-      "sourceExerciseId": "lying_triceps_extension",
-      "aliases": [
-        "라잉 트라이셉스 익스텐션"
-      ]
-    },
-    {
       "id": "pack-ex-hip_extension",
       "label": "케이블 스탠딩 힙 익스텐션",
-      "parent": "pack-tool-hipExtension-케이블",
+      "parent": "basic::힙 익스텐션::tool::케이블",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-hip_extension-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/lower/Cable%20Standing%20Hip%20Extension.png",
-          "alt": "케이블 스탠딩 힙 익스텐션"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-hip_extension-tool",
@@ -3629,15 +6216,14 @@
         "meanings": true
       },
       "sourceExerciseId": "hip_extension",
-      "aliases": [
-        "스탠딩 힙 익스텐션"
-      ]
+      "level": "variant"
     },
     {
-      "id": "dumbbell",
+      "id": "basic::벤트오버 로우::tool::덤벨",
       "label": "덤벨",
-      "parent": "row",
+      "parent": "basic::벤트오버 로우",
       "kind": "branch",
+      "level": "tool",
       "images": [],
       "meanings": [],
       "fields": [
@@ -3657,15 +6243,9 @@
     {
       "id": "pack-ex-db_row",
       "label": "덤벨 벤트오버 로우",
-      "parent": "dumbbell",
+      "parent": "basic::벤트오버 로우::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-db_row-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/back/Dumbbell%20Bent%20Over%20Row.png",
-          "alt": "덤벨 벤트 오버 로우"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-db_row-tool",
@@ -3690,22 +6270,36 @@
         "meanings": true
       },
       "sourceExerciseId": "db_row",
-      "aliases": [
-        "벤트오버 로우"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::시티드 로우::tool::케이블",
+      "label": "케이블",
+      "parent": "basic::시티드 로우",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "cable-difference",
+          "title": "이번에 달라지는 점",
+          "body": "도르래 높이와 손잡이에 따라 저항이 오는 방향이 달라집니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-cable_row",
       "label": "케이블 시티드 로우",
-      "parent": "cable",
+      "parent": "basic::시티드 로우::tool::케이블",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-cable_row-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/back/Cable%20Seated%20Row.png",
-          "alt": "케이블 시티드 로우"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-cable_row-tool",
@@ -3730,22 +6324,36 @@
         "meanings": true
       },
       "sourceExerciseId": "cable_row",
-      "aliases": [
-        "시티드 로우"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::체스트 프레스::tool::바벨",
+      "label": "바벨",
+      "parent": "basic::체스트 프레스",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-press-바벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "두 손이 하나의 바를 공유합니다. 그립과 바의 이동 경로를 확인합니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-bb_chest_press",
       "label": "바벨 체스트 프레스",
-      "parent": "pack-tool-press-바벨",
+      "parent": "basic::체스트 프레스::tool::바벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-bb_chest_press-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/chest/Barbell%20Bench%20Press.png",
-          "alt": "바벨 벤치 프레스"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-bb_chest_press-tool",
@@ -3770,22 +6378,36 @@
         "meanings": true
       },
       "sourceExerciseId": "bb_chest_press",
-      "aliases": [
-        "체스트 프레스"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::체스트 프레스::tool::덤벨",
+      "label": "덤벨",
+      "parent": "basic::체스트 프레스",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-press-덤벨-difference",
+          "title": "이번에 달라지는 점",
+          "body": "양손을 각각 움직이며 도구와 몸통을 스스로 안정시킵니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-db_chest_press",
       "label": "덤벨 체스트 프레스",
-      "parent": "pack-tool-press-덤벨",
+      "parent": "basic::체스트 프레스::tool::덤벨",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-db_chest_press-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/chest/Dumbbell%20Bench%20Press.png",
-          "alt": "덤벨 벤치 프레스"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-db_chest_press-tool",
@@ -3810,22 +6432,36 @@
         "meanings": true
       },
       "sourceExerciseId": "db_chest_press",
-      "aliases": [
-        "체스트 프레스"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::숄더 프레스::tool::머신",
+      "label": "머신",
+      "parent": "basic::숄더 프레스",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [
+        {
+          "id": "pack-tool-press-머신-difference",
+          "title": "이번에 달라지는 점",
+          "body": "좌석·패드·손잡이 위치와 기구의 이동 경로를 확인합니다.",
+          "visible": true
+        }
+      ],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     },
     {
       "id": "pack-ex-machine_shoulder_press",
       "label": "머신 숄더 프레스",
-      "parent": "pack-tool-press-머신",
+      "parent": "basic::숄더 프레스::tool::머신",
       "kind": "exercise",
-      "images": [
-        {
-          "id": "pack-ex-machine_shoulder_press-image",
-          "url": "https://lrzffwawpoidimlrbfxe.supabase.co/storage/v1/object/public/exercise-images/shoulder/Shoulder%20Press%20%28Plate%29.png",
-          "alt": "숄더 프레스 (플레이트)"
-        }
-      ],
+      "images": [],
       "meanings": [
         {
           "id": "pack-ex-machine_shoulder_press-tool",
@@ -3850,9 +6486,241 @@
         "meanings": true
       },
       "sourceExerciseId": "machine_shoulder_press",
-      "aliases": [
-        "숄더 프레스"
-      ]
+      "level": "variant"
+    },
+    {
+      "id": "basic::리버스 플라이::tool::덤벨",
+      "label": "덤벨",
+      "parent": "basic::리버스 플라이",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::리버스 플라이::variant",
+      "label": "덤벨 리버스 플라이",
+      "parent": "basic::리버스 플라이::tool::덤벨",
+      "kind": "exercise",
+      "level": "variant",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::V 스쿼트::tool::머신",
+      "label": "머신",
+      "parent": "basic::V 스쿼트",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::V 스쿼트::variant",
+      "label": "머신 V 스쿼트",
+      "parent": "basic::V 스쿼트::tool::머신",
+      "kind": "exercise",
+      "level": "variant",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::라잉 레그 컬::tool::머신",
+      "label": "머신",
+      "parent": "basic::라잉 레그 컬",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::라잉 레그 컬::variant",
+      "label": "머신 라잉 레그 컬",
+      "parent": "basic::라잉 레그 컬::tool::머신",
+      "kind": "exercise",
+      "level": "variant",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::스탠딩 레그 컬::tool::케이블",
+      "label": "케이블",
+      "parent": "basic::스탠딩 레그 컬",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::스탠딩 레그 컬::variant",
+      "label": "케이블 스탠딩 레그 컬",
+      "parent": "basic::스탠딩 레그 컬::tool::케이블",
+      "kind": "exercise",
+      "level": "variant",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::아웃 타이::tool::머신",
+      "label": "머신",
+      "parent": "basic::아웃 타이",
+      "kind": "branch",
+      "level": "tool",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
+    },
+    {
+      "id": "basic::아웃 타이::variant",
+      "label": "머신 아웃 타이",
+      "parent": "basic::아웃 타이::tool::머신",
+      "kind": "exercise",
+      "level": "variant",
+      "images": [],
+      "meanings": [],
+      "fields": [],
+      "show": {
+        "image": true,
+        "path": true,
+        "meanings": true
+      }
     }
-  ]
+  ],
+  "legacyMap": {
+    "upper": "upper",
+    "lower": "lower",
+    "push": "push",
+    "pull": "pull",
+    "squat": "squat",
+    "hinge": "hinge",
+    "lunge": "lunge",
+    "pack-ex-chest_press": "pack-ex-chest_press",
+    "pack-ex-push_up": "pack-ex-push_up",
+    "pack-ex-incline_chest_press": "pack-ex-incline_chest_press",
+    "pack-ex-decline_chest_press": "pack-ex-decline_chest_press",
+    "pack-ex-shoulder_press": "pack-ex-shoulder_press",
+    "pack-ex-dip": "pack-ex-dip",
+    "pack-ex-chest_fly": "pack-ex-chest_fly",
+    "pack-ex-incline_fly": "pack-ex-incline_fly",
+    "pack-ex-low_to_high_fly": "pack-ex-low_to_high_fly",
+    "pack-ex-high_to_low_fly": "pack-ex-high_to_low_fly",
+    "pack-ex-front_raise": "pack-ex-front_raise",
+    "pack-ex-lateral_raise": "pack-ex-lateral_raise",
+    "pack-ex-triceps_pushdown": "pack-ex-triceps_pushdown",
+    "pack-ex-overhead_triceps_extension": "pack-ex-overhead_triceps_extension",
+    "pack-ex-triceps_kickback": "pack-ex-triceps_kickback",
+    "pack-ex-seated_row": "pack-ex-seated_row",
+    "pack-ex-bent_over_row": "pack-ex-bent_over_row",
+    "pack-ex-high_row": "pack-ex-high_row",
+    "pack-ex-low_row": "pack-ex-low_row",
+    "pack-ex-lat_pulldown": "pack-ex-lat_pulldown",
+    "pack-ex-pull_up": "pack-ex-pull_up",
+    "pack-ex-chin_up": "pack-ex-chin_up",
+    "pack-ex-straight_arm_pulldown": "pack-ex-straight_arm_pulldown",
+    "pack-ex-pullover": "pack-ex-pullover",
+    "pack-ex-rear_delt_fly": "pack-ex-rear_delt_fly",
+    "pack-ex-biceps_curl": "pack-ex-biceps_curl",
+    "pack-ex-hammer_curl": "pack-ex-hammer_curl",
+    "pack-ex-reverse_curl": "pack-ex-reverse_curl",
+    "pack-ex-squat_basic": "pack-ex-squat_basic",
+    "pack-ex-front_squat": "pack-ex-front_squat",
+    "pack-ex-back_squat": "pack-ex-back_squat",
+    "pack-ex-sumo_squat": "pack-ex-sumo_squat",
+    "pack-ex-leg_press": "pack-ex-leg_press",
+    "pack-ex-leg_extension": "pack-ex-leg_extension",
+    "pack-ex-hip_adduction": "pack-ex-hip_adduction",
+    "pack-ex-deadlift": "pack-ex-deadlift",
+    "pack-ex-romanian_deadlift": "pack-ex-romanian_deadlift",
+    "pack-ex-stiff_leg_deadlift": "pack-ex-stiff_leg_deadlift",
+    "pack-ex-sumo_deadlift": "pack-ex-sumo_deadlift",
+    "pack-ex-hip_thrust": "pack-ex-hip_thrust",
+    "pack-ex-glute_bridge": "pack-ex-glute_bridge",
+    "pack-ex-back_extension": "pack-ex-back_extension",
+    "pack-ex-good_morning": "pack-ex-good_morning",
+    "pack-ex-leg_curl": "pack-ex-leg_curl",
+    "pack-ex-glute_kickback": "pack-ex-glute_kickback",
+    "pack-ex-hip_abduction": "pack-ex-hip_abduction",
+    "pack-ex-forward_lunge": "pack-ex-forward_lunge",
+    "pack-ex-reverse_lunge": "pack-ex-reverse_lunge",
+    "pack-ex-walking_lunge": "pack-ex-walking_lunge",
+    "pack-ex-side_lunge": "pack-ex-side_lunge",
+    "pack-ex-curtsy_lunge": "pack-ex-curtsy_lunge",
+    "pack-ex-split_squat": "pack-ex-split_squat",
+    "pack-ex-bulgarian_split_squat": "pack-ex-bulgarian_split_squat",
+    "pack-ex-step_up": "pack-ex-step_up",
+    "pack-ex-step_down": "pack-ex-step_down",
+    "pack-ex-single_leg_squat": "pack-ex-single_leg_squat",
+    "pack-ex-pistol_squat": "pack-ex-pistol_squat",
+    "pack-ex-goblet_squat": "pack-ex-goblet_squat",
+    "pack-ex-hack_squat": "pack-ex-hack_squat",
+    "pack-ex-hip_extension": "pack-ex-hip_extension",
+    "pack-ex-db_row": "pack-ex-db_row",
+    "pack-ex-cable_row": "pack-ex-cable_row",
+    "pack-ex-bb_chest_press": "pack-ex-bb_chest_press",
+    "pack-ex-db_chest_press": "pack-ex-db_chest_press",
+    "pack-ex-machine_shoulder_press": "pack-ex-machine_shoulder_press",
+    "press": "push::복합관절::프레스",
+    "row": "pull::복합관절::로우",
+    "pulldown": "basic::랫 풀다운",
+    "fly": "push::단일관절::플라이",
+    "raise": "push::단일관절::레이즈",
+    "extension": "push::단일관절::팔꿈치 신전",
+    "curl": "pull::단일관절::팔꿈치 굴곡",
+    "deadlift": "hinge::복합관절::데드리프트",
+    "rear": "pull::단일관절::후면 어깨 벌림",
+    "straight": "pull::단일관절::어깨 신전"
+  }
 }

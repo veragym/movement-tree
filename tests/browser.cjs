@@ -4,7 +4,7 @@ const fs=require('node:fs');
 (async()=>{
  const browser=await chromium.launch({channel:'msedge',headless:true});
  const ctx=await browser.newContext({viewport:{width:1180,height:820},hasTouch:true});
- const {seed}=await import('../src/model.js'); let remote={...seed(),contentPacks:['conversation-2026-09']},revision=1,calls=0;
+ const {seed}=await import('../src/model.js'); let remote={...seed(),contentPacks:['conversation-structure-v2-images-reset']},revision=1,calls=0;
  await ctx.route('**/rest/v1/rpc/mt_*',async route=>{calls++;let url=route.request().url(),body=route.request().postDataJSON();let data=null,status=200;
   if(url.endsWith('/mt_load')) data=remote?{document:remote,revision}:null;
   else if(url.endsWith('/mt_version'))data=revision||null;
@@ -48,4 +48,5 @@ const fs=require('node:fs');
  console.log(JSON.stringify({errors,calls,revision,backupBytes:fs.statSync('test-results/backup.zip').size}));assert.deepEqual(errors,[]);
  await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});
+
 

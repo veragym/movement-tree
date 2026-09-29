@@ -31,7 +31,7 @@ function App(){
  useEffect(()=>{if(sync.error)notify(sync.error)},[sync.error]);
  const currentDoc=useRef(doc);currentDoc.current=doc;
  const packAttempted=useRef(false);
- useEffect(()=>{if(!ready||sync.conflict||doc.contentPacks?.includes(pack.id)||packAttempted.current)return;packAttempted.current=true;(async()=>{try{await writeLocal(key+':before-'+pack.id,{doc:structuredClone(currentDoc.current),revision:null,dirty:false});replace(applyContentPack(currentDoc.current));notify('대화에서 정리한 운동 자료를 추가했습니다. 기존 편집 내용은 유지됩니다.')}catch(e){notify('운동 자료를 추가하지 못했습니다: '+e.message)}})()},[ready,doc,sync.conflict]);
+ useEffect(()=>{if(!ready||sync.conflict||doc.contentPacks?.includes(pack.id)||packAttempted.current)return;packAttempted.current=true;(async()=>{try{await writeLocal(key+':before-'+pack.id,{doc:structuredClone(currentDoc.current),revision:null,dirty:false});replace(applyContentPack(currentDoc.current));notify('분류 순서를 변경하고 이미지 연결을 초기화했습니다. 작성한 설명은 보존했습니다.')}catch(e){notify('운동 자료를 추가하지 못했습니다: '+e.message)}})()},[ready,doc,sync.conflict]);
  const change=fn=>{try{let before=structuredClone(currentDoc.current),next=fn(structuredClone(currentDoc.current));replace(next);currentDoc.current=next;setHistory(h=>[...h.slice(-29),before])}catch(e){notify(e.message)}};
  const patch=(id,values)=>change(d=>{let n=d.nodes.find(n=>n.id===id);if(n)Object.assign(n,typeof values==='function'?values(n):values);return d});
  const node=doc.nodes.find(n=>n.id===selected),theme=themes[doc.theme]||themes.green;
@@ -78,6 +78,7 @@ function App(){
  </div>;
 }
 createRoot(document.getElementById('root')).render(<ReactFlowProvider><App/></ReactFlowProvider>);
+
 
 
 
