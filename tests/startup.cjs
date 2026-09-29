@@ -1,0 +1,3 @@
+const {chromium}=require('C:/Users/iksun/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const assert=require('node:assert/strict');
+(async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});try{const page=await browser.newPage();await page.goto('file:///C:/Users/iksun/Desktop/VeraGym/movement-tree/index.html');assert(await page.getByRole('link',{name:'운동 트리 열기',exact:true}).isVisible());assert.equal(await page.getByRole('link',{name:'운동 트리 열기',exact:true}).getAttribute('href'),'https://veragym.github.io/movement-tree/');console.log('PASS local file shows the web app link')}finally{await browser.close()}})().catch(e=>{console.error(e);process.exit(1)});
