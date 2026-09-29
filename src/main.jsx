@@ -11,7 +11,7 @@ import './style.css';
 const key=workspace();
 function IconButton({title,children,...props}){return <button className="icon-btn" title={title} aria-label={title} {...props}>{children}</button>}
 function Photo({url,...props}){let [src,setSrc]=useState(''),[failed,setFailed]=useState(false);useEffect(()=>{let live=true;setFailed(false);imageURL(url).then(s=>{if(live)setSrc(s)});return()=>{live=false}},[url]);return src&&!failed?<img src={src} {...props} onError={()=>setFailed(true)}/>:<div className="photo-fallback"><ImagePlus size={22}/><span>{failed?'이미지 연결 확인':'이미지'}</span></div>}
-function Card({data}){let {node:n,count,open,selected}=data;return <div className={'tree-card '+(!n.parent?'root-card ':'')+(selected?'selected':'')}>
+function Card({data}){let {node:n,count,open,selected}=data;return <div className={'tree-card '+(!n.parent?'root-card ':'')+(selected?'selected ':'')+(n.show?.image!==false&&n.images.length?'has-image':'')}>
  <Handle type="target" position={Position.Top}/>
  <div className="card-top"><span className="micro">{!n.parent?'시작하기':n.kind==='exercise'?'EXERCISE':'MOVEMENT'}</span>{n.kind==='exercise'?<Dumbbell size={17}/>:<GitBranch size={16}/>}</div>
  {n.show?.image!==false&&n.images[0]?<Photo url={n.images[0].url} className="card-photo" alt={n.label}/>:null}
@@ -35,8 +35,8 @@ function App(){
  const rows=useMemo(()=>layout(doc,expanded),[doc,expanded]);
  const canvasNodes=rows.map(n=>({id:n.id,type:'movement',position:n.position,data:{node:n,count:doc.nodes.filter(x=>x.parent===n.id).length,open:expanded.has(n.id),selected:n.id===selected},draggable:false}));
  const visible=new Set(rows.map(n=>n.id));
- const edges=[...rows.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',pathOptions:{offset:10},style:{stroke:theme.color,strokeWidth:2,opacity:.65}})),...doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map(l=>({...l,type:'smoothstep',style:{stroke:theme.color,strokeWidth:2,strokeDasharray:'6 6'}}))];
- const topology=rows.map(n=>n.id).join('|');
+ const edges=[...rows.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',pathOptions:{offset:10,centerY:n.position.y-22},style:{stroke:theme.color,strokeWidth:2,opacity:.65}})),...doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map(l=>({...l,type:'smoothstep',style:{stroke:theme.color,strokeWidth:2,strokeDasharray:'6 6'}}))];
+ const topology=rows.map(n=>n.id+':'+n.position.y+':'+(n.show?.image!==false&&n.images.length>0)).join('|');
  useEffect(()=>{let timer=setTimeout(()=>{if(!isMoving.current)flow.fitView({padding:.22,maxZoom:1,minZoom:.04,duration:420})},160);return()=>clearTimeout(timer)},[topology,panel]);
  const toggle=n=>{setSelected(n.id);let kids=doc.nodes.some(x=>x.parent===n.id);if(kids)setExpanded(s=>{let t=new Set(s);t.has(n.id)?t.delete(n.id):t.add(n.id);return t});if(editing||!kids){setPanel(true)}};
  const focus=id=>{let next=new Set(expanded);for(let p of pathTo(doc,id).slice(0,-1))next.add(p.id);setExpanded(next);setSelected(id);setPanel(true);setSearch('')};
@@ -75,4 +75,5 @@ function App(){
  </div>;
 }
 createRoot(document.getElementById('root')).render(<ReactFlowProvider><App/></ReactFlowProvider>);
+
 
