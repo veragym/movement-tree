@@ -4,8 +4,10 @@ const assert=require('node:assert/strict');
  const browser=await chromium.launch({channel:'msedge',headless:true});
  let remote=null,revision=0,delayVersion=false;
  const contexts=[];
- async function client(){
+ async function client(failStorage=false){
   const ctx=await browser.newContext();contexts.push(ctx);
+  if(failStorage)await ctx.addInitScript(()=>{indexedDB.open=()=>{throw Error('Storage unavailable')}});
+  await ctx.route('**/storage/v1/object/movement-tree-images/**',r=>r.fulfill({status:200,body:'{}',contentType:'application/json'}));
   await ctx.route('**/rest/v1/rpc/mt_*',async route=>{
    const name=route.request().url().split('/').pop(),body=route.request().postDataJSON();
    let result,status=200;
@@ -28,5 +30,11 @@ const assert=require('node:assert/strict');
  await contexts[1].setOffline(true);await b.getByRole('button',{name:'초록 테마',exact:true}).click();await b.waitForTimeout(1400);
  await contexts[1].setOffline(false);await b.getByRole('button',{name:'연결 확인',exact:true}).click();await b.waitForTimeout(2500);assert.equal(remote.theme,'green');
  await b.reload();await b.waitForSelector('.tree-card');await b.waitForTimeout(500);assert.equal(await b.locator('.tree-card').count(),2);
- console.log('PASS delayed refresh save, two-device conflict, offline recovery, reload');await browser.close();
+ const c=await client(true);assert.equal(await c.getByRole('button',{name:'편집',exact:true}).isEnabled(),true,'cloud startup must survive unavailable local storage');
+ await b.getByRole('button',{name:'편집',exact:true}).click();await b.locator('.tree-card').filter({has:b.locator('.card-name',{hasText:'상체'})}).click();
+ await b.evaluate(()=>{const original=window.createImageBitmap;window.createImageBitmap=async(...args)=>{await new Promise(r=>setTimeout(r,1800));return original(...args)}});
+ await b.locator('input[type=file]').first().setInputFiles('test-results/phone.png');
+ await b.getByRole('button',{name:'설정',exact:true}).click();await b.getByRole('button',{name:'파랑 테마',exact:true}).click();
+ await b.waitForTimeout(4500);assert.equal(remote.theme,'blue','async image must preserve intervening theme edit');assert.equal(remote.nodes.find(n=>n.id==='upper').images.length,1);
+ console.log('PASS delayed refresh save, two-device conflict, offline recovery, reload, unavailable local storage, concurrent image/edit');await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});
