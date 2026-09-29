@@ -3,7 +3,8 @@ import {createRoot} from 'react-dom/client';
 import {ReactFlow,ReactFlowProvider,Handle,Position,useReactFlow,Background} from '@xyflow/react';
 import {ArrowUpRight,ArrowLeft,ArrowDown,Plus,Minus,Maximize,Focus,Settings,PenLine,Presentation,Undo2,X,ChevronRight,ChevronDown,ImagePlus,Search,Trash2,Upload,Download,Link,RefreshCw,Check,Cloud,CloudOff,GitBranch,Dumbbell,MoveUp,MoveDown,BookOpen,Eye,EyeOff,Copy,FolderPlus} from 'lucide-react';
 import {seed,item,themes,pathTo,layout,descendants,deleteBranch,moveNode} from './model';
-import {workspace,uid,imageURL,localImage,shrinkImage} from './storage';
+import {workspace,uid,imageURL,localImage,shrinkImage,writeLocal} from './storage';
+import {applyContentPack,pack} from './content-pack';
 import {useDocument} from './useDocument';
 import {exportBackup,importBackup} from './backup';
 import '@xyflow/react/dist/style.css';
@@ -29,13 +30,15 @@ function App(){
  useEffect(()=>{fetch(import.meta.env.BASE_URL+'images.json').then(r=>r.json()).then(setImages).catch(()=>notify('이미지 목록을 불러오지 못했습니다.'));fetch(import.meta.env.BASE_URL+'exercises.json').then(r=>r.json()).then(setInputs).catch(()=>notify('운동 목록을 불러오지 못했습니다.'))},[]);
  useEffect(()=>{if(sync.error)notify(sync.error)},[sync.error]);
  const currentDoc=useRef(doc);currentDoc.current=doc;
+ const packAttempted=useRef(false);
+ useEffect(()=>{if(!ready||sync.conflict||doc.contentPacks?.includes(pack.id)||packAttempted.current)return;packAttempted.current=true;(async()=>{try{await writeLocal(key+':before-'+pack.id,{doc:structuredClone(currentDoc.current),revision:null,dirty:false});replace(applyContentPack(currentDoc.current));notify('대화에서 정리한 운동 자료를 추가했습니다. 기존 편집 내용은 유지됩니다.')}catch(e){notify('운동 자료를 추가하지 못했습니다: '+e.message)}})()},[ready,doc,sync.conflict]);
  const change=fn=>{try{let before=structuredClone(currentDoc.current),next=fn(structuredClone(currentDoc.current));replace(next);currentDoc.current=next;setHistory(h=>[...h.slice(-29),before])}catch(e){notify(e.message)}};
  const patch=(id,values)=>change(d=>{let n=d.nodes.find(n=>n.id===id);if(n)Object.assign(n,typeof values==='function'?values(n):values);return d});
  const node=doc.nodes.find(n=>n.id===selected),theme=themes[doc.theme]||themes.green;
  const rows=useMemo(()=>layout(doc,expanded),[doc,expanded]);
  const canvasNodes=rows.map(n=>({id:n.id,type:'movement',position:n.position,data:{node:n,count:doc.nodes.filter(x=>x.parent===n.id).length,open:expanded.has(n.id),selected:n.id===selected},draggable:false}));
  const visible=new Set(rows.map(n=>n.id));
- const edges=[...rows.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',pathOptions:{offset:10,centerY:n.position.y-22},style:{stroke:theme.color,strokeWidth:2,opacity:.65}})),...doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map(l=>({...l,type:'smoothstep',style:{stroke:theme.color,strokeWidth:2,strokeDasharray:'6 6'}}))];
+ const edges=[...rows.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',pathOptions:{offset:10,centerY:n.position.y-22},style:{stroke:theme.color,strokeWidth:2,opacity:.65,...(n.relation==='related'?{strokeDasharray:'6 6'}:{})}})),...doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map(l=>({...l,type:'smoothstep',style:{stroke:theme.color,strokeWidth:2,strokeDasharray:'6 6'}}))];
  const topology=rows.map(n=>n.id+':'+n.position.y+':'+(n.show?.image!==false&&n.images.length>0)).join('|');
  useEffect(()=>{let timer=setTimeout(()=>{if(!isMoving.current)flow.fitView({padding:.22,maxZoom:1,minZoom:.04,duration:420})},160);return()=>clearTimeout(timer)},[topology,panel]);
  const toggle=n=>{setSelected(n.id);let kids=doc.nodes.some(x=>x.parent===n.id);if(kids)setExpanded(s=>{let t=new Set(s);t.has(n.id)?t.delete(n.id):t.add(n.id);return t});if(editing||!kids){setPanel(true)}};
@@ -75,5 +78,6 @@ function App(){
  </div>;
 }
 createRoot(document.getElementById('root')).render(<ReactFlowProvider><App/></ReactFlowProvider>);
+
 
 

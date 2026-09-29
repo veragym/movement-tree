@@ -2,7 +2,7 @@ const {chromium}=require('C:/Users/iksun/.cache/codex-runtimes/codex-primary-run
 const assert=require('node:assert/strict');
 (async()=>{
  const browser=await chromium.launch({channel:'msedge',headless:true});
- let remote=null,revision=0,delayVersion=false;
+ const {seed}=await import('../src/model.js'); let remote={...seed(),contentPacks:['conversation-2026-09']},revision=1,delayVersion=false;
  const contexts=[];
  async function client(failStorage=false){
   const ctx=await browser.newContext();contexts.push(ctx);
@@ -38,3 +38,4 @@ const assert=require('node:assert/strict');
  await b.waitForTimeout(4500);assert.equal(remote.theme,'blue','async image must preserve intervening theme edit');assert.equal(remote.nodes.find(n=>n.id==='upper').images.length,1);
  console.log('PASS delayed refresh save, two-device conflict, offline recovery, reload, unavailable local storage, concurrent image/edit');await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});
+
