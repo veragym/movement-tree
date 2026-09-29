@@ -1,0 +1,50 @@
+const {chromium}=require('C:/Users/iksun/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+(async()=>{
+ const browser=await chromium.launch({channel:'msedge',headless:true});
+ const ctx=await browser.newContext({viewport:{width:1180,height:820},hasTouch:true});
+ let remote=null,revision=0,calls=0;
+ await ctx.route('**/rest/v1/rpc/mt_*',async route=>{calls++;let url=route.request().url(),body=route.request().postDataJSON();let data=null,status=200;
+  if(url.endsWith('/mt_load')) data=remote?{document:remote,revision}:null;
+  else if(url.endsWith('/mt_version'))data=revision||null;
+  else if(body.p_expected!==revision){data={code:'40001'};status=409}
+  else{remote=body.p_doc;data=++revision}
+  await route.fulfill({status,contentType:'application/json',body:JSON.stringify(data)});
+ });
+ const page=await ctx.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:5180/#tree=00000000-0000-4000-8000-000000000001');
+ await page.waitForSelector('.tree-card');await page.waitForTimeout(1700);
+ assert.equal(await page.locator('.tree-card').count(),2);
+ await page.locator('.tree-card').filter({has:page.locator('.card-name',{hasText:'상체'})}).click();await page.waitForTimeout(550);
+ assert.equal(await page.locator('.tree-card').count(),4);
+ await page.locator('.tree-card').filter({has:page.locator('.card-name',{hasText:'당기기'})}).click();await page.waitForTimeout(550);
+ assert.equal(await page.locator('.tree-card').count(),6);
+ await page.locator('.tree-card').filter({has:page.locator('.card-name',{hasText:/^로우$/})}).click();await page.waitForTimeout(550);
+ assert.equal(await page.locator('.tree-card').count(),10);
+ for(const box of await page.locator('.tree-card').evaluateAll(els=>els.map(e=>{let r=e.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom}}))){assert(box.x>=0&&box.right<=1180);assert(box.y>=0&&box.bottom<=820)}
+ await page.getByRole('button',{name:'편집',exact:true}).click();
+ await page.locator('.tree-card').filter({has:page.locator('.card-name',{hasText:/^바벨$/})}).click();await page.waitForTimeout(500);
+ await page.getByRole('button',{name:'하위 가지',exact:true}).click();
+ await page.getByRole('dialog').getByRole('textbox').fill('바벨 벤트오버 로우');await page.getByRole('dialog').getByRole('button',{name:'가지 추가',exact:true}).click();
+ await page.getByRole('combobox').first().waitFor();
+ await page.getByLabel('항목 종류').selectOption('exercise');
+ await page.getByRole('button',{name:'단어 추가',exact:true}).click();await page.getByLabel('풀이 단어').fill('바벨');await page.getByLabel('단어 뜻').fill('도구');
+ await page.getByRole('button',{name:'설명 항목 추가',exact:true}).click();await page.getByLabel('설명 제목').fill('공통 움직임');await page.getByLabel('설명 내용').fill('팔꿈치를 뒤로 보냅니다.');
+ await page.getByRole('button',{name:'설명 표시 전환',exact:true}).click();
+ await page.getByRole('button',{name:'기존 이미지',exact:true}).click();await page.getByLabel('라이브러리 검색').fill('벤트오버');await page.locator('.image-grid button').first().click();
+ await page.waitForTimeout(2200);assert(remote.nodes.some(n=>n.label==='바벨 벤트오버 로우'&&n.images.length===1));
+ await page.getByRole('button',{name:'설정',exact:true}).click();await page.getByRole('button',{name:'보라 테마',exact:true}).click();await page.getByRole('button',{name:'닫기',exact:true}).click();await page.waitForTimeout(1800);assert.equal(remote.theme,'purple');
+ const selected=remote.nodes.find(n=>n.label==='바벨 벤트오버 로우');
+ await page.getByRole('button',{name:'상담',exact:true}).click();await page.locator('.tree-card').filter({has:page.locator('.card-name',{hasText:'바벨 벤트오버 로우'})}).click();
+ assert.equal(await page.getByText('팔꿈치를 뒤로 보냅니다.').count(),0);
+ assert(await page.locator('.breadcrumbs').textContent());
+ await page.screenshot({path:'test-results/tablet.png',fullPage:true});
+ await page.getByRole('button',{name:'상세 닫기',exact:true}).click();await page.getByRole('button',{name:'설정',exact:true}).click();
+ const dl=page.waitForEvent('download');await page.getByRole('button',{name:'백업 내보내기',exact:true}).click();let download=await dl;await download.saveAs('test-results/backup.zip');assert(fs.statSync('test-results/backup.zip').size>1000);
+ await page.getByRole('button',{name:'닫기',exact:true}).click();
+ await page.setViewportSize({width:768,height:1024});await page.getByRole('button',{name:'전체 보기',exact:true}).click();await page.waitForTimeout(500);await page.screenshot({path:'test-results/portrait.png',fullPage:true});
+ await page.setViewportSize({width:390,height:844});await page.getByRole('button',{name:'전체 보기',exact:true}).click();await page.waitForTimeout(500);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await page.screenshot({path:'test-results/phone.png',fullPage:true});
+ console.log(JSON.stringify({errors,calls,revision,backupBytes:fs.statSync('test-results/backup.zip').size}));assert.deepEqual(errors,[]);
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});
