@@ -35,7 +35,7 @@ function App(){
  const rows=useMemo(()=>layout(doc,expanded),[doc,expanded]);
  const canvasNodes=rows.map(n=>({id:n.id,type:'movement',position:n.position,data:{node:n,count:doc.nodes.filter(x=>x.parent===n.id).length,open:expanded.has(n.id),selected:n.id===selected},draggable:false}));
  const visible=new Set(rows.map(n=>n.id));
- const edges=[...rows.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',style:{stroke:theme.color,strokeWidth:2,opacity:.65}})),...doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map(l=>({...l,type:'smoothstep',style:{stroke:theme.color,strokeWidth:2,strokeDasharray:'6 6'}}))];
+ const edges=[...rows.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',pathOptions:{offset:10},style:{stroke:theme.color,strokeWidth:2,opacity:.65}})),...doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map(l=>({...l,type:'smoothstep',style:{stroke:theme.color,strokeWidth:2,strokeDasharray:'6 6'}}))];
  const topology=rows.map(n=>n.id).join('|');
  useEffect(()=>{let timer=setTimeout(()=>{if(!isMoving.current)flow.fitView({padding:.22,maxZoom:1,minZoom:.04,duration:420})},160);return()=>clearTimeout(timer)},[topology,panel]);
  const toggle=n=>{setSelected(n.id);let kids=doc.nodes.some(x=>x.parent===n.id);if(kids)setExpanded(s=>{let t=new Set(s);t.has(n.id)?t.delete(n.id):t.add(n.id);return t});if(editing||!kids){setPanel(true)}};
@@ -75,3 +75,4 @@ function App(){
  </div>;
 }
 createRoot(document.getElementById('root')).render(<ReactFlowProvider><App/></ReactFlowProvider>);
+
