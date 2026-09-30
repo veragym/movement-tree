@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {seed,validateDoc,pathTo} from '../src/model.js';
-import {applyContentPack,pack} from '../src/content-pack.js';
+import {applyContentPack,pack} from '../src/initial-content-pack.js';
 import legacy from '../src/legacy-content-pack.json' with {type:'json'};
 test('approved hierarchy puts equipment after basic exercise',()=>{const d=applyContentPack(seed());validateDoc(d);assert.deepEqual(pathTo(d,'pack-ex-incline_chest_press').map(n=>n.label),['상체','밀기','복합관절','프레스','상향 사선','인클라인 체스트 프레스','바벨','바벨 인클라인 체스트 프레스']);assert.equal(d.nodes.filter(n=>n.level==='basic').length,64);assert.deepEqual(d.nodes.filter(n=>!n.parent).map(n=>n.label),['상체','하체']);assert(!d.nodes.some(n=>n.parent==='lunge'&&n.label==='단일관절'))});
 test('reset all image links once while retaining user text and theme',()=>{let d={version:1,theme:'purple',nodes:structuredClone(legacy.nodes),links:[]};d.nodes.find(n=>n.id==='pack-ex-incline_chest_press').fields=[{id:'mine',title:'설명',body:'내 설명',visible:true}];d.nodes.push({id:'user-node',label:'내 운동',parent:'row',kind:'exercise',images:[{id:'img',url:'https://example.com/old.jpg'}],meanings:[],fields:[{id:'note',title:'메모',body:'유지',visible:false}],show:{image:true}});let next=applyContentPack(d);assert(next.nodes.every(n=>n.images.length===0));assert.equal(next.theme,'purple');assert.equal(next.nodes.find(n=>n.id==='pack-ex-incline_chest_press').fields[0].body,'내 설명');assert.equal(next.nodes.find(n=>n.id==='user-node').fields[0].body,'유지');next.nodes[0].images=[{id:'new',url:'https://example.com/new.jpg'}];assert.deepEqual(applyContentPack(next),next);validateDoc(next)});

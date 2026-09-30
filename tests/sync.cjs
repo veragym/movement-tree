@@ -2,7 +2,7 @@ const {chromium}=require('C:/Users/iksun/.cache/codex-runtimes/codex-primary-run
 const assert=require('node:assert/strict');
 (async()=>{
  const browser=await chromium.launch({channel:'msedge',headless:true});
- const {seed}=await import('../src/model.js'); let remote={...seed(),contentPacks:['conversation-structure-v2-images-reset']},revision=1,delayVersion=false;
+ const {seed}=await import('../src/model.js'); let remote={...seed(),contentPacks:['conversation-structure-v2-images-reset','lower-review-v3']},revision=1,delayVersion=false;
  const contexts=[];
  async function client(failStorage=false){
   const ctx=await browser.newContext();contexts.push(ctx);
