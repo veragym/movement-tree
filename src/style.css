@@ -28,3 +28,6 @@
 .card-english{font-size:13px;line-height:18px;color:#66796e;margin:0 0 12px;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex-shrink:0}
 .detail-english{font-size:16px;line-height:1.5;color:#66796e;overflow-wrap:anywhere;margin:-10px 0 20px}
 .english-hint{display:block;font-weight:400;font-size:11px;margin-top:6px;color:#819083}
+
+.tree-expand-all,.tree-collapse-all{white-space:nowrap;padding:8px 10px;font-size:12px}
+@media(max-width:900px){.workspace-toolbar .trail{display:none}.workspace-toolbar .tools{width:100%;justify-content:flex-end;gap:6px}}
