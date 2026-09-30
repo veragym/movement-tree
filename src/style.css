@@ -33,3 +33,5 @@
 @media(max-width:900px){.workspace-toolbar .trail{display:none}.workspace-toolbar .tools{width:100%;justify-content:flex-end;gap:6px}}
 
 .inspector{min-height:0;overflow:hidden}.inspector-header{flex-shrink:0}.inspector-body{min-height:0;overflow-y:auto}.inspector-footer{flex-shrink:0;padding:14px 24px max(12px,env(safe-area-inset-bottom));border-top:1px solid #e3e9e4;background:#fff}.inspector-footer .inspector-save{width:100%;min-height:46px;background:var(--accent);border-color:var(--accent);color:white;justify-content:center;font-size:14px}.inspector-footer small{display:block;text-align:center;font-size:10px;color:#819083;margin-top:7px}
+
+.inspector-footer .inspector-save:disabled{background:#e8ece9;border-color:#e8ece9;color:#9aa49d;opacity:1;cursor:default}
