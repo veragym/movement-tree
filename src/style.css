@@ -22,3 +22,9 @@
 .focus-mode .main{margin:0;border:0;border-radius:0}
 .focus-exit{position:absolute;top:12px;right:12px;z-index:10;background:white;box-shadow:0 2px 12px #20332e15}
 @media(max-width:760px){.compact-app .app-header{padding:0 10px}.compact-app .brand strong{font-size:11px}.compact-app .brand-mark{display:none}.compact-app .workspace-toolbar{margin:0 10px}.compact-app .trail{max-width:115px}.compact-app .main{margin:0 6px 6px}.focus-mode .main{margin:0}.compact-app .tools .icon-btn{min-width:36px}}
+
+.tree-card.has-english{height:236px}
+.tree-card.has-image.has-english{height:372px}
+.card-english{font-size:13px;line-height:18px;color:#66796e;margin:0 0 12px;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex-shrink:0}
+.detail-english{font-size:16px;line-height:1.5;color:#66796e;overflow-wrap:anywhere;margin:-10px 0 20px}
+.english-hint{display:block;font-weight:400;font-size:11px;margin-top:6px;color:#819083}
