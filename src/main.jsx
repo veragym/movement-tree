@@ -33,7 +33,7 @@ function App(){
  useEffect(()=>{if(sync.error)notify(sync.error)},[sync.error]);
  const currentDoc=useRef(doc);currentDoc.current=doc;
  const packAttempted=useRef(false);
- useEffect(()=>{if(!ready||sync.conflict||doc.contentPacks?.includes(pack.id)||packAttempted.current)return;packAttempted.current=true;(async()=>{try{await writeLocal(key+':before-'+pack.id,{doc:structuredClone(currentDoc.current),revision:null,dirty:false});replace(applyContentPack(currentDoc.current));notify('하체 분류를 수정했습니다. 기존 사진과 작성한 설명은 유지됩니다.')}catch(e){notify('운동 자료를 추가하지 못했습니다: '+e.message)}})()},[ready,doc,sync.conflict]);
+ useEffect(()=>{if(!ready||sync.conflict||doc.contentPacks?.includes(pack.id)||packAttempted.current)return;packAttempted.current=true;(async()=>{try{await writeLocal(key+':before-'+pack.id,{doc:structuredClone(currentDoc.current),revision:null,dirty:false});replace(applyContentPack(currentDoc.current));notify('운동 영문 이름을 추가했습니다. 기존 사진·설명과 직접 입력한 영문은 유지됩니다.')}catch(e){notify('운동 자료를 추가하지 못했습니다: '+e.message)}})()},[ready,doc,sync.conflict]);
  const change=fn=>{try{let before=structuredClone(currentDoc.current),next=fn(structuredClone(currentDoc.current));replace(next);currentDoc.current=next;setHistory(h=>[...h.slice(-29),before])}catch(e){notify(e.message)}};
  const patch=(id,values)=>change(d=>{let n=d.nodes.find(n=>n.id===id);if(n)Object.assign(n,typeof values==='function'?values(n):values);return d});
  const node=doc.nodes.find(n=>n.id===selected),theme=themes[doc.theme]||themes.green;
