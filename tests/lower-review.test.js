@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import baseline from '../src/content-pack.json' with {type:'json'};
-import {applyContentPack,pack} from '../src/content-pack.js';
+import {applyLowerReview as applyContentPack,reviewId} from '../src/lower-review.js';
+const pack={id:reviewId};
 import {pathTo,validateDoc} from '../src/model.js';
 const original=()=>({version:1,theme:'purple',nodes:structuredClone(baseline.nodes),links:[],contentPacks:[baseline.id]});
 test('lower review preserves every upper node, personal images and descriptions',()=>{const d=original();let upperIds=new Set(d.nodes.filter(n=>pathTo(d,n.id).some(p=>p.id==='upper')).map(n=>n.id));d.nodes.find(n=>n.id==='basic::백 익스텐션').images=[{id:'mine',url:'https://example.com/mine.jpg'}];d.nodes.find(n=>n.id==='basic::백 익스텐션').fields=[{id:'own',title:'내 설명',body:'보존',visible:true}];const next=applyContentPack(d);assert.notEqual(pack.id,baseline.id);assert.deepEqual(next.nodes.filter(n=>upperIds.has(n.id)).map(({englishName,...n})=>n),d.nodes.filter(n=>upperIds.has(n.id)));assert.equal(next.nodes.find(n=>n.id==='basic::백 익스텐션').images[0].id,'mine');assert(next.nodes.find(n=>n.id==='basic::백 익스텐션').fields.some(f=>f.body==='보존'));validateDoc(next)});
