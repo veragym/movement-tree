@@ -35,7 +35,7 @@ function App(){
  useEffect(()=>{if(sync.error)notify(sync.error)},[sync.error]);
  const currentDoc=useRef(doc);currentDoc.current=doc;
  const packAttempted=useRef(false);
- useEffect(()=>{if(!ready||sync.conflict||doc.contentPacks?.includes(pack.id)||packAttempted.current)return;packAttempted.current=true;(async()=>{try{await writeLocal(key+':before-'+pack.id,{doc:structuredClone(currentDoc.current),revision:null,dirty:false});replace(applyContentPack(currentDoc.current));notify('하체 케이블 가지를 제거했습니다. 상체와 나머지 운동은 유지됩니다.')}catch(e){notify('운동 자료를 추가하지 못했습니다: '+e.message)}})()},[ready,doc,sync.conflict]);
+ useEffect(()=>{if(!ready||sync.conflict||doc.contentPacks?.includes(pack.id)||packAttempted.current)return;packAttempted.current=true;(async()=>{try{await writeLocal(key+':before-'+pack.id,{doc:structuredClone(currentDoc.current),revision:null,dirty:false});replace(applyContentPack(currentDoc.current));notify('미매칭 목록의 운동을 제거했습니다. 나머지 운동과 원본 이미지는 유지됩니다.')}catch(e){notify('운동 자료를 추가하지 못했습니다: '+e.message)}})()},[ready,doc,sync.conflict]);
  const change=fn=>{try{let before=structuredClone(currentDoc.current),next=fn(structuredClone(currentDoc.current));replace(next);currentDoc.current=next;setHistory(h=>[...h.slice(-29),before])}catch(e){notify(e.message)}};
  const patch=(id,values)=>change(d=>{let n=d.nodes.find(n=>n.id===id);if(n)Object.assign(n,typeof values==='function'?values(n):values);return d});
  const node=doc.nodes.find(n=>n.id===selected),theme=themes[doc.theme]||themes.green;
