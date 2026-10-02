@@ -6,6 +6,7 @@ import {pathTo,themes} from '../model';
 import {TEST_KEY,criteriaFor,record,progress,stats,setCheck,linkCriterion,unlinkCriterion,deleteCriterion,removeMember} from './model';
 import '@xyflow/react/dist/style.css';
 import './style.css';
+import {AtlasHeader} from '../AtlasHeader';
 import offlineSeed from './offline-seed.json';
 import {questLayout} from './layout';
 const date=v=>v?new Date(v).toLocaleDateString('ko-KR'):'—';
@@ -33,10 +34,10 @@ function AssessmentManager({q,change,close}){
 }
 function LearnerManager({q,change,selected,onSelected,close}){
  const [edit,setEdit]=useState(null),[name,setName]=useState(''),[pending,setPending]=useState(null);
- return <Modal title="학습자 관리" close={close}><div className="modal-body"><p className="hint">테스트용 이름으로 사용해 보세요. 학습자별 체크와 달성일은 따로 저장됩니다.</p><button className="primary" onClick={()=>{setEdit('new');setName('')}}>＋ 학습자 추가</button>
+ return <Modal title="학습자 관리" close={close}><div className="modal-body"><p className="hint">학습자별 체크와 달성일은 따로 저장됩니다.</p><button className="primary" onClick={()=>{setEdit('new');setName('')}}>＋ 학습자 추가</button>
  {edit&&<form className="editor" onSubmit={e=>{e.preventDefault();if(!name.trim())return;const id=edit==='new'?crypto.randomUUID():edit;change(q=>{if(edit==='new')q.members.push({id,name:name.trim(),records:{}});else q.members.find(m=>m.id===edit).name=name.trim()});if(edit==='new')onSelected(id);setEdit(null)}}><label>이름<input autoFocus aria-label="학습자 이름" maxLength={40} value={name} onChange={e=>setName(e.target.value)}/></label><div className="editor-actions"><button type="button" onClick={()=>setEdit(null)}>취소</button><button className="primary" disabled={!name.trim()}>학습자 저장</button></div></form>}
  <div className="library-list">{q.members.map(m=><article key={m.id}><div><b>{m.name}</b><small>{stats(q,m).done} / {stats(q,m).total} 가지 달성{selected===m.id?' · 선택 중':''}</small></div><button onClick={()=>{setEdit(m.id);setName(m.name)}}>수정</button><button className="danger" disabled={q.members.length<=1} onClick={()=>setPending(m)}>삭제</button></article>)}</div>
- <p className="hint">학습자는 최소 1명 유지합니다.</p>{pending&&<div className="confirm" role="alert"><b>{pending.name} 학습자를 삭제할까요?</b><p>이 학습자의 테스트 달성 기록도 삭제됩니다.</p><button onClick={()=>setPending(null)}>취소</button><button className="danger" onClick={()=>{const next=q.members.find(m=>m.id!==pending.id);change(q=>removeMember(q,pending.id));if(selected===pending.id)onSelected(next.id);if(edit===pending.id)setEdit(null);setPending(null)}}>학습자 삭제</button></div>}
+ <p className="hint">학습자는 최소 1명 유지합니다.</p>{pending&&<div className="confirm" role="alert"><b>{pending.name} 학습자를 삭제할까요?</b><p>이 학습자의 달성 기록도 삭제됩니다.</p><button onClick={()=>setPending(null)}>취소</button><button className="danger" onClick={()=>{const next=q.members.find(m=>m.id!==pending.id);change(q=>removeMember(q,pending.id));if(selected===pending.id)onSelected(next.id);if(edit===pending.id)setEdit(null);setPending(null)}}>학습자 삭제</button></div>}
  </div></Modal>
 }
 function App({sync,openOffline}){
@@ -58,13 +59,13 @@ function App({sync,openOffline}){
  const nodes=laid.map(n=>{const pr=progress(q,member,n.id);return {id:n.id,type:'movement',position:n.position,data:{...n,...pr,measure,openQuest:id=>select(id,false,'quest'),hasQuest:pr.total>0,hasImage:n.show?.image!==false&&n.images.length>0,selected:n.id===selected,count:doc.nodes.filter(x=>x.parent===n.id).length,open:expanded.has(n.id),toggle,achievedAt:record(member,n.id).achievedAt}}});
  const visible=new Set(nodes.map(n=>n.id));
  const edges=laid.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',style:{stroke:'#cbb7e0',strokeWidth:1.6}})).concat(doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map((l,i)=>({...l,id:'related-'+i,type:'smoothstep',style:{stroke:'#b4a5c4',strokeDasharray:'5 5'}})));
- if(!sync.ready)return <div className="loading">테스트 트리를 불러오는 중…</div>;
- if(!q)return <div className="loading"><h2>클라우드 연결을 완료하지 못했습니다.</h2><p>서버 응답이 지연되고 있습니다. 기기 테스트는 클라우드와 별도로 저장됩니다.</p><button onClick={sync.refresh}>연결 확인</button> <button className="primary" onClick={openOffline}>기기 테스트로 열기</button></div>;
+ if(!sync.ready)return <div className="loading">퀘스트를 불러오는 중…</div>;
+ if(!q)return <div className="loading"><h2>클라우드 연결을 완료하지 못했습니다.</h2><p>서버 응답이 지연되고 있습니다. 기기 모드는 클라우드와 별도로 저장됩니다.</p><button onClick={sync.refresh}>연결 확인</button> <button className="primary" onClick={openOffline}>기기 모드로 열기</button></div>;
  const summary=stats(q,member),items=selected?criteriaFor(q,selected):[],r=record(member,selected),pr=selected?progress(q,member,selected):{total:0,checked:0,done:false},quests=doc.nodes.filter(n=>criteriaFor(q,n.id).length),available=q.library.filter(c=>!items.some(i=>i.id===c.id));
  const results=search.trim()?doc.nodes.filter(n=>(n.label+' '+(n.englishName||'')).toLowerCase().includes(search.trim().toLowerCase())).slice(0,25):[];
  return <div className="quest-app" style={{'--accent':themes[doc.theme]?.color||'#8050ae'}}>
- <header><div className="brand"><span className="brand-icon">⑂</span><div><b>MOVEMENT ATLAS</b><small>기존 움직임 지도에, 나만의 성장 기록</small></div><span className="test-badge">퀘스트 테스트</span></div><div className="header-right"><span className="sync" role="status">{({preview:'기기 테스트 · 클라우드 미연결',saved:'클라우드 저장됨',pending:'저장 대기',saving:'저장 중',offline:'기기에 보관 · 연결 필요',conflict:'저장 충돌',setup:'연결 설정 필요'})[sync.status]||'연결 중'}</span><button onClick={()=>{sync.refresh();setMessage('클라우드 연결을 확인하고 있습니다.')}}>연결 확인</button><a href="./index.html#tree=27ce43fa-489c-4367-b6ff-891b478abe3e">기존 트리 ↗</a></div></header>
- <div className={"test-notice "+(sync.status==="preview"?"preview-notice":"")}>{sync.status==='preview'?'기기 테스트 모드 · 변경은 이 브라우저에만 저장됩니다. 다른 기기와 동기화되지 않으며 클라우드에 자동 반영하지 않습니다.':'원본 트리를 복사한 독립 테스트판입니다. 가지 구조를 바꾸지 않고, 원하는 가지에만 퀘스트를 연결합니다.'}</div>
+ <AtlasHeader page="quest" status={sync.status} notify={setMessage}><button onClick={()=>{sync.refresh();setMessage('클라우드 연결을 확인하고 있습니다.')}}>연결 확인</button></AtlasHeader>
+ <div className={"test-notice "+(sync.status==="preview"?"preview-notice":"")}>{sync.status==='preview'?'기기 모드 모드 · 변경은 이 브라우저에만 저장됩니다. 다른 기기와 동기화되지 않으며 클라우드에 자동 반영하지 않습니다.':'원하는 가지에 퀘스트를 연결하고 학습자별 달성을 기록합니다.'}</div>
  {sync.conflict&&<div className="conflict">다른 기기에서 변경했습니다. <button onClick={()=>sync.resolve('remote')}>클라우드 저장본 사용</button><button onClick={()=>sync.resolve('local')}>내 변경으로 저장</button></div>}
  {sync.error&&<div className="conflict">{sync.error}</div>}
  <section className="dashboard"><div className="member"><label htmlFor="learner">학습자</label><select id="learner" value={member.id} onChange={e=>setMemberId(e.target.value)}>{q.members.map(m=><option key={m.id} value={m.id}>{m.name}</option>)}</select><button onClick={()=>setModal('learners')} disabled={disabled}>학습자 관리</button></div><div className="progress"><div><span>퀘스트 달성률</span><b>{summary.percent}<small>%</small></b></div><div className="progress-track"><i style={{width:summary.percent+'%'}}/></div><small>{summary.done} / {summary.total}개 가지 달성</small></div><div className="dashboard-actions"><button onClick={()=>setModal('quests')}>◆ 퀘스트 목록 {quests.length}</button><button className="primary" onClick={()=>setModal('assessments')} disabled={disabled}>평가 항목 관리</button></div></section>
