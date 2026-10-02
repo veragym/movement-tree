@@ -65,7 +65,7 @@ function App({sync,openOffline}){
  const results=search.trim()?doc.nodes.filter(n=>(n.label+' '+(n.englishName||'')).toLowerCase().includes(search.trim().toLowerCase())).slice(0,25):[];
  return <div className="quest-app" style={{'--accent':themes[doc.theme]?.color||'#8050ae'}}>
  <AtlasHeader page="quest" status={sync.status} notify={setMessage}><button onClick={()=>{sync.refresh();setMessage('클라우드 연결을 확인하고 있습니다.')}}>연결 확인</button></AtlasHeader>
- <div className={"test-notice "+(sync.status==="preview"?"preview-notice":"")}>{sync.status==='preview'?'기기 모드 모드 · 변경은 이 브라우저에만 저장됩니다. 다른 기기와 동기화되지 않으며 클라우드에 자동 반영하지 않습니다.':'원하는 가지에 퀘스트를 연결하고 학습자별 달성을 기록합니다.'}</div>
+ <div className={"test-notice "+(sync.status==="preview"?"preview-notice":"")}>{sync.status==='preview'?'기기 모드 · 변경은 이 브라우저에만 저장됩니다. 다른 기기와 동기화되지 않으며 클라우드에 자동 반영하지 않습니다.':'원하는 가지에 퀘스트를 연결하고 학습자별 달성을 기록합니다.'}</div>
  {sync.conflict&&<div className="conflict">다른 기기에서 변경했습니다. <button onClick={()=>sync.resolve('remote')}>클라우드 저장본 사용</button><button onClick={()=>sync.resolve('local')}>내 변경으로 저장</button></div>}
  {sync.error&&<div className="conflict">{sync.error}</div>}
  <section className="dashboard"><div className="member"><label htmlFor="learner">학습자</label><select id="learner" value={member.id} onChange={e=>setMemberId(e.target.value)}>{q.members.map(m=><option key={m.id} value={m.id}>{m.name}</option>)}</select><button onClick={()=>setModal('learners')} disabled={disabled}>학습자 관리</button></div><div className="progress"><div><span>퀘스트 달성률</span><b>{summary.percent}<small>%</small></b></div><div className="progress-track"><i style={{width:summary.percent+'%'}}/></div><small>{summary.done} / {summary.total}개 가지 달성</small></div><div className="dashboard-actions"><button onClick={()=>setModal('quests')}>◆ 퀘스트 목록 {quests.length}</button><button className="primary" onClick={()=>setModal('assessments')} disabled={disabled}>평가 항목 관리</button></div></section>
@@ -102,4 +102,5 @@ function Preview({reconnect}){
 function Connected({fallback}){const sync=useDocument(TEST_KEY);useEffect(()=>{if(sync.ready&&sync.status==='offline'&&sync.doc.quest?.schema!==2)fallback()},[sync.ready,sync.status]);return <App sync={sync} openOffline={fallback}/>;}
 function Entry(){const [offline,setOffline]=useState(false);return offline?<Preview reconnect={()=>setOffline(false)}/>:<Connected fallback={()=>setOffline(true)}/>;}
 createRoot(document.getElementById('root')).render(<ReactFlowProvider><Entry/></ReactFlowProvider>);
+
 
