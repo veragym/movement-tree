@@ -6,6 +6,7 @@ import {layout,pathTo,themes} from '../model';
 import {TEST_KEY,criteriaFor,record,progress,stats,setCheck,linkCriterion,unlinkCriterion,deleteCriterion,removeMember} from './model';
 import '@xyflow/react/dist/style.css';
 import './style.css';
+import offlineSeed from './offline-seed.json';
 const date=v=>v?new Date(v).toLocaleDateString('ko-KR'):'—';
 function Card({data:d}){return <div className={'tree-card '+(d.hasQuest?'has-quest ':'')+(d.done?'achieved ':'')+(d.selected?'selected ':'')+(d.hasImage?'has-image ':'')+(d.englishName?.trim()?'has-english':'')}>
  <Handle type="target" position={Position.Top}/>
@@ -37,8 +38,8 @@ function LearnerManager({q,change,selected,onSelected,close}){
  <p className="hint">학습자는 최소 1명 유지합니다.</p>{pending&&<div className="confirm" role="alert"><b>{pending.name} 학습자를 삭제할까요?</b><p>이 학습자의 테스트 달성 기록도 삭제됩니다.</p><button onClick={()=>setPending(null)}>취소</button><button className="danger" onClick={()=>{const next=q.members.find(m=>m.id!==pending.id);change(q=>removeMember(q,pending.id));if(selected===pending.id)onSelected(next.id);if(edit===pending.id)setEdit(null);setPending(null)}}>학습자 삭제</button></div>}
  </div></Modal>
 }
-function App(){
- const sync=useDocument(TEST_KEY),{doc,replace}=sync;const q=doc.quest?.schema===2?doc.quest:null;
+function App({sync,openOffline}){
+ const {doc,replace}=sync;const q=doc.quest?.schema===2?doc.quest:null;
  const [memberId,setMemberId]=useState('demo-a'),[selected,setSelected]=useState(null),[expanded,setExpanded]=useState(new Set(['upper','lower'])),[modal,setModal]=useState(null),[choice,setChoice]=useState(''),[search,setSearch]=useState(''),[message,setMessage]=useState(''),[showPanel,setShowPanel]=useState(true),[pendingUnlink,setPendingUnlink]=useState(null);
  const panelRef=useRef(null);
  const flow=useReactFlow(),focusRef=useRef(null),latest=useRef(doc);latest.current=doc;
@@ -54,12 +55,12 @@ function App(){
  const visible=new Set(nodes.map(n=>n.id));
  const edges=laid.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',style:{stroke:'#cbb7e0',strokeWidth:1.6}})).concat(doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map((l,i)=>({...l,id:'related-'+i,type:'smoothstep',style:{stroke:'#b4a5c4',strokeDasharray:'5 5'}})));
  if(!sync.ready)return <div className="loading">테스트 트리를 불러오는 중…</div>;
- if(!q)return <div className="loading"><h2>테스트 버전 데이터를 연결하는 중입니다.</h2><p>연결을 확인하거나 잠시 후 새로고침해 주세요.</p><button onClick={sync.refresh}>연결 확인</button></div>;
+ if(!q)return <div className="loading"><h2>클라우드 연결을 완료하지 못했습니다.</h2><p>서버 응답이 지연되고 있습니다. 기기 테스트는 클라우드와 별도로 저장됩니다.</p><button onClick={sync.refresh}>연결 확인</button> <button className="primary" onClick={openOffline}>기기 테스트로 열기</button></div>;
  const summary=stats(q,member),items=selected?criteriaFor(q,selected):[],r=record(member,selected),pr=selected?progress(q,member,selected):{total:0,checked:0,done:false},quests=doc.nodes.filter(n=>criteriaFor(q,n.id).length),available=q.library.filter(c=>!items.some(i=>i.id===c.id));
  const results=search.trim()?doc.nodes.filter(n=>(n.label+' '+(n.englishName||'')).toLowerCase().includes(search.trim().toLowerCase())).slice(0,25):[];
  return <div className="quest-app" style={{'--accent':themes[doc.theme]?.color||'#8050ae'}}>
- <header><div className="brand"><span className="brand-icon">⑂</span><div><b>MOVEMENT ATLAS</b><small>기존 움직임 지도에, 나만의 성장 기록</small></div><span className="test-badge">퀘스트 테스트</span></div><div className="header-right"><span className="sync" role="status">{({saved:'클라우드 저장됨',pending:'저장 대기',saving:'저장 중',offline:'기기에 보관 · 연결 필요',conflict:'저장 충돌',setup:'연결 설정 필요'})[sync.status]||'연결 중'}</span><button onClick={()=>{sync.refresh();setMessage('클라우드 연결을 확인하고 있습니다.')}}>연결 확인</button><a href="./index.html#tree=27ce43fa-489c-4367-b6ff-891b478abe3e">기존 트리 ↗</a></div></header>
- <div className="test-notice">원본 트리를 복사한 독립 테스트판입니다. 가지 구조를 바꾸지 않고, 원하는 가지에만 퀘스트를 연결합니다.</div>
+ <header><div className="brand"><span className="brand-icon">⑂</span><div><b>MOVEMENT ATLAS</b><small>기존 움직임 지도에, 나만의 성장 기록</small></div><span className="test-badge">퀘스트 테스트</span></div><div className="header-right"><span className="sync" role="status">{({preview:'기기 테스트 · 클라우드 미연결',saved:'클라우드 저장됨',pending:'저장 대기',saving:'저장 중',offline:'기기에 보관 · 연결 필요',conflict:'저장 충돌',setup:'연결 설정 필요'})[sync.status]||'연결 중'}</span><button onClick={()=>{sync.refresh();setMessage('클라우드 연결을 확인하고 있습니다.')}}>연결 확인</button><a href="./index.html#tree=27ce43fa-489c-4367-b6ff-891b478abe3e">기존 트리 ↗</a></div></header>
+ <div className="test-notice">{sync.status==='preview'?'기기 테스트 모드 · 변경은 이 브라우저에만 저장됩니다. 다른 기기와 동기화되지 않으며 클라우드에 자동 반영하지 않습니다.':'원본 트리를 복사한 독립 테스트판입니다. 가지 구조를 바꾸지 않고, 원하는 가지에만 퀘스트를 연결합니다.'}</div>
  {sync.conflict&&<div className="conflict">다른 기기에서 변경했습니다. <button onClick={()=>sync.resolve('remote')}>클라우드 저장본 사용</button><button onClick={()=>sync.resolve('local')}>내 변경으로 저장</button></div>}
  {sync.error&&<div className="conflict">{sync.error}</div>}
  <section className="dashboard"><div className="member"><label htmlFor="learner">학습자</label><select id="learner" value={member.id} onChange={e=>setMemberId(e.target.value)}>{q.members.map(m=><option key={m.id} value={m.id}>{m.name}</option>)}</select><button onClick={()=>setModal('learners')} disabled={disabled}>학습자 관리</button></div><div className="progress"><div><span>퀘스트 달성률</span><b>{summary.percent}<small>%</small></b></div><div className="progress-track"><i style={{width:summary.percent+'%'}}/></div><small>{summary.done} / {summary.total}개 가지 달성</small></div><div className="dashboard-actions"><button onClick={()=>setModal('quests')}>◆ 퀘스트 목록 {quests.length}</button><button className="primary" onClick={()=>setModal('assessments')} disabled={disabled}>평가 항목 관리</button></div></section>
@@ -80,4 +81,12 @@ function App(){
  {message&&<div className="toast" role="status">{message}</div>}
  </div>
 }
-createRoot(document.getElementById('root')).render(<ReactFlowProvider><App/></ReactFlowProvider>);
+const OFFLINE_KEY='movement-quest-local-preview-v2';
+function Preview({reconnect}){
+ const [doc,setDoc]=useState(()=>{try{const d=JSON.parse(localStorage.getItem(OFFLINE_KEY));if(d?.quest?.schema===2&&Array.isArray(d.nodes))return d;}catch{}return structuredClone(offlineSeed)}),[error,setError]=useState('');
+ const replace=d=>{setDoc(d);try{localStorage.setItem(OFFLINE_KEY,JSON.stringify(d));setError('')}catch{setError('기기 저장에 실패했습니다. 이 창을 닫으면 변경 내용이 사라질 수 있습니다.')}};
+ return <App sync={{doc,replace,ready:true,status:'preview',refresh:reconnect,error}}/>;
+}
+function Connected({fallback}){const sync=useDocument(TEST_KEY);useEffect(()=>{if(sync.ready&&sync.status==='offline'&&sync.doc.quest?.schema!==2)fallback()},[sync.ready,sync.status]);return <App sync={sync} openOffline={fallback}/>;}
+function Entry(){const [offline,setOffline]=useState(false);return offline?<Preview reconnect={()=>setOffline(false)}/>:<Connected fallback={()=>setOffline(true)}/>;}
+createRoot(document.getElementById('root')).render(<ReactFlowProvider><Entry/></ReactFlowProvider>);
