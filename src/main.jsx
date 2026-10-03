@@ -10,6 +10,7 @@ import {exportBackup,importBackup} from './backup';
 import '@xyflow/react/dist/style.css';
 import './style.css';
 import {AtlasHeader} from './AtlasHeader';
+import {useAtlasTheme,BASIC_KEY} from './useAtlasTheme';
 const key=workspace();
 function IconButton({title,children,...props}){return <button className="icon-btn" title={title} aria-label={title} {...props}>{children}</button>}
 function Photo({url,...props}){let [src,setSrc]=useState(''),[failed,setFailed]=useState(false);useEffect(()=>{let live=true;setFailed(false);imageURL(url).then(s=>{if(live)setSrc(s)});return()=>{live=false}},[url]);return src&&!failed?<img src={src} {...props} onError={()=>setFailed(true)}/>:<div className="photo-fallback"><ImagePlus size={22}/><span>{failed?'이미지 연결 확인':'이미지'}</span></div>}
@@ -39,6 +40,7 @@ function App(){
  useEffect(()=>{if(!ready||sync.conflict||doc.contentPacks?.includes(pack.id)||packAttempted.current)return;packAttempted.current=true;(async()=>{try{await writeLocal(key+':before-'+pack.id,{doc:structuredClone(currentDoc.current),revision:null,dirty:false});replace(applyContentPack(currentDoc.current));notify('미매칭 목록의 운동을 제거했습니다. 나머지 운동과 원본 이미지는 유지됩니다.')}catch(e){notify('운동 자료를 추가하지 못했습니다: '+e.message)}})()},[ready,doc,sync.conflict]);
  const change=fn=>{try{let before=structuredClone(currentDoc.current),next=fn(structuredClone(currentDoc.current));replace(next);currentDoc.current=next;setHistory(h=>[...h.slice(-29),before])}catch(e){notify(e.message)}};
  const patch=(id,values)=>change(d=>{let n=d.nodes.find(n=>n.id===id);if(n)Object.assign(n,typeof values==='function'?values(n):values);return d});
+ useAtlasTheme({owner:true,ready:ready&&key===BASIC_KEY,theme:doc.theme});
  const node=doc.nodes.find(n=>n.id===selected),theme=themes[doc.theme]||themes.green;
  const editSnapshot=node?JSON.stringify({node,siblings:doc.nodes.filter(n=>n.parent===node.parent).map(n=>n.id),links:doc.links.filter(l=>l.source===node.id||l.target===node.id)}):null;
  useEffect(()=>{setEditBaseline(editing&&panel?editSnapshot:null)},[selected,panel,editing]);
@@ -89,6 +91,7 @@ function App(){
  </div>;
 }
 createRoot(document.getElementById('root')).render(<ReactFlowProvider><App/></ReactFlowProvider>);
+
 
 
 
