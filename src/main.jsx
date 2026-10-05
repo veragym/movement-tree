@@ -1,3 +1,4 @@
+import {focusNeighborhood} from './focusNeighborhood';
 import React,{useState,useEffect,useMemo,useRef,useCallback} from 'react';
 import {createRoot} from 'react-dom/client';
 import {ReactFlow,ReactFlowProvider,Handle,Position,useReactFlow,Background} from '@xyflow/react';
@@ -52,8 +53,8 @@ function App(){
  const edges=[...rows.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',pathOptions:{offset:10,centerY:n.position.y-22},style:{stroke:theme.color,strokeWidth:2,opacity:.65,...(n.relation==='related'?{strokeDasharray:'6 6'}:{})}})),...doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map(l=>({...l,type:'smoothstep',style:{stroke:theme.color,strokeWidth:2,strokeDasharray:'6 6'}}))];
  const topology=rows.map(n=>n.id+':'+n.position.y+':'+(n.show?.image!==false&&n.images.length>0)).join('|');
  useEffect(()=>{let timer=setTimeout(()=>{if(!editing&&!isMoving.current)flow.fitView({padding:.22,maxZoom:1,minZoom:.005,duration:420})},160);return()=>clearTimeout(timer)},[topology,panel,showIntro,focusMode,editing]);
- useEffect(()=>{if(!editing||!panel||!selected)return;const timer=setTimeout(()=>{const n=flow.getNode(selected);if(n){const height=n.measured?.height||176;flow.setCenter(n.position.x+120,n.position.y+height/2,{zoom:flow.getZoom(),duration:350})}},200);return()=>clearTimeout(timer)},[selected,editing,panel,editFocus,focusMode]);
- const toggle=n=>{setBlankName(null);setEditFocus(v=>v+1);setSelected(n.id);let kids=doc.nodes.some(x=>x.parent===n.id);if(kids)setExpanded(s=>{let t=new Set(s);t.has(n.id)?t.delete(n.id):t.add(n.id);return t});if(editing||!kids){setPanel(true)}};
+ useEffect(()=>{if(!editing||!panel||!selected)return;const timer=setTimeout(()=>{const n=flow.getNode(selected);if(n){flow.fitView({nodes:focusNeighborhood(doc,selected,flow.getNodes()),padding:.16,maxZoom:1,minZoom:.005,duration:350})}},200);return()=>clearTimeout(timer)},[selected,editing,panel,editFocus,focusMode,topology]);
+ const toggle=n=>{setBlankName(null);setEditFocus(v=>v+1);setSelected(n.id);let kids=doc.nodes.some(x=>x.parent===n.id);if(kids)setExpanded(s=>{let t=new Set(s);editing?t.add(n.id):t.has(n.id)?t.delete(n.id):t.add(n.id);return t});if(editing||!kids){setPanel(true)}};
  const focus=id=>{setBlankName(null);setEditFocus(v=>v+1);let next=new Set(expanded);for(let p of pathTo(doc,id).slice(0,-1))next.add(p.id);setExpanded(next);setSelected(id);setPanel(true);setSearch('')};
  const add=(label,parent,kind='branch')=>{if(!label.trim())return;let n=item(uid(),label.trim(),parent,kind);change(d=>{d.nodes.push(n);return d});if(parent)setExpanded(s=>new Set([...s,parent]));setSelected(n.id);setPanel(true);setNewItem(null);setNewLabel('');return n.id};
  const setShown=(field,value)=>patch(node.id,{show:{...node.show,[field]:value}});
