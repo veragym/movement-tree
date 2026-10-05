@@ -26,3 +26,4 @@ header{min-height:46px;padding:4px 16px;gap:10px}.brand{gap:8px}.brand-icon{font
 .quest-app:has(.preview-notice){display:flex}.test-notice.preview-notice{display:block;padding:3px 12px;font-size:9px}
 
 .quest-app .react-flow__handle{background:var(--accent)}.quest-app .tree-card.selected{outline-color:var(--accent)}.quest-app .card-top,.quest-app .text-button,.quest-app .eyebrow,.quest-app .legend b{color:var(--accent)}.quest-app input[type=checkbox]{accent-color:var(--accent)}.quest-app .quest-list button,.quest-app .breadcrumbs button{border-color:color-mix(in srgb,var(--accent) 30%,white)}
+.assessment-guide,.inherited-skills{margin:14px 0;padding:12px;border:1px solid color-mix(in srgb,var(--accent) 20%,white);border-radius:10px;font-size:12px;line-height:1.7}.assessment-guide summary,.inherited-skills summary{cursor:pointer;color:var(--accent)}
