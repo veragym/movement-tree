@@ -51,7 +51,7 @@ function App(){
  const editorChanged=editing&&panel&&editBaseline!==null&&editSnapshot!==editBaseline;
 
  const rows=useMemo(()=>layout(doc,expanded,heights),[doc,expanded,heights]);
- const canvasNodes=rows.map(n=>({id:n.id,type:'movement',position:n.position,data:{measure,node:blankName?.id===n.id?{...n,label:blankName.value}:n,count:doc.nodes.filter(x=>x.parent===n.id).length,open:expanded.has(n.id),selected:n.id===selected},draggable:false}));
+ const canvasNodes=rows.map(n=>({id:n.id,type:'movement',position:n.position,...(heights[n.id]?{measured:{width:240,height:heights[n.id]}}:{}),data:{measure,node:blankName?.id===n.id?{...n,label:blankName.value}:n,count:doc.nodes.filter(x=>x.parent===n.id).length,open:expanded.has(n.id),selected:n.id===selected},draggable:false}));
  const visible=new Set(rows.map(n=>n.id));
  const edges=[...rows.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',pathOptions:{offset:10,centerY:n.position.y-22},style:{stroke:theme.color,strokeWidth:2,opacity:.65,...(n.relation==='related'?{strokeDasharray:'6 6'}:{})}})),...doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map(l=>({...l,type:'smoothstep',style:{stroke:theme.color,strokeWidth:2,strokeDasharray:'6 6'}}))];
  function fitRows(targetRows){const bounds=layoutBounds(targetRows,heights),canvas=document.querySelector('.canvas .react-flow')?.getBoundingClientRect();if(bounds&&canvas?.width&&canvas?.height)flow.setViewport(layoutViewport(bounds,canvas.width,canvas.height),{duration:0});}
