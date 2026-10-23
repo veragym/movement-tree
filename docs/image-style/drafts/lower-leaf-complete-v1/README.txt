@@ -1,0 +1,1 @@
+Built-in image_gen. 69 unique lower-body illustrations for 72 leaf exercises. Approved faceless grey mannequin, charcoal athletic shorts, original equipment/poses/grips/full-body/red muscle map preserved. Blue watermarks removed; white background; no labels/arrows/joint circles. Originals preserved. Barbell Step Up extra foot corrected.

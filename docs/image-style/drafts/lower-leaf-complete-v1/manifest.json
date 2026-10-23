@@ -1,0 +1,650 @@
+[
+  {
+    "index": 0,
+    "id": "pack-ex-squat_basic",
+    "label": "맨몸 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Squat.png",
+    "file": "01-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-c20b1cb3-0de5-4a22-979a-4f8f16f66089.png",
+    "publicFile": "lower-01-squat.png"
+  },
+  {
+    "index": 1,
+    "id": "pack-ex-front_squat",
+    "label": "바벨 프론트 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Front Squat.png",
+    "file": "02-barbell-front-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-f22cada9-223e-41ed-98e1-f9b5e2fb0412.png",
+    "publicFile": "lower-02-barbell-front-squat.png"
+  },
+  {
+    "index": 2,
+    "id": "pack-ex-back_squat",
+    "label": "바벨 백 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Squat.png",
+    "file": "03-barbell-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-0a3bd260-30ef-492a-96a3-26f8edd40bf4.png",
+    "publicFile": "lower-03-barbell-squat.png"
+  },
+  {
+    "index": 3,
+    "id": "pack-ex-sumo_squat",
+    "label": "덤벨 스모 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Sumo Squat.png",
+    "file": "04-dumbbell-sumo-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-7fbbc330-1f65-48a7-88ae-dfe6c095c2c6.png",
+    "publicFile": "lower-04-dumbbell-sumo-squat.png"
+  },
+  {
+    "index": 4,
+    "id": "pack-ex-leg_press",
+    "label": "레그 프레스 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Sled 45 Leg Press.png",
+    "file": "05-sled-45-leg-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-1cb170a4-2d57-422b-ae51-89e164429b78.png",
+    "publicFile": "lower-05-sled-45-leg-press.png"
+  },
+  {
+    "index": 5,
+    "id": "pack-ex-leg_extension",
+    "label": "레그 익스텐션 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Leg Extension.png",
+    "file": "06-leg-extension.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-f3506797-0192-4d06-9002-79d404208a58.png",
+    "publicFile": "lower-06-leg-extension.png"
+  },
+  {
+    "index": 6,
+    "id": "pack-ex-deadlift",
+    "label": "바벨 컨벤셔널 데드리프트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Deadlift.png",
+    "file": "07-barbell-deadlift.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-cdf984af-c7f1-4170-9820-f511f21415b6.png",
+    "publicFile": "lower-07-barbell-deadlift.png"
+  },
+  {
+    "index": 7,
+    "id": "pack-ex-romanian_deadlift",
+    "label": "바벨 루마니안 데드리프트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Romanian Deadlift.png",
+    "file": "08-barbell-romanian-deadlift.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-6223b1c3-c36c-4227-b185-57b929b04867.png",
+    "publicFile": "lower-08-barbell-romanian-deadlift.png"
+  },
+  {
+    "index": 8,
+    "id": "pack-ex-stiff_leg_deadlift",
+    "label": "바벨 스티프 레그 데드리프트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Stiff Legged Deadlift.png",
+    "file": "09-barbell-stiff-legged-deadlift.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-1649999f-2e19-40c4-8263-b1fa637730b5.png",
+    "publicFile": "lower-09-barbell-stiff-legged-deadlift.png"
+  },
+  {
+    "index": 9,
+    "id": "pack-ex-sumo_deadlift",
+    "label": "바벨 스모 데드리프트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Sumo Deadlift.png",
+    "file": "10-barbell-sumo-deadlift.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-3124a246-798e-484a-a0d1-b006b74797f1.png",
+    "publicFile": "lower-10-barbell-sumo-deadlift.png"
+  },
+  {
+    "index": 10,
+    "id": "pack-ex-hip_thrust",
+    "label": "바벨 힙 쓰러스트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Hip Thrust.png",
+    "file": "11-barbell-hip-thrust.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-0246ed11-97d9-4ac1-aa8a-3417d2ff2452.png",
+    "publicFile": "lower-11-barbell-hip-thrust.png"
+  },
+  {
+    "index": 11,
+    "id": "pack-ex-glute_bridge",
+    "label": "바벨 글루트 브리지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Glute Bridge.png",
+    "file": "12-barbell-glute-bridge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-ace07e13-91de-452a-b808-28a9a61837c7.png",
+    "publicFile": "lower-12-barbell-glute-bridge.png"
+  },
+  {
+    "index": 12,
+    "id": "pack-ex-back_extension",
+    "label": "로만 체어 백 익스텐션",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Rounded Back Extension.png",
+    "file": "13-rounded-back-extension.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-e624bafe-542e-4edf-86db-237c10555def.png",
+    "publicFile": "lower-13-rounded-back-extension.png"
+  },
+  {
+    "index": 13,
+    "id": "pack-ex-good_morning",
+    "label": "바벨 굿모닝",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Good Morning.png",
+    "file": "14-barbell-good-morning.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-ae593fb2-2e10-4b31-8db9-e2620d229bc3.png",
+    "publicFile": "lower-14-barbell-good-morning.png"
+  },
+  {
+    "index": 14,
+    "id": "pack-ex-leg_curl",
+    "label": "레그 컬 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Seated Leg Curl.png",
+    "file": "15-seated-leg-curl.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-7aa50ff5-e06e-4fe7-bf26-e41d670dc841.png",
+    "publicFile": "lower-15-seated-leg-curl.png"
+  },
+  {
+    "index": 15,
+    "id": "pack-ex-hip_abduction",
+    "label": "밴드 힙 어브덕션",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Band Hip Abduction.png",
+    "file": "16-band-hip-abduction.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-852be71a-9c36-49a2-844b-dafbd45b70ca.png",
+    "publicFile": "lower-16-band-hip-abduction.png"
+  },
+  {
+    "index": 16,
+    "id": "pack-ex-forward_lunge",
+    "label": "맨몸 포워드 런지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Forward Lunge.png",
+    "file": "17-forward-lunge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-02ba8f3c-3159-4207-a84b-78cec2d7ed31.png",
+    "publicFile": "lower-17-forward-lunge.png"
+  },
+  {
+    "index": 17,
+    "id": "pack-ex-reverse_lunge",
+    "label": "덤벨 리버스 런지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Rear Lunge.png",
+    "file": "18-dumbbell-rear-lunge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-32c4b7c2-46a4-4e40-9d3a-155bec07fcfc.png",
+    "publicFile": "lower-18-dumbbell-rear-lunge.png"
+  },
+  {
+    "index": 18,
+    "id": "pack-ex-walking_lunge",
+    "label": "덤벨 워킹 런지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Walking Lunge.png",
+    "file": "19-dumbbell-walking-lunge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-8013f38d-eedf-40f8-a0d5-25a22ae7ea7e.png",
+    "publicFile": "lower-19-dumbbell-walking-lunge.png"
+  },
+  {
+    "index": 19,
+    "id": "pack-ex-side_lunge",
+    "label": "덤벨 사이드 런지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Lateral Lunge.png",
+    "file": "20-dumbbell-lateral-lunge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-0ea7c4aa-3931-491b-bb33-5221ba7b4e53.png",
+    "publicFile": "lower-20-dumbbell-lateral-lunge.png"
+  },
+  {
+    "index": 20,
+    "id": "pack-ex-curtsy_lunge",
+    "label": "바벨 커트시 런지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Curtsey Lunge.png",
+    "file": "21-barbell-curtsey-lunge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-3781813e-ea13-4991-8b19-56820cc27c26.png",
+    "publicFile": "lower-21-barbell-curtsey-lunge.png"
+  },
+  {
+    "index": 21,
+    "id": "pack-ex-split_squat",
+    "label": "맨몸 스플릿 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Split Squat.png",
+    "file": "22-split-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-676390ac-e523-44e7-b862-ecc12981a67c.png",
+    "publicFile": "lower-22-split-squat.png"
+  },
+  {
+    "index": 22,
+    "id": "pack-ex-bulgarian_split_squat",
+    "label": "맨몸 불가리안 스플릿 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Bulgarian Split Squat.png",
+    "file": "23-bulgarian-split-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-98aaade7-2f10-47cb-9595-456a03997287.png",
+    "publicFile": "lower-23-bulgarian-split-squat.png"
+  },
+  {
+    "index": 23,
+    "id": "pack-ex-step_up",
+    "label": "맨몸 스텝업",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Step Up.png",
+    "file": "24-step-up.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-3bd0e557-1f11-4a59-b96b-53bac3a10de6.png",
+    "publicFile": "lower-24-step-up.png"
+  },
+  {
+    "index": 24,
+    "id": "pack-ex-goblet_squat",
+    "label": "덤벨 고블릿 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Goblet Squat.png",
+    "file": "25-dumbbell-goblet-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-2990ab8b-a5e9-4c26-826e-d13bbfd2068f.png",
+    "publicFile": "lower-25-dumbbell-goblet-squat.png"
+  },
+  {
+    "index": 25,
+    "id": "pack-ex-hack_squat",
+    "label": "핵 스쿼트 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Sled Hack Squat.png",
+    "file": "26-sled-hack-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-91dc30a1-bbdb-4c4b-8cd9-28ca3c5da495.png",
+    "publicFile": "lower-26-sled-hack-squat.png"
+  },
+  {
+    "index": 26,
+    "id": "basic::V 스쿼트::variant",
+    "label": "V 스쿼트 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/V Squat (Plate).png",
+    "file": "27-v-squat-plate-.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-f9145fbf-74dd-44aa-b2b7-bbcd12b6a4d2.png",
+    "publicFile": "lower-27-v-squat-plate-.png"
+  },
+  {
+    "index": 27,
+    "id": "basic::라잉 레그 컬::variant",
+    "label": "라잉 레그 컬 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Lying Leg Curl.png",
+    "file": "28-lying-leg-curl.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-84902bb0-3329-401a-ac03-494933a9b2f4.png",
+    "publicFile": "lower-28-lying-leg-curl.png"
+  },
+  {
+    "index": 28,
+    "id": "basic::아웃 타이::variant",
+    "label": "힙 어브덕션 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Seated Hip Abduction.png",
+    "file": "29-seated-hip-abduction.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-abc9744b-bac6-4d62-a1f2-c72e56fef9bc.png",
+    "publicFile": "lower-29-seated-hip-abduction.png"
+  },
+  {
+    "index": 29,
+    "id": "basic::스쿼트::equipment-v6::M",
+    "label": "스쿼트 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Belt Squat.png",
+    "file": "30-belt-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-ab34f957-ec14-4082-9506-624486e68397.png",
+    "publicFile": "lower-30-belt-squat.png"
+  },
+  {
+    "index": 30,
+    "id": "basic::스쿼트::equipment-v6::B",
+    "label": "바벨 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Squat.png",
+    "file": "31-barbell-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-0a3bd260-30ef-492a-96a3-26f8edd40bf4.png",
+    "publicFile": "lower-03-barbell-squat.png"
+  },
+  {
+    "index": 31,
+    "id": "basic::스쿼트::equipment-v6::S",
+    "label": "스미스 머신 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Smith Squat.png",
+    "file": "32-smith-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-51ce4138-3c80-414e-802d-cb2b6da48fe0.png",
+    "publicFile": "lower-32-smith-squat.png"
+  },
+  {
+    "index": 32,
+    "id": "basic::프론트 스쿼트::equipment-v6::D",
+    "label": "덤벨 프론트 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Front Squat.png",
+    "file": "33-dumbbell-front-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-03d5b4da-1eb3-4ea6-b8c3-7ac73db0290e.png",
+    "publicFile": "lower-33-dumbbell-front-squat.png"
+  },
+  {
+    "index": 33,
+    "id": "basic::프론트 스쿼트::equipment-v6::S",
+    "label": "스미스 머신 프론트 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Smith Front Squat.png",
+    "file": "34-smith-front-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-39c7bb0d-6e02-4bef-909b-d6e976074fa5.png",
+    "publicFile": "lower-34-smith-front-squat.png"
+  },
+  {
+    "index": 34,
+    "id": "basic::백 스쿼트::equipment-v6::S",
+    "label": "스미스 머신 백 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Smith Squat.png",
+    "file": "35-smith-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-51ce4138-3c80-414e-802d-cb2b6da48fe0.png",
+    "publicFile": "lower-32-smith-squat.png"
+  },
+  {
+    "index": 35,
+    "id": "basic::스모 스쿼트::equipment-v6::B",
+    "label": "바벨 스모 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Sumo Squat.png",
+    "file": "36-barbell-sumo-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-795d455d-d0fc-47b9-ad99-2d7d4585c0a8.png",
+    "publicFile": "lower-36-barbell-sumo-squat.png"
+  },
+  {
+    "index": 36,
+    "id": "basic::스모 스쿼트::equipment-v6::S",
+    "label": "스미스 머신 스모 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Smith Sumo Squat.png",
+    "file": "37-smith-sumo-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-05fd6f6d-3cf5-40fe-8dfa-479f083f8198.png",
+    "publicFile": "lower-37-smith-sumo-squat.png"
+  },
+  {
+    "index": 37,
+    "id": "basic::힙 어덕션::equipment-v6::M",
+    "label": "힙 어덕션 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Seated Hip Adduction.png",
+    "file": "38-seated-hip-adduction.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-8b6ca3dd-4182-4548-a9fa-100ff323dd6c.png",
+    "publicFile": "lower-38-seated-hip-adduction.png"
+  },
+  {
+    "index": 38,
+    "id": "basic::데드리프트::equipment-v6::D",
+    "label": "덤벨 컨벤셔널 데드리프트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Deadlift.png",
+    "file": "39-dumbbell-deadlift.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-449e5d1f-10b7-4715-90b9-6c9de4098bd3.png",
+    "publicFile": "lower-39-dumbbell-deadlift.png"
+  },
+  {
+    "index": 39,
+    "id": "basic::루마니안 데드리프트::equipment-v6::D",
+    "label": "덤벨 루마니안 데드리프트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Romanian Deadlift.png",
+    "file": "40-dumbbell-romanian-deadlift.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-5da5caa4-e8e3-49e0-9c16-3ecd0fce2875.png",
+    "publicFile": "lower-40-dumbbell-romanian-deadlift.png"
+  },
+  {
+    "index": 40,
+    "id": "basic::루마니안 데드리프트::equipment-v6::S",
+    "label": "스미스 머신 루마니안 데드리프트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Smith Deadlift.png",
+    "file": "41-smith-deadlift.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-8e8d1f4e-3ac2-478c-8aa1-4852a710dd08.png",
+    "publicFile": "lower-41-smith-deadlift.png"
+  },
+  {
+    "index": 41,
+    "id": "basic::스티프 레그 데드리프트::equipment-v6::D",
+    "label": "덤벨 스티프 레그 데드리프트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Stiff Leg Deadlift.png",
+    "file": "42-dumbbell-stiff-leg-deadlift.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-e9d11e35-0bd3-42ec-9536-01f19a91e9e1.png",
+    "publicFile": "lower-42-dumbbell-stiff-leg-deadlift.png"
+  },
+  {
+    "index": 42,
+    "id": "basic::스티프 레그 데드리프트::equipment-v6::S",
+    "label": "스미스 머신 스티프 레그 데드리프트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Smith Stiff Legged Deadlift.png",
+    "file": "43-smith-stiff-legged-deadlift.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-5b9d48e6-f122-41cd-b25c-17f7dd768f2a.png",
+    "publicFile": "lower-43-smith-stiff-legged-deadlift.png"
+  },
+  {
+    "index": 43,
+    "id": "basic::스모 데드리프트::equipment-v6::D",
+    "label": "덤벨 스모 데드리프트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Sumo Deadlift.png",
+    "file": "44-dumbbell-sumo-deadlift.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-ee84567d-96ed-4f33-b16f-ff21a63dc218.png",
+    "publicFile": "lower-44-dumbbell-sumo-deadlift.png"
+  },
+  {
+    "index": 44,
+    "id": "basic::스모 데드리프트::equipment-v6::S",
+    "label": "스미스 머신 스모 데드리프트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Smith Sumo Deadlift.png",
+    "file": "45-smith-sumo-deadlift.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-42792d3f-7a62-47ed-9dbb-4f9e4109a194.png",
+    "publicFile": "lower-45-smith-sumo-deadlift.png"
+  },
+  {
+    "index": 45,
+    "id": "basic::힙 쓰러스트::equipment-v6::M",
+    "label": "힙 쓰러스트 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Hip Thrust (Plate).png",
+    "file": "46-hip-thrust-plate-.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-9b15e442-083f-4fc6-acae-9b4d7fe16da7.png",
+    "publicFile": "lower-46-hip-thrust-plate-.png"
+  },
+  {
+    "index": 46,
+    "id": "basic::힙 쓰러스트::equipment-v6::D",
+    "label": "덤벨 힙 쓰러스트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Hip Thrust.png",
+    "file": "47-dumbbell-hip-thrust.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-7f5dac1c-20d6-486a-9233-7d5c64ecd67d.png",
+    "publicFile": "lower-47-dumbbell-hip-thrust.png"
+  },
+  {
+    "index": 47,
+    "id": "basic::힙 쓰러스트::equipment-v6::S",
+    "label": "스미스 머신 힙 쓰러스트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Smith Hip Thrust.png",
+    "file": "48-smith-hip-thrust.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-bcafd154-595c-4ef7-ad64-559a36b56c78.png",
+    "publicFile": "lower-48-smith-hip-thrust.png"
+  },
+  {
+    "index": 48,
+    "id": "basic::글루트 브리지::equipment-v6::D",
+    "label": "덤벨 글루트 브리지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Glute Bridge.png",
+    "file": "49-dumbbell-glute-bridge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-55cb214b-96c1-412c-a1a7-1e7cd3663557.png",
+    "publicFile": "lower-49-dumbbell-glute-bridge.png"
+  },
+  {
+    "index": 49,
+    "id": "basic::굿모닝::equipment-v6::D",
+    "label": "덤벨 굿모닝",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Good Morning.png",
+    "file": "50-dumbbell-good-morning.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-32e38a47-d0d7-4ab2-bd25-7f68fa7c93c2.png",
+    "publicFile": "lower-50-dumbbell-good-morning.png"
+  },
+  {
+    "index": 50,
+    "id": "basic::힙 익스텐션::equipment-v6::M",
+    "label": "스탠딩 힙 익스텐션 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Standing Hip Extension.png",
+    "file": "51-standing-hip-extension.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-9dbf516d-6426-4cd5-a662-36c7ed46324d.png",
+    "publicFile": "lower-51-standing-hip-extension.png"
+  },
+  {
+    "index": 51,
+    "id": "basic::글루트 킥백::equipment-v6::M",
+    "label": "글루트 킥백 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Standing Hip Extension.png",
+    "file": "52-standing-hip-extension.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-9dbf516d-6426-4cd5-a662-36c7ed46324d.png",
+    "publicFile": "lower-51-standing-hip-extension.png"
+  },
+  {
+    "index": 52,
+    "id": "basic::포워드 런지::equipment-v6::B",
+    "label": "바벨 포워드 런지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Lunge.png",
+    "file": "53-barbell-lunge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-d6e11f04-8bdc-4156-a146-b42eb661f62c.png",
+    "publicFile": "lower-53-barbell-lunge.png"
+  },
+  {
+    "index": 53,
+    "id": "basic::포워드 런지::equipment-v6::D",
+    "label": "덤벨 포워드 런지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Lunge.png",
+    "file": "54-dumbbell-lunge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-758eb210-37a0-4371-9f87-78026a4ccf5b.png",
+    "publicFile": "lower-54-dumbbell-lunge.png"
+  },
+  {
+    "index": 54,
+    "id": "basic::리버스 런지::equipment-v6::B",
+    "label": "바벨 리버스 런지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Rear Lunge.png",
+    "file": "55-barbell-rear-lunge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-f04289b2-504b-492a-a25b-9ff1b375997c.png",
+    "publicFile": "lower-55-barbell-rear-lunge.png"
+  },
+  {
+    "index": 55,
+    "id": "basic::워킹 런지::equipment-v6::B",
+    "label": "바벨 워킹 런지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Walking Lunge.png",
+    "file": "56-barbell-walking-lunge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-1f5ca398-77d4-4a88-a720-443fa94a5991.png",
+    "publicFile": "lower-56-barbell-walking-lunge.png"
+  },
+  {
+    "index": 56,
+    "id": "basic::사이드 런지::equipment-v6::B",
+    "label": "바벨 사이드 런지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Lateral Lunge.png",
+    "file": "57-barbell-lateral-lunge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-40441059-93bf-4961-b979-9688750cfd08.png",
+    "publicFile": "lower-57-barbell-lateral-lunge.png"
+  },
+  {
+    "index": 57,
+    "id": "basic::커시 런지::equipment-v6::D",
+    "label": "덤벨 커트시 런지",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Curtsey Lunge.png",
+    "file": "58-dumbbell-curtsey-lunge.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-0305fce9-01b3-414f-aa6b-8d35e4a52de0.png",
+    "publicFile": "lower-58-dumbbell-curtsey-lunge.png"
+  },
+  {
+    "index": 58,
+    "id": "basic::스플릿 스쿼트::equipment-v6::B",
+    "label": "바벨 스플릿 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Split Squat.png",
+    "file": "59-barbell-split-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-4bb8029f-8640-473a-b3d2-de08dbe5a55a.png",
+    "publicFile": "lower-59-barbell-split-squat.png"
+  },
+  {
+    "index": 59,
+    "id": "basic::스플릿 스쿼트::equipment-v6::D",
+    "label": "덤벨 스플릿 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Split Squat.png",
+    "file": "60-dumbbell-split-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-02307660-42af-453f-8a99-7f0372e95e47.png",
+    "publicFile": "lower-60-dumbbell-split-squat.png"
+  },
+  {
+    "index": 60,
+    "id": "basic::스플릿 스쿼트::equipment-v6::S",
+    "label": "스미스 머신 스플릿 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Smith Split Squat.png",
+    "file": "61-smith-split-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-cdbab072-6928-4450-beac-9c9381e4602c.png",
+    "publicFile": "lower-61-smith-split-squat.png"
+  },
+  {
+    "index": 61,
+    "id": "basic::불가리안 스플릿 스쿼트::equipment-v6::B",
+    "label": "바벨 불가리안 스플릿 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Single Leg Split Squat.png",
+    "file": "62-barbell-single-leg-split-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-f7346fcd-7c99-43e6-933e-aa1cb7dd0408.png",
+    "publicFile": "lower-62-barbell-single-leg-split-squat.png"
+  },
+  {
+    "index": 62,
+    "id": "basic::불가리안 스플릿 스쿼트::equipment-v6::D",
+    "label": "덤벨 불가리안 스플릿 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Bulgarian Split Squat.png",
+    "file": "63-dumbbell-bulgarian-split-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-28f73a90-0664-4357-b837-712415f31707.png",
+    "publicFile": "lower-63-dumbbell-bulgarian-split-squat.png"
+  },
+  {
+    "index": 63,
+    "id": "basic::불가리안 스플릿 스쿼트::equipment-v6::S",
+    "label": "스미스 머신 불가리안 스플릿 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Smith Single Leg Split Squat.png",
+    "file": "64-smith-single-leg-split-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-d793d420-f848-46af-8fda-bc7485ade10d.png",
+    "publicFile": "lower-64-smith-single-leg-split-squat.png"
+  },
+  {
+    "index": 64,
+    "id": "basic::스텝업::equipment-v6::B",
+    "label": "바벨 스텝업",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Step Up.png",
+    "file": "65-barbell-step-up.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-420fbae2-3b09-4c2d-8852-b4a52ae29bf9.png",
+    "publicFile": "lower-65-barbell-step-up.png"
+  },
+  {
+    "index": 65,
+    "id": "basic::스텝업::equipment-v6::D",
+    "label": "덤벨 스텝업",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Step Up.png",
+    "file": "66-dumbbell-step-up.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-04e13b82-2d71-4117-b7bd-2802064e4041.png",
+    "publicFile": "lower-66-dumbbell-step-up.png"
+  },
+  {
+    "index": 66,
+    "id": "basic::싱글 레그 스쿼트::equipment-v6::D",
+    "label": "덤벨 싱글 레그 스쿼트",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Single Leg Squat.png",
+    "file": "67-dumbbell-single-leg-squat.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-0d327230-eddd-4685-8a00-d71d35f14149.png",
+    "publicFile": "lower-67-dumbbell-single-leg-squat.png"
+  },
+  {
+    "index": 67,
+    "id": "basic::스탠딩 카프 레이즈::equipment-v6::B",
+    "label": "바벨 스탠딩 카프 레이즈",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Standing Calf Raise.png",
+    "file": "68-barbell-standing-calf-raise.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-231e8aaf-0703-45d1-93ea-0fd9a3f8f532.png",
+    "publicFile": "lower-68-barbell-standing-calf-raise.png"
+  },
+  {
+    "index": 68,
+    "id": "basic::스탠딩 카프 레이즈::equipment-v6::D",
+    "label": "덤벨 스탠딩 카프 레이즈",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Standing Calf Raise.png",
+    "file": "69-dumbbell-standing-calf-raise.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-528ebaa7-0c1c-4e04-a0e9-c6ad389ab0cb.png",
+    "publicFile": "lower-69-dumbbell-standing-calf-raise.png"
+  },
+  {
+    "index": 69,
+    "id": "basic::시티드 카프 레이즈::equipment-v6::B",
+    "label": "바벨 시티드 카프 레이즈",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Barbell Seated Calf Raise.png",
+    "file": "70-barbell-seated-calf-raise.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-14fc41dc-2887-48f7-8467-6eef8aadfcbb.png",
+    "publicFile": "lower-70-barbell-seated-calf-raise.png"
+  },
+  {
+    "index": 70,
+    "id": "basic::시티드 카프 레이즈::equipment-v6::D",
+    "label": "덤벨 시티드 카프 레이즈",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Dumbbell Seated Calf Raise.png",
+    "file": "71-dumbbell-seated-calf-raise.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-4a56e09a-4c41-4964-989f-1e9712793b43.png",
+    "publicFile": "lower-71-dumbbell-seated-calf-raise.png"
+  },
+  {
+    "index": 71,
+    "id": "basic::시티드 카프 레이즈::equipment-v6::S",
+    "label": "스미스 머신 시티드 카프 레이즈",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/lower/Smith Seated Calf Raise.png",
+    "file": "72-smith-seated-calf-raise.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-c5543c9e-dfa5-4120-82db-929210e29f4f.png",
+    "publicFile": "lower-72-smith-seated-calf-raise.png"
+  }
+]
