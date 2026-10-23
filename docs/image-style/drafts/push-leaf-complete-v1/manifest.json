@@ -1,0 +1,263 @@
+[
+  {
+    "index": 0,
+    "id": "pack-ex-incline_chest_press",
+    "label": "바벨 인클라인 체스트 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Barbell Incline Bench Press.png",
+    "file": "01-barbell-incline-bench-press.png",
+    "generated": "C:/Users/iksun/.codex/generated_images/01a0c82b-06be-7842-8126-61cf52c99de7/exec-78d31d65-c717-4deb-8a0b-00dc32b944cf.png",
+    "publicFile": "push-01-barbell-incline-bench-press.png"
+  },
+  {
+    "index": 1,
+    "id": "pack-ex-decline_chest_press",
+    "label": "바벨 디클라인 체스트 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Barbell Decline Bench Press.png",
+    "file": "02-barbell-decline-bench-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-c8243872-8dcf-4d15-972d-e742351e9e3f.png",
+    "publicFile": "push-02-barbell-decline-bench-press.png"
+  },
+  {
+    "index": 2,
+    "id": "pack-ex-shoulder_press",
+    "label": "덤벨 숄더 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/shoulder/Dumbbell Seated Shoulder Press.png",
+    "file": "03-dumbbell-seated-shoulder-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-cea4d973-2840-47c8-bb04-47cc1bfc54cd.png",
+    "publicFile": "push-03-dumbbell-seated-shoulder-press.png"
+  },
+  {
+    "index": 3,
+    "id": "pack-ex-dip",
+    "label": "맨몸 딥스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/arm/Triceps Dip.png",
+    "file": "04-triceps-dip.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-2adbce20-e0d6-46de-8fc6-eaecd7caef33.png",
+    "publicFile": "push-04-triceps-dip.png"
+  },
+  {
+    "index": 4,
+    "id": "pack-ex-chest_fly",
+    "label": "덤벨 체스트 플라이",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Dumbbell Fly.png",
+    "file": "05-dumbbell-fly.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-412284c5-0584-414f-b564-36fc654d8565.png",
+    "publicFile": "push-05-dumbbell-fly.png"
+  },
+  {
+    "index": 5,
+    "id": "pack-ex-incline_fly",
+    "label": "덤벨 인클라인 플라이",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Dumbbell Incline Fly.png",
+    "file": "06-dumbbell-incline-fly.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-9495822e-6d7c-4300-9aeb-b57ac362dbdd.png",
+    "publicFile": "push-06-dumbbell-incline-fly.png"
+  },
+  {
+    "index": 6,
+    "id": "pack-ex-overhead_triceps_extension",
+    "label": "덤벨 오버헤드 트라이셉스 익스텐션",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/arm/Dumbbell Standing Triceps Extension.png",
+    "file": "07-dumbbell-standing-triceps-extension.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-3746871b-d1f6-44fd-a716-da4d737946d6.png",
+    "publicFile": "push-07-dumbbell-standing-triceps-extension.png"
+  },
+  {
+    "index": 7,
+    "id": "pack-ex-bb_chest_press",
+    "label": "바벨 체스트 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Barbell Bench Press.png",
+    "file": "08-barbell-bench-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-116bf05f-d22d-4378-87db-6a112fe18a39.png",
+    "publicFile": "push-08-barbell-bench-press.png"
+  },
+  {
+    "index": 8,
+    "id": "pack-ex-db_chest_press",
+    "label": "덤벨 체스트 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Dumbbell Bench Press.png",
+    "file": "09-dumbbell-bench-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-eaf94ffd-3898-48e5-8396-94810c6029d9.png",
+    "publicFile": "push-09-dumbbell-bench-press.png"
+  },
+  {
+    "index": 9,
+    "id": "basic::체스트 프레스::equipment-v6::C",
+    "label": "케이블 체스트 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Cable Bench Press.png",
+    "file": "10-cable-bench-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-7b8b3434-071a-431d-ac9f-327385e89eca.png",
+    "publicFile": "push-10-cable-bench-press.png"
+  },
+  {
+    "index": 10,
+    "id": "basic::체스트 프레스::equipment-v6::S",
+    "label": "스미스 머신 체스트 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Smith Bench Press.png",
+    "file": "11-smith-bench-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-2a277f6f-7bd4-4a75-bac2-621027d9dbff.png",
+    "publicFile": "push-11-smith-bench-press.png"
+  },
+  {
+    "index": 11,
+    "id": "basic::인클라인 체스트 프레스::equipment-v6::D",
+    "label": "덤벨 인클라인 체스트 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Dumbbell Incline Bench Press.png",
+    "file": "12-dumbbell-incline-bench-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-efb5335e-52d5-40a1-b28e-0d261b9dc8e5.png",
+    "publicFile": "push-12-dumbbell-incline-bench-press.png"
+  },
+  {
+    "index": 12,
+    "id": "basic::인클라인 체스트 프레스::equipment-v6::C",
+    "label": "케이블 인클라인 체스트 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Cable Incline Bench Press.png",
+    "file": "13-cable-incline-bench-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-69ba549a-05a4-462d-84cf-dc601139b2e4.png",
+    "publicFile": "push-13-cable-incline-bench-press.png"
+  },
+  {
+    "index": 13,
+    "id": "basic::인클라인 체스트 프레스::equipment-v6::S",
+    "label": "스미스 머신 인클라인 체스트 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Smith Incline Bench Press.png",
+    "file": "14-smith-incline-bench-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-84c9943e-8cb6-4c07-b559-c114aa33e958.png",
+    "publicFile": "push-14-smith-incline-bench-press.png"
+  },
+  {
+    "index": 14,
+    "id": "basic::디클라인 체스트 프레스::equipment-v6::M",
+    "label": "디클라인 체스트 프레스 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Decline Chest Press.png",
+    "file": "15-decline-chest-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-2968a9c0-26b4-4337-b655-f174e915394b.png",
+    "publicFile": "push-15-decline-chest-press.png"
+  },
+  {
+    "index": 15,
+    "id": "basic::디클라인 체스트 프레스::equipment-v6::D",
+    "label": "덤벨 디클라인 체스트 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Dumbbell Decline Bench Press.png",
+    "file": "16-dumbbell-decline-bench-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-c9b2da35-37e3-4d2b-9c9c-169f8b288a5b.png",
+    "publicFile": "push-16-dumbbell-decline-bench-press.png"
+  },
+  {
+    "index": 16,
+    "id": "basic::디클라인 체스트 프레스::equipment-v6::S",
+    "label": "스미스 머신 디클라인 체스트 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Smith Decline Bench Press.png",
+    "file": "17-smith-decline-bench-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-75fcc551-e118-481d-99fc-c4b4a27d4090.png",
+    "publicFile": "push-17-smith-decline-bench-press.png"
+  },
+  {
+    "index": 17,
+    "id": "basic::숄더 프레스::equipment-v6::B",
+    "label": "바벨 숄더 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/shoulder/Barbell Standing Military Press.png",
+    "file": "18-barbell-standing-military-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-05d6589c-cb7a-43cc-a2ef-a51e718f16b7.png",
+    "publicFile": "push-18-barbell-standing-military-press.png"
+  },
+  {
+    "index": 18,
+    "id": "basic::숄더 프레스::equipment-v6::C",
+    "label": "케이블 숄더 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/shoulder/Cable Shoulder Press.png",
+    "file": "19-cable-shoulder-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-c52e2bb5-fef6-4f34-bfc7-1d8c2a11e393.png",
+    "publicFile": "push-19-cable-shoulder-press.png"
+  },
+  {
+    "index": 19,
+    "id": "basic::숄더 프레스::equipment-v6::S",
+    "label": "스미스 머신 숄더 프레스",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/shoulder/Smith Shoulder Press.png",
+    "file": "20-smith-shoulder-press.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-3950f412-046a-45e6-a40a-49516879c46d.png",
+    "publicFile": "push-20-smith-shoulder-press.png"
+  },
+  {
+    "index": 20,
+    "id": "basic::딥스::equipment-v6::M",
+    "label": "어시스티드 딥스 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/arm/Assisted Triceps Dip.png",
+    "file": "21-assisted-triceps-dip.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-54935ac0-0675-406a-8fe1-b79c65e620ea.png",
+    "publicFile": "push-21-assisted-triceps-dip.png"
+  },
+  {
+    "index": 21,
+    "id": "basic::체스트 플라이::equipment-v6::C",
+    "label": "케이블 체스트 플라이",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Cable Middle Fly.png",
+    "file": "22-cable-middle-fly.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-0b405486-e08e-45e2-acaa-69b9a8f73f9d.png",
+    "publicFile": "push-22-cable-middle-fly.png"
+  },
+  {
+    "index": 22,
+    "id": "basic::인클라인 플라이::equipment-v6::C",
+    "label": "케이블 인클라인 플라이",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/chest/Cable Incline Fly.png",
+    "file": "23-cable-incline-fly.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-ac578289-5f9f-499f-867a-8b057528525a.png",
+    "publicFile": "push-23-cable-incline-fly.png"
+  },
+  {
+    "index": 23,
+    "id": "basic::프론트 레이즈::equipment-v6::B",
+    "label": "바벨 프론트 레이즈",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/shoulder/Barbell Front Raise.png",
+    "file": "24-barbell-front-raise.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-011f0842-bed6-453b-8801-0f56b34ec94f.png",
+    "publicFile": "push-24-barbell-front-raise.png"
+  },
+  {
+    "index": 24,
+    "id": "basic::프론트 레이즈::equipment-v6::C",
+    "label": "케이블 프론트 레이즈",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/shoulder/Cable Front Raise.png",
+    "file": "25-cable-front-raise.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-a4ce1eb9-717c-40b5-baab-769f8f6980da.png",
+    "publicFile": "push-25-cable-front-raise.png"
+  },
+  {
+    "index": 25,
+    "id": "basic::래터럴 레이즈::equipment-v6::M",
+    "label": "래터럴 레이즈 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/shoulder/Lateral Raise.png",
+    "file": "26-lateral-raise.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-a847a8d0-23cf-4841-a113-58fbf8131395.png",
+    "publicFile": "push-26-lateral-raise.png"
+  },
+  {
+    "index": 26,
+    "id": "basic::래터럴 레이즈::equipment-v6::C",
+    "label": "케이블 래터럴 레이즈",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/shoulder/Cable Lateral Raise.png",
+    "file": "27-cable-lateral-raise.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-80e32a9e-d9a0-4fe8-81b8-40b5931dc076.png",
+    "publicFile": "push-27-cable-lateral-raise.png"
+  },
+  {
+    "index": 27,
+    "id": "basic::오버헤드 트라이셉스 익스텐션::equipment-v6::B",
+    "label": "바벨 오버헤드 트라이셉스 익스텐션",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/arm/Barbell Standing Overhead Triceps Extension.png",
+    "file": "28-barbell-standing-overhead-triceps-extension.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-443f577b-cdb4-4e41-a59d-41e251a54363.png",
+    "publicFile": "push-28-barbell-standing-overhead-triceps-extension.png"
+  },
+  {
+    "index": 28,
+    "id": "basic::트라이셉스 킥백::equipment-v6::C",
+    "label": "케이블 트라이셉스 킥백",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/arm/Cable Kickback.png",
+    "file": "29-cable-kickback.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-772e0ee4-b848-40ec-8579-9d77d89c5b6f.png",
+    "publicFile": "push-29-cable-kickback.png"
+  }
+]
