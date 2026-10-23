@@ -15,7 +15,7 @@ import {useAtlasTheme,BASIC_KEY} from './useAtlasTheme';
 const key=workspace();
 function IconButton({title,children,...props}){return <button className="icon-btn" title={title} aria-label={title} {...props}>{children}</button>}
 function Photo({url,...props}){let [src,setSrc]=useState(''),[failed,setFailed]=useState(false);useEffect(()=>{let live=true;setFailed(false);imageURL(url).then(s=>{if(live)setSrc(s)});return()=>{live=false}},[url]);return src&&!failed?<img src={src} {...props} onError={()=>setFailed(true)}/>:<div className="photo-fallback"><ImagePlus size={22}/><span>{failed?'이미지 연결 확인':'이미지'}</span></div>}
-function Card({data}){let {node:n,count,open,selected}=data;return <div className={'tree-card '+(!n.parent?'root-card ':'')+(selected?'selected ':'')+(n.show?.image!==false&&n.images.length?'has-image ':'')+(n.englishName?.trim()?'has-english':'')}>
+function Card({data}){let {node:n,count,open,selected}=data;const ref=useRef(null);useEffect(()=>{const observer=new ResizeObserver(()=>data.measure(n.id,Math.ceil(ref.current.offsetHeight)));observer.observe(ref.current);return()=>observer.disconnect()},[n.id,data.measure]);return <div ref={ref} className={'tree-card '+(!n.parent?'root-card ':'')+(selected?'selected ':'')+(n.show?.image!==false&&n.images.length?'has-image ':'')+(n.englishName?.trim()?'has-english':'')}>
  <Handle type="target" position={Position.Top}/>
  <div className="card-top"><span className="micro">{!n.parent?'시작하기':n.kind==='exercise'?'EXERCISE':'MOVEMENT'}</span>{n.kind==='exercise'?<Dumbbell size={17}/>:<GitBranch size={16}/>}</div>
  {n.show?.image!==false&&n.images[0]?<Photo url={n.images[0].url} className="card-photo" alt={n.label}/>:null}
@@ -27,6 +27,8 @@ function Card({data}){let {node:n,count,open,selected}=data;return <div classNam
 const nodeTypes={movement:Card};
 function Modal({title,onClose,children,wide=false}){return <div className="modal-backdrop" onClick={onClose}><section role="dialog" aria-modal="true" aria-label={title} className={'modal '+(wide?'wide':'')} onClick={e=>e.stopPropagation()}><header><h2>{title}</h2><IconButton title="닫기" onClick={onClose}><X/></IconButton></header>{children}</section></div>}
 function App(){
+ const [heights,setHeights]=useState({});
+ const measure=useCallback((id,height)=>setHeights(prev=>prev[id]===height?prev:{...prev,[id]:height}),[]);
  const [editBaseline,setEditBaseline]=useState(null);
  const [blankName,setBlankName]=useState(null),[editFocus,setEditFocus]=useState(0);
  const [showIntro,setShowIntro]=useState(false),[focusMode,setFocusMode]=useState(false);
@@ -47,8 +49,8 @@ function App(){
  useEffect(()=>{setEditBaseline(editing&&panel?editSnapshot:null)},[selected,panel,editing]);
  const editorChanged=editing&&panel&&editBaseline!==null&&editSnapshot!==editBaseline;
 
- const rows=useMemo(()=>layout(doc,expanded),[doc,expanded]);
- const canvasNodes=rows.map(n=>({id:n.id,type:'movement',position:n.position,data:{node:blankName?.id===n.id?{...n,label:blankName.value}:n,count:doc.nodes.filter(x=>x.parent===n.id).length,open:expanded.has(n.id),selected:n.id===selected},draggable:false}));
+ const rows=useMemo(()=>layout(doc,expanded,heights),[doc,expanded,heights]);
+ const canvasNodes=rows.map(n=>({id:n.id,type:'movement',position:n.position,data:{measure,node:blankName?.id===n.id?{...n,label:blankName.value}:n,count:doc.nodes.filter(x=>x.parent===n.id).length,open:expanded.has(n.id),selected:n.id===selected},draggable:false}));
  const visible=new Set(rows.map(n=>n.id));
  const edges=[...rows.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',pathOptions:{offset:10,centerY:n.position.y-22},style:{stroke:theme.color,strokeWidth:2,opacity:.65,...(n.relation==='related'?{strokeDasharray:'6 6'}:{})}})),...doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map(l=>({...l,type:'smoothstep',style:{stroke:theme.color,strokeWidth:2,strokeDasharray:'6 6'}}))];
  const topology=rows.map(n=>n.id+':'+n.position.y+':'+(n.show?.image!==false&&n.images.length>0)).join('|');

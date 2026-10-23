@@ -18,7 +18,7 @@ function Card({data:d}){const ref=useRef(null);useEffect(()=>{const observer=new
  <Handle type="target" position={Position.Top}/>
  {d.hasQuest&&<button className="quest-rail nodrag nopan" aria-label={d.label+' 퀘스트 보기'} onClick={e=>{e.stopPropagation();d.openQuest(d.id)}}><span className="shield">{d.done?'✓':'◆'}</span><strong>QUEST</strong><span>{d.done?'달성':d.checked?'진행 중':'도전 전'}</span><b>{d.checked}/{d.total}</b></button>}<div className="card-content">
  <div className="card-top"><span>{!d.parent?'시작하기':d.kind==='exercise'?'EXERCISE':'MOVEMENT'}</span><span>{d.hasQuest?'◆':'⑂'}</span></div>
- {d.hasImage&&<img className="card-photo" src={d.images[0].url} alt="" loading="lazy"/>}
+ {d.hasImage&&<img className="card-photo" src={d.images[0].url} alt=""/>}
  <h3>{d.label}</h3>{d.englishName?.trim()&&<div className="card-english">{d.englishName}</div>}
  <div className="card-bottom"><span>{d.hasQuest&&d.done?date(d.achievedAt):d.count?d.count+'개의 가지':'자세히 보기'}</span>{d.count>0&&<button className="nodrag" aria-label={d.label+' '+(d.open?'접기':'펼치기')} onClick={e=>{e.stopPropagation();d.toggle(d.id)}}>{d.open?'−':'＋'}</button>}</div>
  </div><Handle type="source" position={Position.Bottom}/>
@@ -110,6 +110,7 @@ function Preview({reconnect}){
 function Connected({fallback}){const sync=useDocument(TEST_KEY);useEffect(()=>{if(sync.ready&&sync.status==='offline'&&sync.doc.quest?.schema!==2)fallback()},[sync.ready,sync.status]);return <App sync={sync} openOffline={fallback}/>;}
 function Entry(){const [offline,setOffline]=useState(false);return offline?<Preview reconnect={()=>setOffline(false)}/>:<Connected fallback={()=>setOffline(true)}/>;}
 createRoot(document.getElementById('root')).render(<ReactFlowProvider><Entry/></ReactFlowProvider>);
+
 
 
 
