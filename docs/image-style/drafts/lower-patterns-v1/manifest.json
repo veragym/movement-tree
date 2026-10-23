@@ -1,0 +1,24 @@
+{
+  "status": "approved",
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "squat",
+      "prompt": "Educational exercise tree CATEGORY illustration, not a specific equipment exercise. Use attached image ONLY for character style: identical smooth faceless grey muscular male mannequin, soft grey shading, charcoal athletic shorts, muted coral target muscles. Pure white background. No text, letters, arrows, rings, watermark, equipment or floor line. Two separated full-body figures, same scale and side profile facing right, evenly spaced, balanced equal top/bottom/side margins approx 8%, no crop, no anatomy distortion. LEFT upright standing start; RIGHT bodyweight squat with hips lowering downward, both knees bending, thighs roughly parallel to floor, heels flat, torso moderately forward, arms straight forward for balance. Both feet grounded; two arms and legs per figure. Subtle coral quadriceps and glutes. Communicate knee-dominant squat simply for beginners. Horizontal 2:1 canvas. Match proportions of reference but omit its text/arrows. All figures solid opacity, no ghost overlays.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-dfb940cf-b90e-4f6e-b4b4-82a4a046ed10.png",
+      "saved": "docs/image-style/drafts/lower-patterns-v1/squat-pattern-v1.png"
+    },
+    {
+      "id": "hinge",
+      "prompt": "Educational exercise tree CATEGORY illustration. Attached reference supplies character style ONLY: identical smooth faceless grey muscular male mannequin, soft grey shading, charcoal athletic shorts, muted coral muscle highlights. Pure white background. No text, letters, arrows, rings, watermark, equipment or floor line. Two separated full-body figures at same scale and side profile facing right, balanced equal top/bottom/side margins approx 8%, no crop, no distortion. Horizontal 2:1 canvas. Both figures solid opacity no ghost overlay.  Hip HINGE pattern overview, not squat: LEFT upright standing feet hip-width hands on hip creases. RIGHT pushes hips distinctly BACK, torso inclines forward 55 degrees as rigid neutral spine, knees only slightly bent around 15 degrees, shins almost vertical, hands remain on hip creases to indicate folding at hips. Both feet flat. Same head-to-foot body proportions as left. Soft coral glutes and back of thighs only. Make hip fold clear and distinguish from a deep knee bend. Corrected highlights: glutes and posterior thigh hamstrings, quadriceps grey.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-57a85459-85a3-4468-8954-e5f03cfba97e.png",
+      "saved": "docs/image-style/drafts/lower-patterns-v1/hinge-pattern-v1.png"
+    },
+    {
+      "id": "lunge",
+      "prompt": "Educational exercise tree CATEGORY illustration. Attached reference supplies character style ONLY: identical smooth faceless grey muscular male mannequin, soft grey shading, charcoal athletic shorts, muted coral muscle highlights. Pure white background. No text, letters, arrows, rings, watermark, equipment or floor line. Two separated full-body figures at same scale and side profile facing right, balanced equal top/bottom/side margins approx 8%, no crop, no distortion. Horizontal 2:1 canvas. Both figures solid opacity no ghost overlay.  Lunge / unilateral movement pattern: LEFT tall split stance one foot forward one foot back, hands on hips, rear heel naturally lifted. RIGHT same planted split stance with both knees bent, rear knee hovering above floor, front foot flat, front thigh near horizontal, torso upright. Exactly two legs and feet per figure with clear separation; natural rear toes contacting floor. Light coral quadriceps and glutes on working leg. Simple equipment-free beginner category image. First reference character only, second reference layout and grey/coral palette only, do not copy squat.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-5c1a0a71-66f1-4666-97de-f0ba1e4eec07.png",
+      "saved": "docs/image-style/drafts/lower-patterns-v1/lunge-pattern-v1.png"
+    }
+  ]
+}
