@@ -58,7 +58,7 @@ function App(){
  const topology=rows.map(n=>n.id+':'+n.position.x+':'+n.position.y+':'+(heights[n.id]||0)+':'+(n.show?.image!==false&&n.images.length>0)).join('|');
  useEffect(()=>{const timer=setTimeout(()=>{if(selected)flow.fitView({nodes:focusNeighborhood(doc,selected,flow.getNodes()),duration:300,padding:.16,maxZoom:1,minZoom:.015});else fitRows(rows)},120);return()=>clearTimeout(timer)},[topology,panel,showIntro,focusMode,editing,selected,editFocus]);
  function toggleBranch(id){setSelected(id);setEditFocus(v=>v+1);setExpanded(s=>{const next=new Set(s);next.has(id)?next.delete(id):next.add(id);return next})}
- const toggle=n=>{setBlankName(null);setEditFocus(v=>v+1);setSelected(n.id);if(doc.nodes.some(x=>x.parent===n.id))setExpanded(s=>new Set([...s,n.id]));setPanel(true)};
+ const toggle=n=>{setBlankName(null);setEditFocus(v=>v+1);setSelected(n.id);if(doc.nodes.some(x=>x.parent===n.id))setExpanded(s=>{const next=new Set(s);next.has(n.id)?next.delete(n.id):next.add(n.id);return next});setPanel(true)};
  const focus=id=>{setBlankName(null);setEditFocus(v=>v+1);let next=new Set(expanded);for(let p of pathTo(doc,id).slice(0,-1))next.add(p.id);setExpanded(next);setSelected(id);setPanel(true);setSearch('')};
  const add=(label,parent,kind='branch')=>{if(!label.trim())return;let n=item(uid(),label.trim(),parent,kind);change(d=>{d.nodes.push(n);return d});if(parent)setExpanded(s=>new Set([...s,parent]));setSelected(n.id);setPanel(true);setNewItem(null);setNewLabel('');return n.id};
  const setShown=(field,value)=>patch(node.id,{show:{...node.show,[field]:value}});
