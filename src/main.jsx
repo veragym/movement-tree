@@ -1,3 +1,4 @@
+import {layoutBounds,layoutViewport} from './layoutBounds';
 import {focusNeighborhood} from './focusNeighborhood';
 import React,{useState,useEffect,useMemo,useRef,useCallback} from 'react';
 import {createRoot} from 'react-dom/client';
@@ -53,8 +54,8 @@ function App(){
  const canvasNodes=rows.map(n=>({id:n.id,type:'movement',position:n.position,data:{measure,node:blankName?.id===n.id?{...n,label:blankName.value}:n,count:doc.nodes.filter(x=>x.parent===n.id).length,open:expanded.has(n.id),selected:n.id===selected},draggable:false}));
  const visible=new Set(rows.map(n=>n.id));
  const edges=[...rows.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',pathOptions:{offset:10,centerY:n.position.y-22},style:{stroke:theme.color,strokeWidth:2,opacity:.65,...(n.relation==='related'?{strokeDasharray:'6 6'}:{})}})),...doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map(l=>({...l,type:'smoothstep',style:{stroke:theme.color,strokeWidth:2,strokeDasharray:'6 6'}}))];
- const topology=rows.map(n=>n.id+':'+n.position.y+':'+(n.show?.image!==false&&n.images.length>0)).join('|');
- useEffect(()=>{let timer=setTimeout(()=>{if(!editing&&!isMoving.current)flow.fitView({padding:.22,maxZoom:1,minZoom:.005,duration:420})},160);return()=>clearTimeout(timer)},[topology,panel,showIntro,focusMode,editing]);
+ const topology=rows.map(n=>n.id+':'+n.position.x+':'+n.position.y+':'+(heights[n.id]||0)+':'+(n.show?.image!==false&&n.images.length>0)).join('|');
+ useEffect(()=>{let timer=setTimeout(()=>{if(!editing){const bounds=layoutBounds(rows,heights);const canvas=document.querySelector('.canvas .react-flow')?.getBoundingClientRect();if(bounds&&canvas?.width&&canvas?.height)flow.setViewport(layoutViewport(bounds,canvas.width,canvas.height),{duration:0})}},160);return()=>clearTimeout(timer)},[topology,panel,showIntro,focusMode,editing]);
  useEffect(()=>{if(!editing||!panel||!selected)return;const timer=setTimeout(()=>{const n=flow.getNode(selected);if(n){flow.fitView({nodes:focusNeighborhood(doc,selected,flow.getNodes()),padding:.16,maxZoom:1,minZoom:.005,duration:350})}},200);return()=>clearTimeout(timer)},[selected,editing,panel,editFocus,focusMode,topology]);
  const toggle=n=>{setBlankName(null);setEditFocus(v=>v+1);setSelected(n.id);let kids=doc.nodes.some(x=>x.parent===n.id);if(kids)setExpanded(s=>{let t=new Set(s);editing?t.add(n.id):t.has(n.id)?t.delete(n.id):t.add(n.id);return t});if(editing||!kids){setPanel(true)}};
  const focus=id=>{setBlankName(null);setEditFocus(v=>v+1);let next=new Set(expanded);for(let p of pathTo(doc,id).slice(0,-1))next.add(p.id);setExpanded(next);setSelected(id);setPanel(true);setSearch('')};
