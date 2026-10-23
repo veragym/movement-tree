@@ -1,0 +1,1 @@
+Built-in image_gen. 19 remaining pull leaf exercises restyled using reference-push-family.png. Preserve original poses/full-body/equipment/grips/red muscle highlight map. Faceless grey mannequin charcoal shorts; clean white backdrop, remove blue watermark. No text arrows circles. All original files preserved. Reverse Fly branch deleted separately; Rear Delt Fly retained.

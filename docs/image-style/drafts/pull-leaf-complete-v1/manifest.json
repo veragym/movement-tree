@@ -1,0 +1,173 @@
+[
+  {
+    "index": 0,
+    "id": "pack-ex-bent_over_row",
+    "label": "바벨 벤트오버 로우",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/back/Barbell Bent Over Row.png",
+    "file": "01-barbell-bent-over-row.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-268a5a3f-c56f-4780-9d8c-97923f92ec0a.png",
+    "publicFile": "pull-01-barbell-bent-over-row.png"
+  },
+  {
+    "index": 1,
+    "id": "pack-ex-chin_up",
+    "label": "맨몸 친업",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/back/Chin Up.png",
+    "file": "02-chin-up.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-193b64e8-5847-4a18-8c5a-d8065601ae8d.png",
+    "publicFile": "pull-02-chin-up.png"
+  },
+  {
+    "index": 2,
+    "id": "pack-ex-pullover",
+    "label": "덤벨 풀오버",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/back/Dumbbell Pullover.png",
+    "file": "03-dumbbell-pullover.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-d612e990-cdaf-4f7d-a3d5-bc7f15984049.png",
+    "publicFile": "pull-03-dumbbell-pullover.png"
+  },
+  {
+    "index": 3,
+    "id": "pack-ex-rear_delt_fly",
+    "label": "덤벨 리어 델트 플라이",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/shoulder/Dumbbell Rear Delt Fly.png",
+    "file": "04-dumbbell-rear-delt-fly.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-8eb86dc4-8dcf-4717-86a0-54142c205a1f.png",
+    "publicFile": "pull-04-dumbbell-rear-delt-fly.png"
+  },
+  {
+    "index": 4,
+    "id": "pack-ex-biceps_curl",
+    "label": "덤벨 바이셉스 컬",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/arm/Dumbbell Biceps Curl.png",
+    "file": "05-dumbbell-biceps-curl.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-770c9f41-c97e-4d1a-8966-58af71477924.png",
+    "publicFile": "pull-05-dumbbell-biceps-curl.png"
+  },
+  {
+    "index": 5,
+    "id": "pack-ex-db_row",
+    "label": "덤벨 벤트오버 로우",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/back/Dumbbell Bent Over Row.png",
+    "file": "06-dumbbell-bent-over-row.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-93a39390-d169-498a-b7e2-571d6eadd515.png",
+    "publicFile": "pull-06-dumbbell-bent-over-row.png"
+  },
+  {
+    "index": 6,
+    "id": "pack-ex-cable_row",
+    "label": "케이블 시티드 로우",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/back/Cable Seated Row.png",
+    "file": "07-cable-seated-row.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-0c9d012d-6469-4571-ae76-628a9d50907b.png",
+    "publicFile": "pull-07-cable-seated-row.png"
+  },
+  {
+    "index": 7,
+    "id": "basic::벤트오버 로우::equipment-v6::C",
+    "label": "케이블 벤트오버 로우",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/back/Cable Bent Over Row.png",
+    "file": "08-cable-bent-over-row.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-13665483-8c73-481a-8ace-11f8bef99fe1.png",
+    "publicFile": "pull-08-cable-bent-over-row.png"
+  },
+  {
+    "index": 8,
+    "id": "basic::벤트오버 로우::equipment-v6::S",
+    "label": "스미스 머신 벤트오버 로우",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/back/Smith Bent Over Row.png",
+    "file": "09-smith-bent-over-row.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-a1652827-aa4b-43a2-a5d4-ef4ce1ef9586.png",
+    "publicFile": "pull-09-smith-bent-over-row.png"
+  },
+  {
+    "index": 9,
+    "id": "basic::랫 풀다운::equipment-v6::M",
+    "label": "랫 풀다운 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/back/Front Pulldown.png",
+    "file": "10-front-pulldown.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-3ec2c5ab-c534-4b18-9d30-4427e34a0e06.png",
+    "publicFile": "pull-10-front-pulldown.png"
+  },
+  {
+    "index": 10,
+    "id": "basic::풀업::equipment-v6::M",
+    "label": "어시스티드 풀업 머신",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/back/Assisted Pull Up.png",
+    "file": "11-assisted-pull-up.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-758b8aa7-25f1-4fb2-978e-12109caa90da.png",
+    "publicFile": "pull-11-assisted-pull-up.png"
+  },
+  {
+    "index": 11,
+    "id": "basic::풀오버::equipment-v6::B",
+    "label": "바벨 풀오버",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/back/Barbell Pullover.png",
+    "file": "12-barbell-pullover.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-1105fbcd-b9aa-4c14-a436-d1f38c8af239.png",
+    "publicFile": "pull-12-barbell-pullover.png"
+  },
+  {
+    "index": 12,
+    "id": "basic::풀오버::equipment-v6::C",
+    "label": "케이블 풀오버",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/back/Cable Seated Pullover.png",
+    "file": "13-cable-seated-pullover.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-4203f644-8fb7-4de0-b9a8-82ef52f44019.png",
+    "publicFile": "pull-13-cable-seated-pullover.png"
+  },
+  {
+    "index": 13,
+    "id": "basic::리어 델트 플라이::equipment-v6::C",
+    "label": "케이블 리어 델트 플라이",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/shoulder/Cable One Arm Reverse Fly.png",
+    "file": "14-cable-one-arm-reverse-fly.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-e5de933b-10c5-4669-bbb3-ba0688bb1ed3.png",
+    "publicFile": "pull-14-cable-one-arm-reverse-fly.png"
+  },
+  {
+    "index": 14,
+    "id": "basic::바이셉스 컬::equipment-v6::B",
+    "label": "바벨 바이셉스 컬",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/arm/Barbell Curl.png",
+    "file": "15-barbell-curl.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-8df8033a-4dec-4d22-a820-8b410c8da649.png",
+    "publicFile": "pull-15-barbell-curl.png"
+  },
+  {
+    "index": 15,
+    "id": "basic::바이셉스 컬::equipment-v6::C",
+    "label": "케이블 바이셉스 컬",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/arm/Cable Curl.png",
+    "file": "16-cable-curl.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-4f28e19e-2392-4bec-b3c6-9befc80fe820.png",
+    "publicFile": "pull-16-cable-curl.png"
+  },
+  {
+    "index": 16,
+    "id": "basic::해머 컬::equipment-v6::C",
+    "label": "케이블 해머 컬",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/arm/Cable Hammer Curl.png",
+    "file": "17-cable-hammer-curl.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-8d0bc3cc-5521-49d3-a5ee-a5fbc2fc7af7.png",
+    "publicFile": "pull-17-cable-hammer-curl.png"
+  },
+  {
+    "index": 17,
+    "id": "basic::리버스 컬::equipment-v6::D",
+    "label": "덤벨 리버스 컬",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/arm/Dumbbell Biceps Curl Reverse.png",
+    "file": "18-dumbbell-biceps-curl-reverse.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-cf9c61dd-41e7-4893-86c7-19b6d0fc7949.png",
+    "publicFile": "pull-18-dumbbell-biceps-curl-reverse.png"
+  },
+  {
+    "index": 18,
+    "id": "basic::리버스 컬::equipment-v6::C",
+    "label": "케이블 리버스 컬",
+    "source": "C:/Users/iksun/Desktop/VeraGym/veragym-app/veragym-app-main/images/exercise/arm/Cable Reverse Curl.png",
+    "file": "19-cable-reverse-curl.png",
+    "generated": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-515d2d43-1bae-4649-b708-070fa188ecac.png",
+    "publicFile": "pull-19-cable-reverse-curl.png"
+  }
+]
