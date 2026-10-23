@@ -1,0 +1,21 @@
+Use case: scientific-educational illustration for the VeraGym movement tree.
+Input reference: attach reference-push-family.png as the primary STYLE AND CHARACTER reference, not as a pose requirement. For two-position illustrations also attach reference-press.png as the pose-opacity reference.
+
+Preserve the same smooth faceless grey muscular mannequin: identical head shape, shoulder breadth, muscle mass, proportions, softly shaded grey anatomy, matte charcoal shorts. No realistic face, hair, skin texture, veins, striated skinless anatomy, or bodybuilding exaggeration. Keep the reference's premium educational illustration finish.
+Pure white background. Pale grey body, soft grey shadows, muted light coral highlights only on the relevant muscle region. No text, labels, numbers or lettering anywhere. Purple directional arrows only when the movement requires them. Minimal neutral equipment. No watermark, logo or decorative border.
+
+TASK-SPECIFIC INPUTS:
+- Movement(s): [fill]
+- Camera angle best showing movement: [fill]
+- Equipment/support: [fill]
+- Pose(s) and movement direction: [fill]
+- Target area for subtle coral emphasis: [fill]
+- Text: none. Labels are rendered by the app, never baked into the image.
+- Canvas ratio based on current tree image frame: [fill]
+
+For a category overview use one clear pose per movement, evenly scaled across the image. For a before/after example, use a light translucent starting pose and a darker ending pose, with sufficient separation to avoid tangled limbs. Do not add duplicate poses unless requested.
+Keep anatomy correct: two arms per body, hands gripping correctly, stable wrists, appropriate elbow path, no forced joint hyperextension. Arrows must match actual movement direction. Keep every hand, relevant joint and arrow within safe margins. Fit the canvas through composition and whitespace, never distort body proportions. Do not prescribe a compulsory full range of motion through labels.
+Use the attached reference to maintain character and palette consistency; change only the requested motion, equipment, viewpoint and layout.
+
+Arrow specification: solid #7041ED at 100% opacity. At canvas height H: shaft width 0.008H, filled triangular head length 0.028H and total head width 0.024H. Same dimensions for straight and curved arrows. Rounded shaft caps/joins. No tapered shafts, perspective scaling, gradient or shadow. Follow arrow-standard.svg; change only path length/direction/curvature. Anatomy reference lettering must not be copied.
+
