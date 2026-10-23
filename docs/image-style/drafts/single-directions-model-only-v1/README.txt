@@ -1,0 +1,4 @@
+Tool: built-in image_gen. Status: preview; not connected to either tree.
+Shared prompt: Edit the corresponding supplied original. Replace only both humans with reference-push-family.png faceless grey muscular male mannequin, smooth blank head and charcoal shorts. Preserve original full-body start/end poses, camera, layout, equipment, grips, cables, benches and dumbbells. Match original red muscle regions and hue. Remove pale blue watermark/rectangle completely to clean white background. No text, arrows, rings or extra objects. Do not crop.
+Sources in order: Seated Fly; Cable Low Fly; Cable Standing Fly; Dumbbell Front Raise; Dumbbell Lateral Raise; Cable Pushdown; Cable High Pulley Overhead Tricep Extension; Dumbbell Kickback.
+Original files remain unchanged. Generative edits require visual approval before publishing.
