@@ -1,0 +1,51 @@
+{
+  "status": "approved",
+  "tool": "built-in image_gen",
+  "reference": "exec-49fc8ab2-1fe2-4a93-b0a5-643c85e3cd15.png",
+  "images": [
+    {
+      "id": "horizontal",
+      "detail": "ONE purple straight arrow horizontally RIGHT along zero-degree baseline, label0° only, remove45° text and purple angle arc.",
+      "prompt": "Precise diagram edit of provided image. Preserve SAME neutral upright TRUE SIDE PROFILE body facing RIGHT, ARM HANGING STRAIGHT DOWN, exact body position/scale/grey shading/navel fade. Do not raise or bend arms. Preserve grey180degree protractor overlapping torso and its ticks/lines/white background. Change ONLY purple arrow and angle text: remove existing45degree arrow,45° text and small purple arc. ONE purple straight arrow horizontally RIGHT along zero-degree baseline, label0° only, remove45° text and purple angle arc. Arrow starts EXACTLY at same chest origin, ends at protractor arc. Match purple color, thin shaft and triangular head size of source. No other changes, no extra text.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-6ed837bd-a33e-4350-a125-8896389886d8.png",
+      "saved": "docs/image-style/drafts/press-directions-neutral-protractor-v1/horizontal-v1.png",
+      "node": "push::복합관절::프레스::수평",
+      "publicFile": "press-direction-neutral-horizontal-v1.png"
+    },
+    {
+      "id": "decline",
+      "detail": "ONE purple straight arrow DOWN-RIGHT at45degrees below horizontal baseline. Small purple angle arc clockwise below baseline, label −45°. Keep grey0° at baseline.",
+      "prompt": "Precise edit ONLY direction arrow and angle annotation. Preserve EXACT neutral true side-profile mannequin facing right, arm relaxed STRAIGHT DOWN, body position/scale/white fade. No bending/raising arms. Preserve entire grey180degree protractor overlapping body. Remove purple up-right45degree arrow and45° label/arc. ONE purple straight arrow DOWN-RIGHT at45degrees below horizontal baseline. Small purple angle arc clockwise below baseline, label −45°. Keep grey0° at baseline. Arrow origin remains same chest point, length reaches protractor arc, thin purple shaft/head size same as source, no extra words. All other image content unchanged.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-934edc91-9e3d-4ccc-866e-63921240c8de.png",
+      "saved": "docs/image-style/drafts/press-directions-neutral-protractor-v1/decline-v1.png",
+      "node": "push::복합관절::프레스::하향 사선",
+      "publicFile": "press-direction-neutral-decline-v1.png"
+    },
+    {
+      "id": "vertical",
+      "detail": "ONE purple straight arrow vertically UP from chest origin along upper vertical radius. Purple quarter-circle angle arc from horizontal baseline up to arrow, label +90°. Keep grey0° at baseline.",
+      "prompt": "Precise edit ONLY direction arrow and angle annotation. Preserve EXACT neutral true side-profile mannequin facing right, arm relaxed STRAIGHT DOWN, body position/scale/white fade. No bending/raising arms. Preserve entire grey180degree protractor overlapping body. Remove purple up-right45degree arrow and45° label/arc. ONE purple straight arrow vertically UP from chest origin along upper vertical radius. Purple quarter-circle angle arc from horizontal baseline up to arrow, label +90°. Keep grey0° at baseline. Arrow origin same chest point, length reaches top of protractor, thin purple shaft/head size same as source, no extra words. Purple angle arc must be a quarter circle from chest horizontal radius to upper vertical radius. All other content unchanged.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-7bbae819-cf29-4ca3-9cd0-58e04d8c3188.png",
+      "saved": "docs/image-style/drafts/press-directions-neutral-protractor-v1/vertical-v1.png",
+      "node": "push::복합관절::프레스::수직",
+      "publicFile": "press-direction-neutral-vertical-v1.png"
+    },
+    {
+      "id": "downward-dips",
+      "detail": "ONE purple straight arrow vertically DOWN from chest origin along lower vertical radius. Purple quarter-circle angle arc from horizontal baseline DOWN clockwise to arrow, label −90°. Keep grey0° at baseline. Downward push direction of dips.",
+      "prompt": "Precise edit ONLY direction arrow and angle annotation. Preserve EXACT neutral true side-profile mannequin facing right, arm relaxed STRAIGHT DOWN, body position/scale/white fade. No bending/raising arms. Preserve entire grey180degree protractor overlapping body. Remove purple up-right45degree arrow and45° label/arc. ONE purple straight arrow vertically DOWN from chest origin along lower vertical radius. Purple quarter-circle angle arc from horizontal baseline DOWN clockwise to arrow, label −90°. Keep grey0° at baseline. Downward push direction of dips. Arrow origin same chest point, reaches bottom of protractor, thin purple shaft/head size same as source, no extra words. Angle arc clearly quarter-circle lower right quadrant. All other content unchanged.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-47b20dde-91af-45b7-be91-0ee7f7a2b8f8.png",
+      "saved": "docs/image-style/drafts/press-directions-neutral-protractor-v1/downward-dips-v1.png",
+      "node": "push::복합관절::프레스::하향",
+      "publicFile": "press-direction-neutral-downward-dips-v1.png"
+    },
+    {
+      "id": "incline",
+      "detail": "User-approved neutral side profile with45degree incline arrow",
+      "path": "C:/Users/iksun/.codex/generated_images/01a0c82b-06be-7842-8126-61cf52c99de7/exec-49fc8ab2-1fe2-4a93-b0a5-643c85e3cd15.png",
+      "saved": "docs/image-style/drafts/press-directions-neutral-protractor-v1/incline-v1.png",
+      "node": "push::복합관절::프레스::상향 사선",
+      "publicFile": "press-direction-neutral-incline-v1.png"
+    }
+  ]
+}
