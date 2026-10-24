@@ -1,0 +1,33 @@
+{
+  "status": "approved",
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "downward",
+      "label": "하향",
+      "prompt": "Edit reference to elbow extension DOWNWARD direction diagram. Same smooth faceless grey muscular mannequin, TRUE SIDE PROFILE facing RIGHT, upright head-to-navel crop bottom white fade. Change visible arm: upper arm vertical pressed beside ribs, elbow at waist, elbow bent EXACT90degrees, forearm extends horizontally FORWARD (right), neutral closed hand. Single clear near arm, far arm occluded. No equipment. REMOVE reference arrow. Add ONE purple curved quarter-circle arrow describing forearm extension around fixed ELBOW: begin just past forward hand at right, curve DOWN and BACK toward below elbow, arrowhead at lower end points downward-left tangent. Arrow sits below forearm in empty right-side space, clearly DOWNWARD pushdown arc, NOT rising arc. Preserve body and pose aside requested arm. No ghost/end-position arm. No red muscles, rings, protractor, text, numbers. White background. Same #7041ED constant shaft0.008H, triangle length0.028H,width0.024H. Keep all visible within safe margins.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-6ef6ffd6-3ceb-42ee-8095-da70c0a823d8.png",
+      "saved": "docs/image-style/drafts/elbow-extension-directions-v1/downward-v1.png",
+      "node": "push::단일관절::팔꿈치 신전::하향",
+      "publicFile": "elbow-extension-direction-downward-v1.png"
+    },
+    {
+      "id": "upward",
+      "label": "상향",
+      "prompt": "Matching elbow extension UPWARD direction illustration. Reference same smooth faceless grey mannequin, TRUE SIDE PROFILE facing RIGHT, upright torso, white background head through navel bottom fade. Pose: visible UPPER ARM raised VERTICALLY above shoulder, elbow ABOVE head. Elbow bent EXACT90degrees BACKWARD: forearm runs horizontally LEFT behind top of head, hand behind head. This is overhead triceps-extension START position. Far arm fully occluded; only one clear arm. Full elbow and hand safely inside canvas, reduce mannequin scale slightly to fit overhead pose. ONE purple curved quarter-circle arrow centered on raised ELBOW: begins behind head near hand on LEFT, sweeps UP to above elbow, triangle tip at TOP points upward/right tangent, indicating straightening forearm UPWARD while upper arm fixed. No extra ghost arms or straightened arm. No equipment, no muscle red, no joint circles, no protractor, no text/numbers. Match reference grey shading and arrow #7041ED constant shaft0.008H, triangle head0.028H long0.024H wide. Clean clear anatomy, body exact side profile facing right.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-5618a1f8-6bfd-4ed7-83a8-aa19cd4f58fa.png",
+      "saved": "docs/image-style/drafts/elbow-extension-directions-v1/upward-v1.png",
+      "node": "push::단일관절::팔꿈치 신전::상향",
+      "publicFile": "elbow-extension-direction-upward-v1.png"
+    },
+    {
+      "id": "backward",
+      "label": "후방",
+      "prompt": "Matching elbow extension BACKWARD direction educational diagram. Same smooth faceless grey muscular mannequin TRUE SIDE PROFILE facing RIGHT, upright torso, head to navel fading into pure white. Visible arm shoulder EXTENDED BACK behind torso: upper arm angles DOWN-LEFT from shoulder, elbow clearly behind back silhouette at lower-rib height. Elbow deeply FLEXED MORE THAN90degrees of flexion (acute internal elbow angle about60degrees): forearm folds forward/up from rear elbow, closed hand near side of lower chest. Anatomically correct, no twist. Far arm occluded. This is standing triceps kickback START with upper arm held behind body, not overhead. ONE purple curved arc arrow centered on fixed rear elbow, begins near folded hand, sweeps down and LEFT around elbow toward behind body, arrowhead terminates far LEFT behind back pointing LEFT/backward along tangent. Clearly shows forearm straightening BACKWARD, no shoulder motion arrow. Arrow outside body visible in left negative space. No second/ghost arm. No equipment, red muscles, joint circles, protractor, text/numbers. Match reference grey shading and thin #7041ED arrow shaft0.008H,triangle head0.028H length0.024H width, same weight as other images. Balanced full pose and arrow within margins.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-5d49d114-be97-408a-bbce-4edb5ccba369.png",
+      "saved": "docs/image-style/drafts/elbow-extension-directions-v1/backward-v1.png",
+      "node": "push::단일관절::팔꿈치 신전::후방",
+      "publicFile": "elbow-extension-direction-backward-v1.png"
+    }
+  ]
+}
