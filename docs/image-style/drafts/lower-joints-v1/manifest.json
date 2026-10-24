@@ -1,0 +1,58 @@
+{
+  "status": "approved",
+  "tool": "built-in image_gen",
+  "base": "Educational lower-body JOINT CATEGORY image for gym tree, matching attached upper-body joint reference style exactly: smooth grey muscular mannequin, charcoal shorts, pure white backdrop, NO red/coral muscles, no text, no arrows, no equipment except minimal support if specified. Crop body at navel at top with subtle white fade; include pelvis, both legs and complete feet. Two separated poses left start right finish, same scale, horizontal 2:1 canvas, balanced outside margins. Highlight ONLY specified nearest-side joint centers with purple #7041ED DASHED CIRCLES, identical circle diameters approx 9% canvas height in every image, identical thin stroke and rounded short dashes, no fill/glow, no tiny arrows. Do not mark far-side overlapping joints to avoid tangles. ",
+  "images": [
+    {
+      "id": "squat-compound",
+      "node": "squat::복합관절",
+      "detail": "Side profile facing right. LEFT upright standing; RIGHT squat with hip and knees bending, thighs near horizontal, heels flat, natural moderate torso lean. On EACH pose exactly TWO dashed circles at nearest HIP center and KNEE center. No ankle rings. No hands/upper torso needed.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-9213ed0b-bab0-42ee-a552-6ff3cbf89462.png",
+      "saved": "docs/image-style/drafts/lower-joints-v1/squat-compound-v1.png",
+      "publicFile": "lower-joint-squat-compound-v1.png"
+    },
+    {
+      "id": "squat-single",
+      "node": "squat::단일관절",
+      "detail": "Seated knee extension side profile facing right, pelvis at same height in both poses. Minimal charcoal flat seat supporting buttocks only no machine. LEFT thighs horizontal knees bent 90 degrees feet down; RIGHT thighs remain fixed horizontal with knees extended lower legs forward near horizontal. Mark exactly ONE nearest KNEE ring per pose. Hip unmarked. Preserve natural two legs.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-1b575e7d-c4d5-4875-b011-7845fd94f4fb.png",
+      "saved": "docs/image-style/drafts/lower-joints-v1/squat-single-v1.png",
+      "publicFile": "lower-joint-squat-single-v1.png"
+    },
+    {
+      "id": "hinge-compound",
+      "node": "hinge::복합관절",
+      "detail": "Side profile facing right, equipment-free deadlift lower-body pattern. LEFT hip flexed back and knees moderately bent, shins nearly vertical; RIGHT upright standing hips and knees extended. Two rings per pose, nearest HIP and KNEE, no ankle rings. Upper body cropped at navel. User revision: starting torso inclined 15 degrees further forward like Romanian deadlift. Latest: upright LEFT, hinge RIGHT, vertical shins with no forward knee translation, soft knees and hips back.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-464749aa-55eb-46e4-b73c-b42699c32898.png",
+      "saved": "docs/image-style/drafts/lower-joints-v1/hinge-compound-v3.png",
+      "previousPath": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-f925e51c-16e7-498a-a60e-c3f260457172.png",
+      "publicFile": "lower-joint-hinge-compound-v1.png"
+    },
+    {
+      "id": "hip-dominant",
+      "node": "hinge::hip-dominant",
+      "detail": "Equipment-free hip hinge side profile facing right. LEFT upright standing; RIGHT pelvis pushed backward with trunk flexing at hip, knees only soft 15 degrees and shins vertical. Show cropped lower abdomen with enough torso stub to show hip flexion. Exactly ONE ring per pose nearest HIP. Knees and ankles unmarked.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-5c7f7183-6ccd-4f7f-a0bb-767106c846c3.png",
+      "saved": "docs/image-style/drafts/lower-joints-v1/hip-dominant-v1.png",
+      "publicFile": "lower-joint-hip-dominant-v1.png"
+    },
+    {
+      "id": "lunge-compound",
+      "node": "lunge::복합관절",
+      "detail": "Side profile facing right. LEFT high split stance one foot forward rear heel raised; RIGHT same stance lowered lunge both knees bent, rear knee hovering above ground, front thigh horizontal front foot flat. Exactly TWO rings per pose on front leg HIP and front KNEE, no rear-leg or ankle rings. Clearly two legs each.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-672a1da1-3e0d-43b6-96f7-0c4c5181dcbc.png",
+      "saved": "docs/image-style/drafts/lower-joints-v1/lunge-compound-v1.png",
+      "publicFile": "lower-joint-lunge-compound-v1.png"
+    }
+  ],
+  "excludedImages": [
+    {
+      "id": "hinge-single",
+      "node": "hinge::단일관절",
+      "detail": "Standing knee flexion side profile facing right: LEFT upright on both legs, RIGHT one support leg remains straight and planted while near working knee flexes 90 degrees heel moving toward buttock behind. Pelvis fixed upright both poses, no hip motion. Exactly ONE ring per pose on working KNEE, no hip/ankle rings. Two legs each.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-768fa8e1-f614-4823-8e5c-4e44db1b3f29.png",
+      "saved": "docs/image-style/drafts/lower-joints-v1/hinge-single-v1.png",
+      "status": "excluded-by-user"
+    }
+  ]
+}
