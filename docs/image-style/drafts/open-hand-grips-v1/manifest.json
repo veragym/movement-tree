@@ -1,0 +1,31 @@
+{
+  "status": "approved",
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "supinated",
+      "prompt": "Create ONE educational SUPINATION hand orientation illustration for VeraGym, using reference LEFT panel for orientation ONLY, not photo style. Smooth pale-grey faceless-mannequin anatomical style, soft grey shading, no skin texture/hair/veins, clean white background. Isolated ONE forearm and OPEN HAND, NO clenched fist. Forearm enters from upper center (elbow cropped softly), wrist centered, fingers extend toward lower center. Camera slightly above looking along forearm like reference, palm clearly FACING UP toward viewer: visible palm creases lightly, four fingers naturally extended together with gentle relaxed curvature, thumb relaxed outward. Exactly5fingers, anatomically correct, wrist straight. Crop forearm+entire open hand only, no torso/clothes/equipment. Minimal thin purple #7041ED curved rotation arrow beside wrist indicating supination, constant shaft0.008H, triangle head0.028Hlong0.024Hwide. No angle measurements, numbers, labels, text, baseline or protractor. Balanced wide landscape canvas and generous equal margins. Model pale-grey premium educational rendering matches established exercise mannequin, not realistic human photograph.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-c03009b5-6515-42b5-b716-4dfe56b1dbc5.png",
+      "saved": "docs/image-style/drafts/open-hand-grips-v1/supinated-v1.png",
+      "node": "pull::단일관절::팔꿈치 굴곡::일반",
+      "publicFile": "open-hand-grip-supinated-v1.png",
+      "label": "회외 그립"
+    },
+    {
+      "id": "neutral",
+      "prompt": "Create NEUTRAL forearm orientation variant of exact reference hand. Same single RIGHT hand/forearm, same palegrey smooth mannequin style, scale, forearm entry from top center, fingers toward bottom, white canvas. ROTATE forearm and OPEN hand90degrees from palm-facing-viewer into THUMB-SIDE EDGE-ON VIEW, neutral handshake orientation, thumb uppermost relative horizontal forearm; in this camera thumb-side faces viewer, palm is vertical sideways, four extended fingers overlap naturally in side view. Keep wrist straight and hand relaxed OPEN, not a fist. Exactly5anatomically correct digits, no duplicated thumb. REMOVE purple rotation arrow entirely because neutral is stationary. No arrow, text,numbers,baseline,protractor,equipment. Same composition/lighting and entire hand within margin.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-4a985f25-75ca-40c6-a287-e3be66db17f2.png",
+      "saved": "docs/image-style/drafts/open-hand-grips-v1/neutral-v1.png",
+      "node": "pull::단일관절::팔꿈치 굴곡::중립 그립",
+      "publicFile": "open-hand-grip-neutral-v1.png"
+    },
+    {
+      "id": "pronated",
+      "prompt": "Create PRONATION orientation variant of reference same single RIGHT hand+forearm. Same smooth pale-grey mannequin rendering, same scale, forearm top center fingers bottom center, same clean white canvas and margins. Rotate forearm and OPEN hand180degrees from reference palm-up into BACK-OF-HAND FACING VIEWER (palm DOWN). Dorsal hand surface visible, light subtle fingernails on four naturally extended relaxed fingers, thumb now on RIGHT side of image consistent with SAME right hand rotating, no palm creases on dorsal surface. Wrist straight, exactly5digits. No fist. A single thin purple #7041ED curved rotation arrow beside RIGHT side wrist, mirrors reference supination arrow position/direction to indicate pronation. Match same shaft and triangular head size. No text,numbers,baseline,protractor,equipment. Full hand within safe margins.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-89e8ca9d-e8c9-48dc-997b-5bf254ab8093.png",
+      "saved": "docs/image-style/drafts/open-hand-grips-v1/pronated-v1.png",
+      "node": "pull::단일관절::팔꿈치 굴곡::회내 그립",
+      "publicFile": "open-hand-grip-pronated-v1.png"
+    }
+  ]
+}
