@@ -1,0 +1,141 @@
+{
+  "status": "approved",
+  "tool": "built-in image_gen",
+  "base": "Educational lower-body MOVEMENT FAMILY illustration for VeraGym tree, matching approved upper-body press/fly style from image1 (STYLE ONLY). Smooth grey muscular mannequin, matte charcoal shorts, muted pale CORAL muscle highlights on specified target muscles. Pure white background, NO text, labels, arrows, joint circles, machines, bars, weights, watermark. Two separated equal-scale poses LEFT START and RIGHT FINISH, horizontal 2:1 canvas. Crop at navel with gentle white fade at upper cut, include whole pelvis and both legs and feet, natural proportions, compact balanced equal visual outer margins. No ghost overlays or extra limbs. Minimal support only if specified. Image2 when supplied supplies pose/crop ONLY; remove ALL purple circles and add coral highlights. ",
+  "images": [
+    {
+      "id": "squat",
+      "node": "squat::복합관절::스쿼트",
+      "source": "squat-compound-v1.png",
+      "detail": "Standing LEFT, squat RIGHT. Coral quadriceps and glutes. Preserve pose and body crop from second reference.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-eb75d076-edf6-4f3b-acde-4f4222484cc0.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/squat-v1.png",
+      "publicFile": "lower-movement-squat-v1.png"
+    },
+    {
+      "id": "press",
+      "node": "squat::복합관절::프레스",
+      "detail": "Side view facing right, seated leg press. Minimal charcoal seat/backpad and single plain small footplate only, no connecting frames. LEFT hips and knees bent with feet on footplate near body, RIGHT knees extend and footplate farther forward, pelvis remains on seat. Coral quads/glutes. Two legs each, feet stay contacting plate.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-fcfe4394-5a04-47e1-8c00-67c184dd3123.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/press-v1.png",
+      "publicFile": "lower-movement-press-v1.png"
+    },
+    {
+      "id": "knee-extension",
+      "node": "squat::단일관절::무릎 신전",
+      "source": "squat-single-v1.png",
+      "detail": "Seated knee extension, knees bent LEFT straightened RIGHT, thighs fixed on small seat. Coral quadriceps only. Preserve pose and crop from image2.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-4d30cc84-862f-4505-8efe-e88ce5383119.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/knee-extension-v1.png",
+      "publicFile": "lower-movement-knee-extension-v1.png"
+    },
+    {
+      "id": "hip-adduction",
+      "node": "squat::단일관절::고관절 내전",
+      "detail": "Front view seated on minimal small charcoal seat. LEFT thighs spread outward and knees apart, RIGHT thighs closed inward and knees together, both feet below knees, no machine/pads. Coral INNER thigh adductors only.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-71f4a368-77ca-4637-89b0-da9ba75c1830.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/hip-adduction-v1.png",
+      "publicFile": "lower-movement-hip-adduction-v1.png"
+    },
+    {
+      "id": "calf-raise",
+      "node": "squat::단일관절::ankle",
+      "detail": "Rear three-quarter view standing calf raise. LEFT both heels flat on floor RIGHT both heels lifted with forefeet on floor. Same near-straight knees, no weights or platforms. Coral calves only.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-8c8e987e-8ae4-4b7b-9001-a91ab7353d4f.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/calf-raise-v1.png",
+      "publicFile": "lower-movement-calf-raise-v1.png"
+    },
+    {
+      "id": "deadlift",
+      "node": "hinge::복합관절::데드리프트",
+      "source": "hinge-compound-v3.png",
+      "detail": "Standing LEFT, hip hinge RIGHT, soft knees and vertical shins no forward knee movement, hips back. Coral glutes and hamstrings. Preserve exact pose/crop second reference.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-6dcca179-9566-4bf8-b3d9-8408cfde96b5.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/deadlift-v1.png",
+      "publicFile": "lower-movement-deadlift-v1.png"
+    },
+    {
+      "id": "knee-flexion",
+      "node": "hinge::단일관절::무릎 굴곡",
+      "source": "hinge-single-v1.png",
+      "detail": "Standing knee curl, straight legs LEFT, RIGHT exactly ONE straight planted support leg and ONE working knee bent backward heel in air. No third leg. Coral hamstrings of working leg only. Preserve corrected second reference anatomy.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-a13bd9a9-12fe-46b1-ad26-f8424ad61b63.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/knee-flexion-v1.png",
+      "publicFile": "lower-movement-knee-flexion-v1.png"
+    },
+    {
+      "id": "hip-extension-standing",
+      "node": "hinge::단일관절::고관절 신전",
+      "detail": "Side view facing right. LEFT standing both feet under pelvis. RIGHT planted support leg remains vertical, other leg extends backward near straight, toe in air behind. Pelvis upright stationary. Exactly two legs per pose. Coral glutes and posterior thigh of working leg.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-4124e98c-c143-44ad-a573-f5de86a932e6.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/hip-extension-standing-v1.png",
+      "publicFile": "lower-movement-hip-extension-standing-v1.png"
+    },
+    {
+      "id": "hip-abduction",
+      "node": "hinge::단일관절::고관절 외전",
+      "detail": "Front view. LEFT standing feet together. RIGHT one straight support leg planted other straight leg opens sideways about25degrees with foot in air. Pelvis level. Coral upper outer hip glute medius only.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-5bc6100b-7793-4abc-9065-5e7e3d132667.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/hip-abduction-v1.png",
+      "publicFile": "lower-movement-hip-abduction-v1.png"
+    },
+    {
+      "id": "hip-extension-supported",
+      "node": "hinge::복합관절::힙 익스텐션",
+      "detail": "Side view facing right glute bridge, lower abdomen/pelvis thighs legs feet only cropped at navel. LEFT pelvis lowered toward floor knees bent feet flat, RIGHT hips raised knees still bent with shins vertical feet flat. No weights, no equipment. Coral glutes and hamstrings. Show enough lower abdomen to imply horizontal trunk at top finish.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-aab10a19-8000-4302-86d1-49605315d3f9.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/hip-extension-supported-v1.png",
+      "publicFile": "lower-movement-hip-extension-supported-v1.png"
+    },
+    {
+      "id": "good-morning",
+      "node": "hinge::복합관절::굿모닝 패턴",
+      "detail": "Side view facing right, equipment-free good morning. LEFT standing upright RIGHT hips pushed far back torso inclines forward from hip with neutral back and almost straight knees only soft bend, shins vertical. Include cropped lower torso enough to show hinge clearly. Coral glutes/hamstrings.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-a67987ee-0637-448e-8318-53c0f2bd8a13.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/good-morning-v1.png",
+      "publicFile": "lower-movement-good-morning-v1.png"
+    },
+    {
+      "id": "romanian-deadlift",
+      "node": "hinge::hip-dominant::deadlift",
+      "source": "hinge-compound-v3.png",
+      "detail": "Standing LEFT, Romanian hip hinge RIGHT. Preserve exact vertical shins and no forward knee movement from second reference, hips back, soft knees. Coral glutes/hamstrings, no equipment.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-c988c3a1-8373-459d-b306-f55ed15182ab.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/romanian-deadlift-v1.png",
+      "publicFile": "lower-movement-romanian-deadlift-v1.png"
+    },
+    {
+      "id": "lunge",
+      "node": "lunge::복합관절::런지",
+      "source": "lunge-compound-v1.png",
+      "detail": "High split stance LEFT lowered lunge RIGHT. Coral front quadriceps and glutes. Preserve correct stance and crop second reference.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-de54f611-dacc-4129-a584-0fd9efff9ad3.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/lunge-v1.png",
+      "publicFile": "lower-movement-lunge-v1.png"
+    },
+    {
+      "id": "split-squat",
+      "node": "lunge::복합관절::스플릿 스쿼트",
+      "detail": "Side view facing right fixed split squat. LEFT high split stance with front foot flat and rear toes on floor, RIGHT same exact fixed foot positions and distances with pelvis lowered both knees bent rear knee hovers. Coral front quadriceps/glutes. No bench.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-d02a39d9-9852-43f6-9d52-1f2a979fbcec.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/split-squat-v1.png",
+      "publicFile": "lower-movement-split-squat-v1.png"
+    },
+    {
+      "id": "step",
+      "node": "lunge::복합관절::스텝",
+      "detail": "Side view facing right step up. Minimal small charcoal step. LEFT one foot on step with knee bent and other foot on floor, RIGHT both legs extend and both feet on top of step. Exactly two legs and feet each. Coral working quadriceps/glutes.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-87fd2c08-1d96-48eb-add4-a076c7ba0898.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/step-v1.png",
+      "publicFile": "lower-movement-step-v1.png"
+    },
+    {
+      "id": "single-leg-squat",
+      "node": "lunge::복합관절::싱글 레그 Squat",
+      "detail": "Side profile facing right single leg squat. LEFT standing on one near-straight supporting leg, free leg extended straight forward lifted. RIGHT support knee bends and pelvis lowers, free leg remains extended straight forward off floor. Exactly two legs, ONE foot floor each pose. Coral supporting quadriceps/glutes.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-8a4d2a7e-2a01-4f0a-9667-818ab0d51671.png",
+      "saved": "docs/image-style/drafts/lower-movements-v1/single-leg-squat-v1.png",
+      "publicFile": "lower-movement-single-leg-squat-v1.png"
+    }
+  ]
+}
