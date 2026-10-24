@@ -1,0 +1,19 @@
+{
+  "status": "approved",
+  "images": [
+    {
+      "id": "horizontal",
+      "node": "pull::단일관절::후면 어깨 벌림::수평",
+      "path": "C:/Users/iksun/AppData/Local/Temp/codex-clipboard-dd9a6bea-0b47-40ae-af6e-e4e5c1f1bcee.png",
+      "saved": "docs/image-style/drafts/pull-single-approved-v1/horizontal-v1.png",
+      "publicFile": "pull-single-direction-horizontal-v1.png"
+    },
+    {
+      "id": "upper-to-lower",
+      "node": "pull::단일관절::어깨 신전::상향 → 하향",
+      "path": "C:/Users/iksun/AppData/Local/Temp/codex-clipboard-81edecf4-b99e-405f-a630-87b31c54f92f.png",
+      "saved": "docs/image-style/drafts/pull-single-approved-v1/upper-to-lower-v1.png",
+      "publicFile": "pull-single-direction-upper-to-lower-v1.png"
+    }
+  ]
+}
