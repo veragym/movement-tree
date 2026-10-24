@@ -1,0 +1,51 @@
+{
+  "status": "approved",
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "horizontal",
+      "node": "pull::복합관절::로우::수평",
+      "path": "C:/Users/iksun/Desktop/VeraGym/movement-tree/docs/image-style/drafts/pull-armless-directions-v1/horizontal-faint-shoulder-v3.png",
+      "saved": "docs/image-style/drafts/pull-armless-final-v1/horizontal-v1.png",
+      "publicFile": "pull-direction-armless-horizontal-v1.png"
+    },
+    {
+      "id": "upper-diagonal",
+      "node": "pull::복합관절::로우::상향 사선",
+      "prompt": "Precise edit ONLY arrow direction. Preserve mannequin EXACTLY: armless true right-facing side profile, very faint almost-white shoulder ghost, visible grey latissimus, same scale, position, white background and navel fade. Preserve arrow color, constant stroke and triangle dimensions. Original horizontal arrow total length about465pixels on1774x887 canvas; every new arrow must SAME465pixel geometric length (NOT same horizontal span). Exactly ONE arrow, no text, baseline, protractor, angle arcs, equipment or extra limbs. Remove horizontal arrow. Draw straight diagonal from UPPER-RIGHT toward SAME latissimus endpoint (~795,511), arrowhead at latissimus pointing DOWN-LEFT. Tail roughly(1124,182), giving45degree slope and465pixel length. Plain tail upper right, single head at body. Only rotate arrow around fixed tip.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-3ecc870e-8864-4239-b615-12ced37ef5b3.png",
+      "saved": "docs/image-style/drafts/pull-armless-final-v1/upper-diagonal-v1.png",
+      "publicFile": "pull-direction-armless-upper-diagonal-v1.png"
+    },
+    {
+      "id": "lower-diagonal",
+      "node": "pull::복합관절::로우::하향 사선",
+      "prompt": "Precise edit ONLY arrow direction. Preserve mannequin EXACTLY: armless true right-facing side profile, very faint almost-white shoulder ghost, visible grey latissimus, same scale, position, white background and navel fade. Preserve arrow color, constant stroke and triangle dimensions. Original horizontal arrow total length about465pixels on1774x887 canvas; every new arrow must SAME465pixel geometric length (NOT same horizontal span). Exactly ONE arrow, no text, baseline, protractor, angle arcs, equipment or extra limbs. Remove horizontal arrow. Draw ONE diagonal straight arrow from LOWER-RIGHT into SAME latissimus endpoint(~795,511), arrowhead points UP-LEFT. Tail at(~1124,840); tip(~795,511), same465pixel total length, equal x/y displacement329pixels. Do NOT extend beyond image bottom. Preserve exact original body and shoulder fade. Plain lower-right tail, head at body.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-94ae37c9-6e5b-42e0-86c2-13b9815db24f.png",
+      "saved": "docs/image-style/drafts/pull-armless-final-v1/lower-diagonal-v1.png",
+      "publicFile": "pull-direction-armless-lower-diagonal-v1.png"
+    },
+    {
+      "id": "vertical-down",
+      "node": "pull::복합관절::풀::수직 하향",
+      "prompt": "ONLY lengthen and reposition purple downward arrow. Keep exact mannequin unchanged. On1774x887canvas arrow must run VERTICALLY from(795,46) tail at head-top height to(795,511) tip at latissimus under shoulder. Length465px, nearly same as HEAD TOP TO LOWER CHEST distance. Current arrow is too short and low. Move tip UP from current570to511, extend tail UP from320to46. Keep purple shaft width9px and triangular head about45pxlong50pxwide matching original horizontal. SINGLE head DOWN at latissimus. Do NOT shorten arrow to fit shoulder. It intentionally passes in front of head/neck. Everything else unchanged, faint white shoulder retained, no text.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-631603b2-ee5e-4d8a-ba6a-e61ff39e95a0.png",
+      "saved": "docs/image-style/drafts/pull-armless-final-v1/vertical-down-v1.png",
+      "publicFile": "pull-direction-armless-vertical-down-v1.png"
+    },
+    {
+      "id": "vertical-up",
+      "node": "pull::복합관절::풀::수직 상향",
+      "prompt": "Edit ONLY arrow direction: reverse existing vertical DOWN arrow into vertical UP arrow on EXACT same line segment, same total length, purple thickness and head dimensions. Remove triangular head at bottom, make bottom plain tail. Put ONE triangle at TOP pointing UP. Body-rise pull-up direction. Preserve identical armless grey right-facing side profile, very faint white shoulder, visible latissimus, exact body scale/position, white background and bottom fade. No other edits, no extra arrows, no text or protractor.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-1db6a1cf-e2d6-4246-91d8-4a8b43a2a3f6.png",
+      "saved": "docs/image-style/drafts/pull-armless-final-v1/vertical-up-v1.png",
+      "publicFile": "pull-direction-armless-vertical-up-v1.png"
+    }
+  ],
+  "excludedPreviews": [
+    {
+      "path": "C:/Users/iksun/.codex/generated_images/01a0c82b-06be-7842-8126-61cf52c99de7/exec-32bbabf7-652a-477c-ab96-057122d608fd.png",
+      "reason": "User excluded short vertical downward draft; not part of final set"
+    }
+  ]
+}
