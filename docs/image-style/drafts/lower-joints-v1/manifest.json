@@ -43,16 +43,16 @@
       "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-672a1da1-3e0d-43b6-96f7-0c4c5181dcbc.png",
       "saved": "docs/image-style/drafts/lower-joints-v1/lunge-compound-v1.png",
       "publicFile": "lower-joint-lunge-compound-v1.png"
-    }
-  ],
-  "excludedImages": [
+    },
     {
       "id": "hinge-single",
       "node": "hinge::단일관절",
       "detail": "Standing knee flexion side profile facing right: LEFT upright on both legs, RIGHT one support leg remains straight and planted while near working knee flexes 90 degrees heel moving toward buttock behind. Pelvis fixed upright both poses, no hip motion. Exactly ONE ring per pose on working KNEE, no hip/ankle rings. Two legs each.",
       "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-768fa8e1-f614-4823-8e5c-4e44db1b3f29.png",
       "saved": "docs/image-style/drafts/lower-joints-v1/hinge-single-v1.png",
-      "status": "excluded-by-user"
+      "status": "approved",
+      "publicFile": "lower-joint-hinge-single-v1.png"
     }
-  ]
+  ],
+  "excludedImages": []
 }
