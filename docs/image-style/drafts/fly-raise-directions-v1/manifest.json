@@ -1,0 +1,48 @@
+{
+  "status": "approved-for-application",
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "horizontal",
+      "detail": "ONE purple straight arrow horizontally RIGHT along zero-degree baseline, label0° only, remove45° text and purple angle arc.",
+      "prompt": "Precise diagram edit of provided image. Preserve SAME neutral upright TRUE SIDE PROFILE body facing RIGHT, ARM HANGING STRAIGHT DOWN, exact body position/scale/grey shading/navel fade. Do not raise or bend arms. Preserve grey180degree protractor overlapping torso and its ticks/lines/white background. Change ONLY purple arrow and angle text: remove existing45degree arrow,45° text and small purple arc. ONE purple straight arrow horizontally RIGHT along zero-degree baseline, label0° only, remove45° text and purple angle arc. Arrow starts EXACTLY at same chest origin, ends at protractor arc. Match purple color, thin shaft and triangular head size of source. No other changes, no extra text.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-6ed837bd-a33e-4350-a125-8896389886d8.png",
+      "saved": "docs/image-style/drafts/press-directions-neutral-protractor-v1/horizontal-v1.png",
+      "node": "push::단일관절::플라이::수평",
+      "publicFile": "press-direction-neutral-horizontal-v1.png"
+    },
+    {
+      "id": "decline",
+      "detail": "ONE purple straight arrow DOWN-RIGHT at45degrees below horizontal baseline. Small purple angle arc clockwise below baseline, label −45°. Keep grey0° at baseline.",
+      "prompt": "Precise edit ONLY direction arrow and angle annotation. Preserve EXACT neutral true side-profile mannequin facing right, arm relaxed STRAIGHT DOWN, body position/scale/white fade. No bending/raising arms. Preserve entire grey180degree protractor overlapping body. Remove purple up-right45degree arrow and45° label/arc. ONE purple straight arrow DOWN-RIGHT at45degrees below horizontal baseline. Small purple angle arc clockwise below baseline, label −45°. Keep grey0° at baseline. Arrow origin remains same chest point, length reaches protractor arc, thin purple shaft/head size same as source, no extra words. All other image content unchanged.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-934edc91-9e3d-4ccc-866e-63921240c8de.png",
+      "saved": "docs/image-style/drafts/press-directions-neutral-protractor-v1/decline-v1.png",
+      "node": "push::단일관절::플라이::하향 사선",
+      "publicFile": "press-direction-neutral-decline-v1.png"
+    },
+    {
+      "id": "incline",
+      "detail": "User-approved neutral side profile with45degree incline arrow",
+      "path": "C:/Users/iksun/.codex/generated_images/01a0c82b-06be-7842-8126-61cf52c99de7/exec-49fc8ab2-1fe2-4a93-b0a5-643c85e3cd15.png",
+      "saved": "docs/image-style/drafts/press-directions-neutral-protractor-v1/incline-v1.png",
+      "node": "push::단일관절::플라이::상향 사선",
+      "publicFile": "press-direction-neutral-incline-v1.png"
+    },
+    {
+      "id": "raise-front",
+      "node": "push::단일관절::레이즈::전방",
+      "prompt": "Edit reference into a FRONT RAISE direction illustration. Preserve same faceless smooth grey muscular mannequin, TRUE SIDE PROFILE facing RIGHT, upright neutral pose, both arms hanging STRAIGHT DOWN, head to navel white bottom fade, exact character and white background. REMOVE ALL protractor lines, ticks, numbers, labels, straight rays and original arrow. Draw ONE purple #7041ED curved quarter-circle motion arrow in empty space in FRONT of body (right side): centered geometrically on shoulder, arc begins low near hanging hand at waist level and sweeps FORWARD AND UP to shoulder-height in front of chest. Arrow tip at rightmost end points UP along arc tangent. This is arm lifting trajectory from down toward horizontal front raise, NOT a straight arrow emanating from chest. Do not bend or raise actual arm. Thin constant stroke 0.008 image height, triangular head length0.028H,width0.024H. No text, no equipment, no red muscles, no rings. Keep full curve and head in margins, balanced centered composition.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-216fdb3f-3ec6-441e-80d9-b0182946efe0.png",
+      "saved": "docs/image-style/drafts/fly-raise-directions-v1/raise-front-v1.png",
+      "publicFile": "raise-direction-front-v1.png"
+    },
+    {
+      "id": "raise-side",
+      "node": "push::단일관절::레이즈::측방",
+      "prompt": "Create matching LATERAL RAISE direction educational illustration using reference character/style. Change camera to EXACT STRAIGHT FRONT VIEW, symmetrical mannequin looking directly at viewer. Same smooth faceless grey muscular model, upright neutral pose, BOTH ARMS HANGING STRAIGHT DOWN at sides. Head through navel, bottom fades into clean white. REMOVE ALL protractor, lines, ticks, numbers and text. No red highlights or equipment. TWO mirrored purple #7041ED quarter-circle arrows outside torso, one on each side: arcs centered geometrically at corresponding shoulder, BEGIN LOW beside hanging hands around waist, sweep OUTWARD AND UP, ending at shoulder height on far left and far right. Both arrowheads point UP along arc tangent. Show arm lifting out to SIDES, NOT straight arrows originating chest. Arms remain down, no ghost arms or bent arms. Same arrow thin constant stroke 0.008H and triangle head length0.028H,width0.024H as previous front raise. Full arcs visible within safe margins, balanced centered composition, same mannequin scale and white background. No text of any kind.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-6d86c300-959d-4365-93f3-ea83afd60cc7.png",
+      "saved": "docs/image-style/drafts/fly-raise-directions-v1/raise-side-v1.png",
+      "publicFile": "raise-direction-side-v1.png"
+    }
+  ]
+}
