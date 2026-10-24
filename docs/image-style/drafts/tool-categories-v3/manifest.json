@@ -1,0 +1,46 @@
+{
+  "status": "approved",
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "barbell",
+      "prompt": "Refine reference single BARBELL equipment illustration, same thin dark outline simple smooth grey shading, charcoal plates,silver shaft,pure white background, no text or people. ExactlyONE circular plate on EACH end,2plates total, no stacked/doubled plates. Correct realistic proportional barbell: long slim shaft, overall length about5times plate diameter, balanced sleeve protrusions, symmetric plate sizes in perspective. Center barbell horizontally with gentle3quarter angle, whole object occupies80percent canvas width with equal margins, avoid cramped edge. Keep similar established instructional illustration finish, no shiny photorealism, no labels,logos,numbers,arrows or watermark.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-c147cd66-29b3-48d6-8fb3-cf9bce54f18e.png",
+      "saved": "docs/image-style/drafts/tool-categories-v3/barbell-v3.png",
+      "label": "바벨",
+      "publicFile": "tool-category-barbell-approved-v3.png"
+    },
+    {
+      "id": "dumbbell",
+      "prompt": "Refine reference ONE dumbbell, same simple outlined smoothgrey instructional illustration white background. Keep exactlyONE charcoal circular plate at EACH end,2total, no stacked plates. Adjust proportional dumbbell: compact realistic short silver grip, grip exposed length about0.8plate diameter, plate diameter moderate, total dumbbell length about2.2plate diameters. Slimmer plate thickness about0.12diameter, balanced symmetry in3quarter perspective. Entire object centered occupying65percent canvas width with generous equal margins, not oversized closeup. No people,text,logos,numbers,arrows,watermark. Match previous illustration style.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-1b233f6e-da6a-4639-bd77-a5a19b6e988b.png",
+      "saved": "docs/image-style/drafts/tool-categories-v3/dumbbell-v3.png",
+      "label": "덤벨",
+      "publicFile": "tool-category-dumbbell-approved-v3.png"
+    },
+    {
+      "id": "cable",
+      "prompt": "ONE equipment category illustration, ONLY TWO cable attachments side by side on pure white. LEFT: single thin dark cable descends vertically from above, small metal carabiner connects to CENTER eye of a horizontal STRAIGHT BAR, silver straight shaft with charcoal grips at both ends. RIGHT: separate single thin dark cable descends from above, small carabiner connects to top eye of ONE D-GRIP handle, silver D-shaped frame with horizontal charcoal grip at bottom. Exactly TWO cable lines total, each attached to its own attachment. NO machine frame, pulley tower, weight stack, people, floor, wall, support or other equipment. Cable tops softly fade/crop near upper quarter, attachments same approximate scale, centered balanced spacing, bar longer than Dhandle realistically. Simple instructional equipment rendering matching reference thin dark outline, silver lightgrey structure,charcoal grips,soft shading, not photorealistic. No text,labels,numbers,logos,watermarks,arrows.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-f4767272-47b0-4092-8b70-cfac007b8298.png",
+      "saved": "docs/image-style/drafts/tool-categories-v3/cable-v3.png",
+      "label": "케이블",
+      "publicFile": "tool-category-cable-approved-v3.png"
+    },
+    {
+      "id": "machine",
+      "prompt": "Subtle illustration restyling of uploaded reference ONLY. Preserve ALL NINE distinct gym strength machines in EXACT SAME3by3grid, same order, camera angles, silhouettes, proportions and equipment structures. Do not replace them with generic machines, do not merge or omit any machine. Maintain black/charcoal frames, darkbrown pads, small muted lime adjustment accents. Slightly stylize into clean exercise-encyclopedia equipment illustration: fine neat dark outlines, simplified soft shading, tidy edges and surfaces, still faithful technical shapes. Only modest illustrative treatment, not cartoon, not exaggerated3D, no photoreal textures. Pure clean WHITE background, evenly balanced spacing and outer margins, all nine complete including bases and towers, no dividing lines. Remove unreadable branding/text/labels from equipment; no added text,numbers,logos,watermarks,people,arrows. Single square image showing nine machines as a collection representing machine category.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-f9d2ce00-7dde-417b-980e-f4d652d4020e.png",
+      "saved": "docs/image-style/drafts/tool-categories-v3/machine-collection-v5.png",
+      "label": "머신",
+      "publicFile": "tool-category-machine-approved-v3.png"
+    },
+    {
+      "id": "band",
+      "prompt": "Edit reference loop resistance band to be noticeably THINNER and NARROWER. Same charcoal continuous closed rubber loop in oblique oval resting shape, same simple instructional equipment illustration with thin outline and softgrey shading white background. Reduce strap ribbon WIDTH to aboutONE THIRD of original, like slim long power resistance band rather than broad fabric hip band. Rubber material wall thickness only2-3mm visually, not chunky. Preserve continuous untwisted loop, plausible soft flexibility, oval clearly open at center. Center object with balanced margins, no people,handles,text,logos,numbers,arrows or watermark. Same style as existing reference.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-19bff156-a9e1-47c2-b86c-9240693222f7.png",
+      "saved": "docs/image-style/drafts/tool-categories-v3/band-v3.png",
+      "label": "밴드",
+      "publicFile": "tool-category-band-approved-v3.png"
+    }
+  ]
+}
