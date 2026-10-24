@@ -1,0 +1,17 @@
+{
+  "status": "approved",
+  "images": [
+    {
+      "id": "bodyweight",
+      "label": "맨몸",
+      "saved": "docs/image-style/drafts/tool-categories-v2/bodyweight-v2.png",
+      "publicFile": "tool-category-bodyweight-approved-v2.png"
+    },
+    {
+      "id": "roman-chair",
+      "label": "로만 체어",
+      "saved": "docs/image-style/drafts/tool-categories-v2/roman-chair-v2.png",
+      "publicFile": "tool-category-roman-chair-approved-v2.png"
+    }
+  ]
+}
