@@ -1,0 +1,70 @@
+{
+  "status": "approved-for-application",
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "horizontal",
+      "prompt": "Remove ALL protractor graphics, vertical/horizontal grey baselines, radial rays,ticks,numbers,0°text and angle arcs. Preserve ONLY exact grey neutral side-profile mannequin facing RIGHT arm hanging down and exact existing SINGLE PURPLE HORIZONTAL RIGHTWARD ARROW starting at chest, same location,length,shaft,head. Reconstruct underlying body smoothly where lines erased. Pure white background, body pose/scale/position unchanged, no new text or lines.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-52aa7a8e-4f3c-4e9b-834d-2713d658525d.png",
+      "saved": "docs/image-style/drafts/push-directions-arrow-only-v1/horizontal-v1.png",
+      "publicFile": "push-direction-arrow-only-horizontal-v1.png",
+      "node": "push::복합관절::프레스::수평"
+    },
+    {
+      "id": "horizontal-fly",
+      "prompt": "Remove ALL protractor graphics, vertical/horizontal grey baselines, radial rays,ticks,numbers,0°text and angle arcs. Preserve ONLY exact grey neutral side-profile mannequin facing RIGHT arm hanging down and exact existing SINGLE PURPLE HORIZONTAL RIGHTWARD ARROW starting at chest, same location,length,shaft,head. Reconstruct underlying body smoothly where lines erased. Pure white background, body pose/scale/position unchanged, no new text or lines.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-52aa7a8e-4f3c-4e9b-834d-2713d658525d.png",
+      "saved": "docs/image-style/drafts/push-directions-arrow-only-v1/horizontal-v1.png",
+      "publicFile": "push-direction-arrow-only-horizontal-v1.png",
+      "node": "push::단일관절::플라이::수평"
+    },
+    {
+      "id": "incline",
+      "prompt": "Change ONLY purple arrow orientation on this exact image. Same chest origin, same actual arrow length, thin shaft, head size and color. Rotate straight arrow45degrees UP-RIGHT, outward triangle at upper-right endpoint. Preserve grey neutral right-facing side profile arms DOWN, body position/scale and white background EXACTLY. No text,numbers,angle arc,protractor,baselines or other graphics.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-33efe8f5-7e2c-4b84-9100-951409e74af6.png",
+      "saved": "docs/image-style/drafts/push-directions-arrow-only-v1/incline-v1.png",
+      "publicFile": "push-direction-arrow-only-incline-v1.png",
+      "node": "push::복합관절::프레스::상향 사선"
+    },
+    {
+      "id": "incline-fly",
+      "prompt": "Change ONLY purple arrow orientation on this exact image. Same chest origin, same actual arrow length, thin shaft, head size and color. Rotate straight arrow45degrees UP-RIGHT, outward triangle at upper-right endpoint. Preserve grey neutral right-facing side profile arms DOWN, body position/scale and white background EXACTLY. No text,numbers,angle arc,protractor,baselines or other graphics.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-33efe8f5-7e2c-4b84-9100-951409e74af6.png",
+      "saved": "docs/image-style/drafts/push-directions-arrow-only-v1/incline-v1.png",
+      "publicFile": "push-direction-arrow-only-incline-v1.png",
+      "node": "push::단일관절::플라이::상향 사선"
+    },
+    {
+      "id": "decline",
+      "prompt": "Change ONLY purple arrow orientation. Same chest origin, same actual arrow length, thin shaft,triangle head size,color. Rotate straight arrow45degrees DOWN-RIGHT, outward triangle at lower-right endpoint. Preserve grey neutral right-facing side-profile arms DOWN, exact body position/scale, white background. No text,numbers,angle arc,protractor,baselines or other graphics.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-74b7adcb-6ac4-4a11-8fe1-46dd01fa920b.png",
+      "saved": "docs/image-style/drafts/push-directions-arrow-only-v1/decline-v1.png",
+      "publicFile": "push-direction-arrow-only-decline-v1.png",
+      "node": "push::복합관절::프레스::하향 사선"
+    },
+    {
+      "id": "decline-fly",
+      "prompt": "Change ONLY purple arrow orientation. Same chest origin, same actual arrow length, thin shaft,triangle head size,color. Rotate straight arrow45degrees DOWN-RIGHT, outward triangle at lower-right endpoint. Preserve grey neutral right-facing side-profile arms DOWN, exact body position/scale, white background. No text,numbers,angle arc,protractor,baselines or other graphics.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-74b7adcb-6ac4-4a11-8fe1-46dd01fa920b.png",
+      "saved": "docs/image-style/drafts/push-directions-arrow-only-v1/decline-v1.png",
+      "publicFile": "push-direction-arrow-only-decline-v1.png",
+      "node": "push::단일관절::플라이::하향 사선"
+    },
+    {
+      "id": "vertical",
+      "prompt": "Erase ONLY protractor, all grey diagram lines and ticks, vertical/horizontal baselines, radial rays, ALL numbers and angle text, and purple quarter-circle angle arc. KEEP original purple straight VERTICAL UP arrow EXACTLY from chest to head top, original length~400px and location. Keep body identical neutral side profile right arm down, reconstruct anatomy under erased lines. ONLY mannequin+one original long upward purple arrow on white. No text.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-841749c9-4862-4864-9e58-c51181a7a343.png",
+      "saved": "docs/image-style/drafts/push-directions-arrow-only-v1/vertical-v1.png",
+      "publicFile": "push-direction-arrow-only-vertical-v1.png",
+      "node": "push::복합관절::프레스::수직"
+    },
+    {
+      "id": "downward",
+      "prompt": "Erase ONLY protractor, all grey diagram lines and ticks, vertical/horizontal baselines,radial rays,ALL numbers/angle text,and purple curved quarter-circle angle arc. KEEP original purple straight VERTICAL DOWN arrow EXACTLY from chest to navel, original length~390px,position,shaft,head. Preserve identical grey neutral right-facing side-profile mannequin arms down, reconstruct anatomy smoothly under removed lines. ONLY body+single original long downward purple arrow on white, no text.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-cf0fd814-d19b-4d49-982b-edd1290faadd.png",
+      "saved": "docs/image-style/drafts/push-directions-arrow-only-v1/downward-v1.png",
+      "publicFile": "push-direction-arrow-only-downward-v1.png",
+      "node": "push::복합관절::프레스::하향"
+    }
+  ]
+}
