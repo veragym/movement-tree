@@ -1,0 +1,30 @@
+{
+  "status": "approved-for-application",
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "squat",
+      "node": "squat",
+      "prompt": "Edit reference category overview strip. KEEP ONLY FIRST TWO examples from LEFT: squat mannequin and seated leg-press mannequin with footplate. REMOVE examples3,4,5 completely (leg extension, hip adduction, calf raise) including all their equipment/arrows. Arrange remaining TWO side-by-side centered, balanced equal margins, same character proportions and relative scale, preserve their exact poses, palegrey faceless muscle style,charcoal shorts,muted coral highlights,purple motion arrows. Clean pure white background. Wide horizontal strip, no text, numbers, borders, logos or new exercises. Do not change squat/press anatomy or add additional figures.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-22060c33-102c-4a04-a56a-88f9a5521151.png",
+      "saved": "docs/image-style/drafts/lower-reclassified-overviews-v1/squat-v1.png",
+      "publicFile": "lower-overview-reclassified-squat-v1.png"
+    },
+    {
+      "id": "hip",
+      "node": "hinge",
+      "prompt": "Edit category overview reference strip. KEEP ONLY FIRST TWO examples on LEFT: dumbbell hip-hinge/deadlift, and hands-at-hips good-morning hip hinge. REMOVE lastTHREE figures completely: standing leg curl, standing hip extension kickback, side leg abduction; remove their arrows too. Arrange TWO remaining original figures side-by-side centered in wide horizontal strip with balanced equal margins, same character anatomy,scale,exact poses, charcoal shorts,palecoral posterior thigh/glute highlights,purple hip motion arrows. Both hinge torsos keep neutral spine. Pure white background, no text, no new examples, no other equipment. Preserve smoothgrey faceless mannequin illustration style.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-68f15afa-bb3d-4466-9252-c907ce4d6433.png",
+      "saved": "docs/image-style/drafts/lower-reclassified-overviews-v1/hip-v1.png",
+      "publicFile": "lower-overview-reclassified-hip-v1.png"
+    },
+    {
+      "id": "accessories",
+      "node": "squat::단일관절",
+      "prompt": "Combine ONLY the SIX single-joint accessory examples extracted from two reference overview strips into ONE wide horizontal strip. From reference1 take examples3,4,5: seated LEG EXTENSION with small knee roller, seated HIP ADDUCTION with inner thigh pads, standing CALF RAISE. From reference2 take examples3,4,5: standing LEG CURL heel folds backward, standing HIP EXTENSION leg straight behind, standing HIP ABDUCTION leg to side. Arrange exactlySIX distinct mannequins evenly spaced left-to-right in this order: knee extension, knee flexion, hip extension, hip adduction, hip abduction, calf raise. Reuse exact existing poses/styles of selected examples, smoothgrey faceless model,charcoal shorts,muted coral highlights on relevant regions, same-size thin purple motion arrows. Entire figures and needed seat/pads visible, common visual head/foot size, white background balanced margins. Exclude squat,legpress,deadlift,goodmorning entirely. NO text,labels,numbers,borders or extra exercises. Match original wide strip ratio approximately3:1 or wider, six examples legible without overlap.",
+      "path": "C:\\Users\\iksun\\.codex\\generated_images\\01a0c82b-06be-7842-8126-61cf52c99de7\\exec-2d1cef12-2fc1-48c7-934f-605038b35d87.png",
+      "saved": "docs/image-style/drafts/lower-reclassified-overviews-v1/accessories-v1.png",
+      "publicFile": "lower-overview-reclassified-accessories-v1.png"
+    }
+  ]
+}
