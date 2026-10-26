@@ -1,7 +1,8 @@
 import {get,set} from 'idb-keyval';
 import config from './config.json';
+import {workspaceKey} from './staff-workspaces';
 export const uid=()=>crypto.randomUUID();
-export function workspace(){let h=new URLSearchParams(location.hash.slice(1)).get('tree');let saved=localStorage.getItem('mt-last');let key=/^[\da-f]{8}(-[\da-f]{4}){3}-[\da-f]{12}$/i.test(h||'')?h:saved||uid();location.hash=new URLSearchParams({tree:key}).toString();localStorage.setItem('mt-last',key);return key}
+export function workspace(){const key=workspaceKey(location.hash);location.hash=new URLSearchParams({tree:key}).toString();localStorage.setItem('mt-last',key);return key}
 export const readLocal=k=>get('tree:'+k);
 export const writeLocal=(k,data)=>set('tree:'+k,data);
 export async function rpc(name,args){let r;try{r=await fetch(config.url+'/rest/v1/rpc/'+name,{method:'POST',headers:{apikey:config.anon,Authorization:'Bearer '+config.anon,'Content-Type':'application/json'},body:JSON.stringify(args),signal:AbortSignal.timeout(15000)})}catch{throw Error('OFFLINE')}let data=await r.json();if(!r.ok){if(data.code==='40001')throw Error('CONFLICT');if(r.status===404||data.code==='PGRST202')throw Error('SETUP');throw Error(data.message||'서버에 저장하지 못했습니다.')}return data}

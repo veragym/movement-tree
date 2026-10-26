@@ -13,6 +13,8 @@ import {AtlasHeader} from '../AtlasHeader';
 import {useAtlasTheme} from '../useAtlasTheme';
 import offlineSeed from './offline-seed.json';
 import {questLayout} from './layout';
+import {workspaceKey,MAIN_QUEST_KEY} from '../staff-workspaces';
+const questKey=workspaceKey(location.hash,'quest');
 const date=v=>v?new Date(v).toLocaleDateString('ko-KR'):'—';
 function Card({data:d}){const ref=useRef(null);useEffect(()=>{const observer=new ResizeObserver(()=>d.measure(d.id,Math.ceil(ref.current.offsetHeight)));observer.observe(ref.current);return()=>observer.disconnect()},[d.id,d.measure]);return <div ref={ref} className={'tree-card '+(d.hasQuest?'has-quest ':'')+(d.done?'achieved ':'')+(d.selected?'selected ':'')+(d.hasImage?'has-image ':'')+(d.englishName?.trim()?'has-english':'')}>
  <Handle type="target" position={Position.Top}/>
@@ -48,7 +50,7 @@ function LearnerManager({q,change,selected,onSelected,close}){
  </div></Modal>
 }
 function App({sync,openOffline}){
- const {doc,replace}=sync;const sharedTheme=useAtlasTheme({theme:doc.theme});const q=doc.quest?.schema===2?doc.quest:null;
+ const {doc,replace}=sync;const sharedTheme=useAtlasTheme({theme:doc.theme,basicKey:doc.staffWorkspace?.basicKey,ready:sync.ready});const q=doc.quest?.schema===2?doc.quest:null;
  const [memberId,setMemberId]=useState('demo-a'),[selected,setSelected]=useState(null),[expanded,setExpanded]=useState(new Set(['upper','lower'])),[modal,setModal]=useState(null),[choice,setChoice]=useState(''),[search,setSearch]=useState(''),[message,setMessage]=useState(''),[showPanel,setShowPanel]=useState(true),[pendingUnlink,setPendingUnlink]=useState(null);
  const [panelMode,setPanelMode]=useState('info'),[viewCriterion,setViewCriterion]=useState(null),[heights,setHeights]=useState({});
  const measure=useCallback((id,height)=>setHeights(prev=>prev[id]===height?prev:{...prev,[id]:height}),[]);
@@ -67,11 +69,11 @@ function App({sync,openOffline}){
  const visible=new Set(nodes.map(n=>n.id));
  const edges=laid.filter(n=>n.parent&&visible.has(n.parent)).map(n=>({id:'parent-'+n.id,source:n.parent,target:n.id,type:'smoothstep',style:{stroke:themes[sharedTheme]?.color,strokeWidth:1.6}})).concat(doc.links.filter(l=>visible.has(l.source)&&visible.has(l.target)).map((l,i)=>({...l,id:'related-'+i,type:'smoothstep',style:{stroke:themes[sharedTheme]?.color,strokeDasharray:'5 5'}})));
  if(!sync.ready)return <div className="loading">퀘스트를 불러오는 중…</div>;
- if(!q)return <div className="loading"><h2>클라우드 연결을 완료하지 못했습니다.</h2><p>서버 응답이 지연되고 있습니다. 기기 모드는 클라우드와 별도로 저장됩니다.</p><button onClick={sync.refresh}>연결 확인</button> <button className="primary" onClick={openOffline}>기기 모드로 열기</button></div>;
+ if(!q)return <div className="loading"><h2>클라우드 연결을 완료하지 못했습니다.</h2><p>서버 응답이 지연되고 있습니다. 연결을 확인한 뒤 다시 시도해 주세요.</p><button onClick={sync.refresh}>연결 확인</button> {openOffline&&<button className="primary" onClick={openOffline}>기기 모드로 열기</button>}</div>;
  const summary=stats(q,member),items=selected?criteriaFor(q,selected):[],r=record(member,selected),pr=selected?progress(q,member,selected):{total:0,checked:0,done:false},quests=doc.nodes.filter(n=>criteriaFor(q,n.id).length),available=q.library.filter(c=>!items.some(i=>i.id===c.id));
  const results=search.trim()?doc.nodes.filter(n=>(n.label+' '+(n.englishName||'')).toLowerCase().includes(search.trim().toLowerCase())).slice(0,25):[];
  return <div className="quest-app" style={{'--accent':themes[sharedTheme]?.color||'#8050ae'}}>
- <AtlasHeader page="quest" status={sync.status} notify={setMessage}><button onClick={()=>{sync.refresh();setMessage('클라우드 연결을 확인하고 있습니다.')}}>연결 확인</button></AtlasHeader>
+ <AtlasHeader page="quest" status={sync.status} notify={setMessage} doc={doc}><button onClick={()=>{sync.refresh();setMessage('클라우드 연결을 확인하고 있습니다.')}}>연결 확인</button></AtlasHeader>
  <div className={"test-notice "+(sync.status==="preview"?"preview-notice":"")}>{sync.status==='preview'?'기기 모드 · 변경은 이 브라우저에만 저장됩니다. 다른 기기와 동기화되지 않으며 클라우드에 자동 반영하지 않습니다.':'원하는 가지에 퀘스트를 연결하고 학습자별 달성을 기록합니다.'}</div>
  {sync.conflict&&<div className="conflict">다른 기기에서 변경했습니다. <button onClick={()=>sync.resolve('remote')}>클라우드 저장본 사용</button><button onClick={()=>sync.resolve('local')}>내 변경으로 저장</button></div>}
  {sync.error&&<div className="conflict">{sync.error}</div>}
@@ -107,7 +109,7 @@ function Preview({reconnect}){
  const replace=d=>{setDoc(d);try{localStorage.setItem(OFFLINE_KEY,JSON.stringify(d));setError('')}catch{setError('기기 저장에 실패했습니다. 이 창을 닫으면 변경 내용이 사라질 수 있습니다.')}};
  return <App sync={{doc,replace,ready:true,status:'preview',refresh:reconnect,error}}/>;
 }
-function Connected({fallback}){const sync=useDocument(TEST_KEY);useEffect(()=>{if(sync.ready&&sync.status==='offline'&&sync.doc.quest?.schema!==2)fallback()},[sync.ready,sync.status]);return <App sync={sync} openOffline={fallback}/>;}
+function Connected({fallback}){const sync=useDocument(questKey);useEffect(()=>{if(questKey===MAIN_QUEST_KEY&&sync.ready&&sync.status==='offline'&&sync.doc.quest?.schema!==2)fallback()},[sync.ready,sync.status]);return <App sync={sync} openOffline={questKey===MAIN_QUEST_KEY?fallback:undefined}/>;}
 function Entry(){const [offline,setOffline]=useState(false);return offline?<Preview reconnect={()=>setOffline(false)}/>:<Connected fallback={()=>setOffline(true)}/>;}
 createRoot(document.getElementById('root')).render(<ReactFlowProvider><Entry/></ReactFlowProvider>);
 

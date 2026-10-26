@@ -1,12 +1,13 @@
 import {useEffect,useRef,useState,useCallback} from 'react';
 import {seed,validateDoc} from './model';
 import {readLocal,writeLocal,rpc,uploadImage} from './storage';
+import {preserveWorkspaceIdentity} from './staff-workspaces';
 export function useDocument(key){
  const [doc,setDoc]=useState(seed),[ready,setReady]=useState(false),[status,setStatus]=useState('loading'),[conflict,setConflict]=useState(null),[error,setError]=useState('');
  const [wake,setWake]=useState(0);
  const live=useRef({doc:seed(),revision:0,dirty:false,known:false}),busy=useRef(false),mounted=useRef(true);
  const persist=async()=>{try{await writeLocal(key,{doc:live.current.doc,revision:live.current.revision,dirty:live.current.dirty});}catch{setError('기기 저장 공간이 부족합니다. 백업을 먼저 내보내 주세요.')}};
- const replace=(d)=>{validateDoc(d);live.current.doc=d;live.current.dirty=true;setDoc(d);setStatus('pending');persist()};
+ const replace=(d)=>{d=preserveWorkspaceIdentity(live.current.doc,d,key,{directoryUpdate:true});validateDoc(d);live.current.doc=d;live.current.dirty=true;setDoc(d);setStatus('pending');persist()};
  const refresh=useCallback(async()=>{
   if(busy.current)return;busy.current=true;
   try{if(live.current.known&&!live.current.dirty){let version=await rpc('mt_version',{p_key:key});if(version===live.current.revision){setStatus('saved');return}}let remote=await rpc('mt_load',{p_key:key});if(remote)validateDoc(remote.document);let l=live.current;
